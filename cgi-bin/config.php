@@ -1,21 +1,9 @@
 <?php
 session_start();
 
-function db ()
-{
-    $username = "doadmin";
-    $password = "AVNS_it1X-Dop6EooZRm3cQR";
-    $host = "dbaas-db-8875074-do-user-13908232-0.b.db.ondigitalocean.com";
-    $port = "25060";
-    $database = "defaultdb";
-    $sslmode = "REQUIRED";
+include "../globalFunctions.php";
 
-    $db = new PDO(
-            "mysql://$username:$password@$host:$port/$database?ssl-mode=$sslmode");
-    return $db;
-}
-
-$db = db();
+$db = db_sfi();
 
 $debugging = 0; // 1 for debug info showing, 0 for not showing
 $beta = 0; // 1 for beta, 0 for complete
