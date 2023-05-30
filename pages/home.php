@@ -1,0 +1,9 @@
+<div style="padding:30px; font-weight:bold;">
+Welcome to Simple Financials and Inventory.<br /><br />
+Our goal is to provide a simplified, but complete financial suite that includes inventory tracking and reports. Also included is the capability to create recipes from the ingredients in your in inventory, which creates a new inventory item, calculates a new cost for that item, and increases your company value by tracking the amount of labor it took to complete the recipe.<br /><br />
+When you register, a ledger will be set up for your financials. You will need to start on the settings page, where we will gather information about your company, and set up whatever custom accounts you will use.<br /><br />
+Feel free to use the <a href="index.php?page=help">help page</a> if you would like some guidance about setting up your accounts, or using the SFaI website.<br /><br />
+Our hope is that the SFaI website will be easy to use and give acurate company financial information. If you have any problems, questions, or comments about the site, please use the feedback form in the menu to let us know. All emails will be addressed quickly, and changes made as needed.<br /><br />
+Thank you for using our site. I hope it is helpful to your business. If you find this website to be a useful tool, please help us by donating on the <a href="index.php?page=settings">settings page</a> so we can continue providing the website without subscription or purchasing costs.<br /><br />
+** One of our users has found that the inventory and recipie pages are a useful way of tracking nutrition information for a specialized diet. I have put her write up about how she is doing this on the help page, and a help link on the Inv page. <a href="index.php?page=help&helpId=19">Check it out here.</a><br><br>
+</div>

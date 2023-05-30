@@ -1,0 +1,35 @@
+id,date,contact,description,cashCheckCC,checkNumber,account,debitAmount,creditAmount,refNumber,typeCode,dailyConfirm
+1,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,2.76,69,Inventory,0
+2,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,2.76,0.00,69,Inventory,0
+3,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,6.18,0.00,78,Inventory,0
+4,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,0.00,6.18,78,Inventory,0
+5,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,0.00,12.36,78,Inventory,0
+6,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,12.36,0.00,78,Inventory,0
+7,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,12.36,0.00,78,Inventory,0
+8,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,0.00,12.36,78,Inventory,0
+9,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,11.04,69,Inventory,0
+10,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,11.04,0.00,69,Inventory,0
+11,2021-05-29,,Edit Inventory Item - Jojoba oil,none,0,120.0 - Inventory,0.00,20014.28,23,Inventory,0
+12,2021-05-29,,Edit Inventory Item - Jojoba oil,none,0,400.3 - Inventory Adj,20014.28,0.00,23,Inventory,0
+13,2021-05-29,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,11.04,0.00,69,Inventory,0
+14,2021-05-29,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,0.00,11.04,69,Inventory,0
+15,2021-05-29,,Recipe Creation - Labor,none,0,120.0 - Inventory,0.00,0.00,13,Recipe,0
+16,2021-05-29,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,0.00,13,Recipe,0
+17,2021-05-29,,Edit Inventory Item - Caridwen 1.5 oz,none,0,120.0 - Inventory,9.00,0.00,7,Inventory,0
+18,2021-05-29,,Edit Inventory Item - Caridwen 1.5 oz,none,0,400.3 - Inventory Adj,0.00,9.00,7,Inventory,0
+19,2021-05-29,,Edit Inventory Item - Iduna  1.5 oz,none,0,120.0 - Inventory,3.21,0.00,106,Inventory,0
+20,2021-05-29,,Edit Inventory Item - Iduna  1.5 oz,none,0,400.3 - Inventory Adj,0.00,3.21,106,Inventory,0
+21,2021-05-29,,Edit Inventory Item - Ceridwin 1.5 oz,none,0,120.0 - Inventory,0.00,20.50,105,Inventory,0
+22,2021-05-29,,Edit Inventory Item - Ceridwin 1.5 oz,none,0,400.3 - Inventory Adj,20.50,0.00,105,Inventory,0
+23,2021-05-29,,Edit Inventory Item - delete this,none,0,120.0 - Inventory,0.00,105.69,104,Inventory,0
+24,2021-05-29,,Edit Inventory Item - delete this,none,0,400.3 - Inventory Adj,105.69,0.00,104,Inventory,0
+25,2021-05-29,,Edit Inventory Item - deleteIduna 1.5 oz,none,0,120.0 - Inventory,0.00,3.11,20,Inventory,0
+26,2021-05-29,,Edit Inventory Item - deleteIduna 1.5 oz,none,0,400.3 - Inventory Adj,3.11,0.00,20,Inventory,0
+27,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,23.68,69,Inventory,0
+28,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,23.68,0.00,69,Inventory,0
+29,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,17.76,0.00,69,Inventory,0
+30,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,0.00,17.76,69,Inventory,0
+31,2021-05-30,,Recipe Creation - Labor,none,0,120.0 - Inventory,0.00,0.00,34,Recipe,0
+32,2021-05-30,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,0.00,34,Recipe,0
+33,2021-05-30,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,0.00,13.38,78,Inventory,0
+34,2021-05-30,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,13.38,0.00,78,Inventory,0

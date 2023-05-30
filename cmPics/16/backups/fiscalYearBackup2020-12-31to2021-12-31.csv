@@ -1,0 +1,194 @@
+id,date,contact,description,cash Check CC,check Number,account,debit Amount,credit Amount,ref Number,type
+1,2021-06-15,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,143.00,1,Cash
+2,2021-06-15,In House,Bank Deposit,none,0,101.2 - FNB Checking - Checking,143.00,0.00,1,Cash
+3,2021-06-19,In House,donation,none,0,401.0 - Donations,0.00,28.00,3,General
+4,2021-06-19,In House,fee,none,0,402.0 - FM Fee,0.00,33.22,3,General
+5,2021-06-19,In House,taxes,none,0,200.0 - Sales Tax Payable,0.00,33.30,3,General
+6,2021-06-19,In House,money rcvd,none,0,101.0 - Cash Drawer,94.52,0.00,3,General
+7,2021-06-28,In House,6/26/21 Fees,none,0,402.0 - FM Fee,0.00,20.19,4,General
+8,2021-06-28,In House,6/26/21 Taxes,none,0,200.0 - Sales Tax Payable,0.00,21.00,4,General
+9,2021-06-28,In House,6/26/21 Donations,none,0,401.0 - Donations,0.00,9.00,4,General
+10,2021-06-28,In House,6/26/21 Rcvd,none,0,101.0 - Cash Drawer,50.19,0.00,4,General
+11,2021-07-03,In House,FM Rcvd,none,0,101.0 - Cash Drawer,78.30,0.00,5,General
+12,2021-07-03,In House,FM Fees,none,0,402.0 - FM Fee,0.00,42.06,5,General
+13,2021-07-03,In House,FM taxes,none,0,200.0 - Sales Tax Payable,0.00,33.94,5,General
+14,2021-07-03,In House,FM Donations,none,0,401.0 - Donations,0.00,2.30,5,General
+15,2021-07-10,In House,donation,none,0,401.0 - Donations,0.00,8.73,6,General
+16,2021-07-10,In House,fee,none,0,402.0 - FM Fee,0.00,68.43,6,General
+17,2021-07-10,In House,taxes,none,0,200.0 - Sales Tax Payable,0.00,63.94,6,General
+18,2021-07-10,In House,cash taken in,none,0,101.0 - Cash Drawer,141.10,0.00,6,General
+19,2021-07-17,In House,Donation,none,0,401.0 - Donations,0.00,42.07,7,General
+20,2021-07-17,In House,taxes,none,0,200.0 - Sales Tax Payable,0.00,81.56,7,General
+21,2021-07-17,In House,fm fees,none,0,402.0 - FM Fee,0.00,69.47,7,General
+22,2021-07-17,In House,fm rcvd,none,0,101.0 - Cash Drawer,193.10,0.00,7,General
+23,2021-07-26,KDoR,June Sales Tax,none,0,200.0 - Sales Tax Payable,99.85,0.00,8,General
+24,2021-07-26,KDoR,June Sales Tax,none,0,101.2 - FNB Checking - Checking,0.00,99.85,8,General
+25,2021-07-24,In House,sales tax,none,0,200.0 - Sales Tax Payable,0.00,44.95,9,General
+26,2021-07-24,In House,fee,none,0,402.0 - FM Fee,0.00,27.31,9,General
+27,2021-07-24,In House,donation,none,0,401.0 - Donations,0.00,3.74,9,General
+28,2021-07-24,In House,rcvd,none,0,101.0 - Cash Drawer,76.00,0.00,9,General
+29,2021-07-31,In House,fee,none,0,402.0 - FM Fee,0.00,30.43,10,General
+30,2021-07-31,In House,Donation,none,0,401.0 - Donations,0.00,0.55,10,General
+31,2021-07-31,In House,taxes,none,0,200.0 - Sales Tax Payable,0.00,28.13,10,General
+32,2021-07-31,In House,rcvd,none,0,101.0 - Cash Drawer,59.11,0.00,10,General
+33,2021-08-07,In House,fee,none,0,402.0 - FM Fee,0.00,88.83,11,General
+34,2021-08-07,In House,taxes,none,0,200.0 - Sales Tax Payable,0.00,102.18,11,General
+35,2021-08-07,In House,rcvd,none,0,101.0 - Cash Drawer,191.01,0.00,11,General
+36,2021-08-14,In House,fee,none,0,402.0 - FM Fee,0.00,43.86,12,General
+37,2021-08-14,In House,taxes,none,0,200.0 - Sales Tax Payable,0.00,65.29,12,General
+38,2021-08-14,In House,Donations Received,none,0,401.0 - Donations,0.00,1.50,12,General
+39,2021-08-14,In House,rcvd,none,0,101.0 - Cash Drawer,110.65,0.00,12,General
+40,2021-02-18,In House,Retained Earnings,Cash,0,101.2 - FNB Checking - Checking,1691.11,0.00,30,Cash
+41,2021-02-18,In House,Retained Earnings,Cash,0,399.9 - Retained Earnings,0.00,1691.11,30,Cash
+42,2021-02-18,In House,paper stmt fee,Cash,0,101.2 - FNB Checking - Checking,0.00,3.00,31,Cash
+43,2021-02-18,In House,paper stmt fee,Cash,0,501.1 - Bank Fee,3.00,0.00,31,Cash
+44,2021-02-18,In House,school  fund raiser,Cash,0,101.2 - FNB Checking - Checking,488.94,0.00,32,Cash
+45,2021-02-18,In House,school  fund raiser,Cash,0,400.7 - Fund Raising,0.00,488.94,32,Cash
+46,2021-04-22,In House,fund Raising,Cash,0,101.2 - FNB Checking - Checking,324.00,0.00,33,Cash
+47,2021-04-22,In House,fund Raising,Cash,0,400.7 - Fund Raising,0.00,324.00,33,Cash
+48,2021-08-21,In House,taxes,Cash,0,200.0 - Sales Tax Payable,0.00,49.50,13,General
+49,2021-08-21,In House,Donations Received,Cash,0,401.0 - Donations,0.00,0.99,13,General
+50,2021-08-21,In House,fee,Cash,0,402.0 - FM Fee,0.00,40.41,13,General
+51,2021-08-21,In House,rcvd,Cash,0,101.0 - Cash Drawer,90.90,0.00,13,General
+52,2021-08-28,In House,,Cash,0,101.0 - Cash Drawer,114.46,0.00,14,General
+53,2021-08-28,In House,,Cash,0,402.0 - FM Fee,0.00,64.51,14,General
+54,2021-08-28,In House,,Cash,0,401.0 - Donations,0.00,0.70,14,General
+55,2021-08-28,In House,,Cash,0,200.0 - Sales Tax Payable,0.00,49.25,14,General
+56,2021-09-04,In House,,Cash,0,101.0 - Cash Drawer,201.56,0.00,15,General
+57,2021-09-04,In House,,Cash,0,401.0 - Donations,0.00,2.33,15,General
+58,2021-09-04,In House,,Cash,0,402.0 - FM Fee,0.00,82.28,15,General
+59,2021-09-04,In House,,Cash,0,200.0 - Sales Tax Payable,0.00,116.95,15,General
+60,2021-08-07,Heidi Straub,Coordinator Pay,Check,2044,101.2 - FNB Checking - Checking,0.00,100.00,28,Cash
+61,2021-08-07,Heidi Straub,Coordinator Pay,Check,2044,501.0 - Coordinator Pay,100.00,0.00,28,Cash
+62,2021-08-14,Heidi Straub,Coordinator Pay,Check,2045,101.2 - FNB Checking - Checking,0.00,100.00,29,Cash
+63,2021-08-14,Heidi Straub,Coordinator Pay,Check,2045,501.0 - Coordinator Pay,100.00,0.00,29,Cash
+64,2021-08-21,Heidi Straub,Coordinator Pay,Check,2047,501.0 - Coordinator Pay,100.00,0.00,34,Cash
+65,2021-08-21,Heidi Straub,Coordinator Pay,Check,2047,101.2 - FNB Checking - Checking,0.00,100.00,34,Cash
+66,2021-08-28,Heidi Straub,,Check,2048,101.2 - FNB Checking - Checking,0.00,100.00,16,General
+67,2021-08-28,Heidi Straub,,Check,2048,501.0 - Coordinator Pay,100.00,0.00,16,General
+68,2021-08-28,Vendor,food for concert meal,Check,2049,101.2 - FNB Checking - Checking,0.00,150.00,17,General
+69,2021-08-28,Vendor,food for concert meal,Check,2049,501.2 - Fund Raising Supplies,150.00,0.00,17,General
+70,2021-09-06,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,316.02,35,Cash
+71,2021-09-06,In House,Bank Deposit,none,0,101.2 - FNB Checking - Checking,316.02,0.00,35,Cash
+72,2021-08-28,Vendor,tamales for concert,Check,2050,101.2 - FNB Checking - Checking,0.00,187.50,18,General
+73,2021-08-28,Vendor,tamales for concert,Check,2050,501.2 - Fund Raising Supplies,187.50,0.00,18,General
+74,2021-06-05,Heidi Straub,Coordinator Pay,Check,2016,101.2 - FNB Checking - Checking,0.00,100.00,2,Cash
+75,2021-06-05,Heidi Straub,Coordinator Pay,Check,2016,501.0 - Coordinator Pay,100.00,0.00,2,Cash
+76,2021-06-12,Heidi Straub,Coordinator Pay,Check,2015,501.0 - Coordinator Pay,100.00,0.00,3,Cash
+77,2021-06-12,Heidi Straub,Coordinator Pay,Check,2015,101.2 - FNB Checking - Checking,0.00,100.00,3,Cash
+78,2021-06-19,Heidi Straub,Coordinator Pay,Check,2018,101.2 - FNB Checking - Checking,0.00,100.00,4,Cash
+79,2021-06-19,Heidi Straub,Coordinator Pay,Check,2018,501.0 - Coordinator Pay,100.00,0.00,4,Cash
+80,2021-06-26,Heidi Straub,Coordinator Pay,Check,2019,501.0 - Coordinator Pay,100.00,0.00,22,Cash
+81,2021-06-26,Heidi Straub,Coordinator Pay,Check,2019,101.2 - FNB Checking - Checking,0.00,100.00,22,Cash
+82,2021-07-03,Heidi Straub,Coordinator Pay,Check,2021,501.0 - Coordinator Pay,100.00,0.00,23,Cash
+83,2021-07-03,Heidi Straub,Coordinator Pay,Check,2021,101.2 - FNB Checking - Checking,0.00,100.00,23,Cash
+84,2021-07-10,Heidi Straub,Coordinator Pay,Check,2022,501.0 - Coordinator Pay,100.00,0.00,24,Cash
+85,2021-07-10,Heidi Straub,Coordinator Pay,Check,2022,101.2 - FNB Checking - Checking,0.00,100.00,24,Cash
+86,2021-07-07,Kelly Milliken,Scale Reimbursment,Check,2020,101.2 - FNB Checking - Checking,0.00,189.00,19,General
+87,2021-07-07,Kelly Milliken,Scale Reimbursment,Check,2020,120.0 - Inventory,189.00,0.00,19,General
+88,2021-07-17,Heidi Straub,Coordinator Pay,Check,2041,101.2 - FNB Checking - Checking,0.00,100.00,25,Cash
+89,2021-07-17,Heidi Straub,Coordinator Pay,Check,2041,501.0 - Coordinator Pay,100.00,0.00,25,Cash
+90,2021-07-24,Heidi Straub,Coordinator Pay,Check,2042,101.2 - FNB Checking - Checking,0.00,100.00,26,Cash
+91,2021-07-24,Heidi Straub,Coordinator Pay,Check,2042,501.0 - Coordinator Pay,100.00,0.00,26,Cash
+92,2021-07-31,Heidi Straub,Coordinator Pay,Check,2023,101.2 - FNB Checking - Checking,0.00,100.00,27,Cash
+93,2021-07-31,Heidi Straub,Coordinator Pay,Check,2023,501.0 - Coordinator Pay,100.00,0.00,27,Cash
+94,2021-08-02,Heidi Straub,,Check,2043,101.2 - FNB Checking - Checking,0.00,100.00,20,General
+95,2021-08-02,Heidi Straub,,Check,2043,501.0 - Coordinator Pay,100.00,0.00,20,General
+96,2021-09-09,KDoR,July sales tax,none,0,101.2 - FNB Checking - Checking,0.00,227.33,22,General
+97,2021-09-09,KDoR,July sales tax,none,0,200.0 - Sales Tax Payable,227.33,0.00,22,General
+98,2021-09-09,KDoR,Aug sales tax,none,0,101.2 - FNB Checking - Checking,0.00,330.93,23,General
+99,2021-09-09,KDoR,Aug sales tax,none,0,200.0 - Sales Tax Payable,330.93,0.00,23,General
+100,2021-09-11,In House,,Cash,0,101.0 - Cash Drawer,198.45,0.00,24,General
+101,2021-09-11,In House,,Cash,0,402.0 - FM Fee,0.00,85.47,24,General
+102,2021-09-11,In House,,Cash,0,200.0 - Sales Tax Payable,0.00,111.22,24,General
+103,2021-09-11,In House,,Cash,0,401.0 - Donations,0.00,1.76,24,General
+104,2021-09-11,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,198.45,36,Cash
+105,2021-09-11,In House,Bank Deposit,none,0,101.2 - FNB Checking - Checking,198.45,0.00,36,Cash
+106,2021-09-18,In House,,Cash,0,200.0 - Sales Tax Payable,0.00,20.14,25,General
+107,2021-09-18,In House,,Cash,0,402.0 - FM Fee,0.00,32.56,25,General
+108,2021-09-18,In House,,Cash,0,401.0 - Donations,0.00,2.25,25,General
+109,2021-09-18,In House,,Cash,0,101.0 - Cash Drawer,54.95,0.00,25,General
+110,2021-09-23,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,54.95,37,Cash
+111,2021-09-23,In House,Bank Deposit,none,0,101.2 - FNB Checking - Checking,54.95,0.00,37,Cash
+112,2021-09-25,In House,,Cash,0,200.0 - Sales Tax Payable,0.00,78.18,26,General
+113,2021-09-25,In House,,Cash,0,402.0 - FM Fee,0.00,56.56,26,General
+114,2021-09-25,In House,,Cash,0,401.0 - Donations,0.00,0.22,26,General
+115,2021-09-25,In House,,Cash,0,101.0 - Cash Drawer,134.96,0.00,26,General
+116,2021-09-25,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,134.96,38,Cash
+117,2021-09-25,In House,Bank Deposit,none,0,101.2 - FNB Checking - Checking,134.96,0.00,38,Cash
+118,2021-09-25,In House,Money in bag,none,0,300.1 - Prior Year Adjustment,0.00,100.78,27,General
+119,2021-09-25,In House,Money in bag,none,0,101.2 - FNB Checking - Checking,100.78,0.00,27,General
+120,2021-10-13,In House,Jacque Hayes donation,Cash,0,101.2 - FNB Checking - Checking,14.00,0.00,28,General
+121,2021-10-13,In House,Jacque Hayes donation,Cash,0,401.0 - Donations,0.00,14.00,28,General
+122,2021-06-22,In House,,Cash,0,101.2 - FNB Checking - Checking,94.52,0.00,39,Cash
+123,2021-06-22,In House,,Cash,0,101.0 - Cash Drawer,0.00,94.52,39,Cash
+124,2021-06-29,In House,,Cash,0,101.2 - FNB Checking - Checking,50.19,0.00,40,Cash
+125,2021-06-29,In House,,Cash,0,101.0 - Cash Drawer,0.00,50.19,40,Cash
+126,2021-07-08,In House,,Cash,0,101.2 - FNB Checking - Checking,78.30,0.00,41,Cash
+127,2021-07-08,In House,,Cash,0,101.0 - Cash Drawer,0.00,78.30,41,Cash
+128,2021-07-14,In House,,Cash,0,101.2 - FNB Checking - Checking,141.00,0.00,42,Cash
+129,2021-07-14,In House,,Cash,0,101.0 - Cash Drawer,0.00,141.00,42,Cash
+130,2021-07-20,In House,,Cash,0,101.2 - FNB Checking - Checking,193.10,0.00,43,Cash
+131,2021-07-20,In House,,Cash,0,101.0 - Cash Drawer,0.00,193.10,43,Cash
+132,2021-07-28,In House,,Cash,0,101.2 - FNB Checking - Checking,76.00,0.00,44,Cash
+133,2021-07-28,In House,,Cash,0,101.0 - Cash Drawer,0.00,76.00,44,Cash
+134,2021-08-03,In House,,Cash,0,101.2 - FNB Checking - Checking,77.68,0.00,45,Cash
+135,2021-08-03,In House,,Cash,0,101.0 - Cash Drawer,0.00,77.68,45,Cash
+136,2021-08-09,In House,,Cash,0,101.2 - FNB Checking - Checking,191.01,0.00,46,Cash
+137,2021-08-09,In House,,Cash,0,101.0 - Cash Drawer,0.00,191.01,46,Cash
+138,2021-08-16,In House,,Cash,0,101.2 - FNB Checking - Checking,110.65,0.00,47,Cash
+139,2021-08-16,In House,,Cash,0,101.0 - Cash Drawer,0.00,110.65,47,Cash
+140,2021-08-25,In House,,Cash,0,101.2 - FNB Checking - Checking,90.90,0.00,48,Cash
+141,2021-08-25,In House,,Cash,0,101.0 - Cash Drawer,0.00,90.90,48,Cash
+142,2021-09-07,Heidi Straub,,Check,2051,101.2 - FNB Checking - Checking,0.00,100.00,49,Cash
+143,2021-09-07,Heidi Straub,,Check,2051,501.0 - Coordinator Pay,100.00,0.00,49,Cash
+144,2021-09-09,In House,,Cash,0,101.2 - FNB Checking - Checking,839.00,0.00,50,Cash
+145,2021-09-09,In House,,Cash,0,401.0 - Donations,0.00,839.00,50,Cash
+146,2021-09-10,In House,Dietta Knorr Memorial,Check,2046,101.2 - FNB Checking - Checking,0.00,25.00,51,Cash
+147,2021-09-10,In House,Dietta Knorr Memorial,Check,2046,501.2 - Fund Raising Supplies,25.00,0.00,51,Cash
+148,2021-10-07,Heidi Straub,,Check,2052,101.2 - FNB Checking - Checking,0.00,100.00,52,Cash
+149,2021-10-07,Heidi Straub,,Check,2052,501.0 - Coordinator Pay,100.00,0.00,52,Cash
+150,2021-10-07,Heidi Straub,,Check,2053,101.2 - FNB Checking - Checking,0.00,100.00,53,Cash
+151,2021-10-07,Heidi Straub,,Check,2053,501.0 - Coordinator Pay,100.00,0.00,53,Cash
+152,2021-10-07,Heidi Straub,,Check,2054,101.2 - FNB Checking - Checking,0.00,100.00,54,Cash
+153,2021-10-07,Heidi Straub,,Check,2054,501.0 - Coordinator Pay,100.00,0.00,54,Cash
+154,2021-11-29,KDoR,Pay Tax,Credit Card,0,101.2 - FNB Checking - Checking,0.00,335.18,55,Cash
+155,2021-11-29,KDoR,Pay Tax,Credit Card,0,200.0 - Sales Tax Payable,335.18,0.00,55,Cash
+156,2021-06-05,In House,Donations Received,none,0,401.0 - Donations,0.00,59.70,1,General
+157,2021-06-05,In House,Fees Collected,none,0,402.0 - FM Fee,0.00,21.37,1,General
+158,2021-06-05,In House,Taxes Collected,none,0,200.0 - Sales Tax Payable,0.00,19.21,1,General
+159,2021-06-05,In House,rcved,none,0,101.0 - Cash Drawer,100.28,0.00,1,General
+160,2021-06-12,In House,6/12/21 FM rcvd,none,0,101.0 - Cash Drawer,42.72,0.00,2,General
+161,2021-06-12,In House,6/12/21 FM fees,none,0,402.0 - FM Fee,0.00,16.36,2,General
+162,2021-06-12,In House,6/12/21 FM taxes,none,0,200.0 - Sales Tax Payable,0.00,26.36,2,General
+163,2021-12-30,farmers Mkt corrections,to bring acct to zero,none,0,101.0 - Cash Drawer,18.47,0.00,29,General
+164,2021-12-30,farmers Mkt corrections,to bring acct to zero,none,0,200.0 - Sales Tax Payable,0.00,48.19,29,General
+165,2021-12-30,farmers Mkt corrections,,none,0,402.0 - FM Fee,29.72,0.00,29,General
+,,,,,,,,,,,
+Totals,,,,,,,,,,,
+Account Number,Account Name,Debit Amount,Credit Amount,Total,,,,,,,
+101.0,Cash Drawer,1950.73,1950.73,1.1368683772162E-13,,,,,,,
+101.1,Petty Cash,,,,,,,,,,
+101.2,FNB Checking - Checking,5408.56,3347.79,2060.77,,,,,,,
+110.0,Account Receivables,,,,,,,,,,
+120.0,Inventory,189,0,189,,,,,,,
+200.0,Sales Tax Payable,993.29,993.29,1.4210854715202E-14,,,,,,,
+210.0,Accounts Payable,,,,,,,,,,
+220.0,Labor Production,,,,,,,,,,
+300.0,Owners Capital,,,,,,,,,,
+300.1,Prior Year Adjustment,0,100.78,100.78,,,,,,,
+380.0,Net Income,,,,,,,,,,
+399.9,Retained Earnings,0,1691.11,1691.11,,,,,,,
+400.1,Revenue,,,,,,,,,,
+400.2,Shipping COS,,,,,,,,,,
+400.3,Inventory Adj,,,,,,,,,,
+400.4,Fees Revenue,,,,,,,,,,
+400.5,Discounts,,,,,,,,,,
+400.6,Inventory COS,,,,,,,,,,
+400.7,Fund Raising,0,812.94,812.94,,,,,,,
+401.0,Donations,0,1016.84,1016.84,,,,,,,
+402.0,FM Fee,29.72,823.32,793.6,,,,,,,
+500.0,Sales Tax Expense,,,,,,,,,,
+501.0,Coordinator Pay,1800,0,1800,,,,,,,
+501.1,Bank Fee,3,0,3,,,,,,,
+501.2,Fund Raising Supplies,362.5,0,362.5,,,,,,,

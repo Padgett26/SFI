@@ -1,0 +1,821 @@
+id,date,contact,description,cash Check CC,check Number,account,debit Amount,credit Amount,ref Number,type
+1,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,2.76,69,Inventory
+2,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,2.76,0.00,69,Inventory
+3,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,6.18,0.00,78,Inventory
+4,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,0.00,6.18,78,Inventory
+5,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,0.00,12.36,78,Inventory
+6,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,12.36,0.00,78,Inventory
+7,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,12.36,0.00,78,Inventory
+8,2021-05-28,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,0.00,12.36,78,Inventory
+9,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,11.04,69,Inventory
+10,2021-05-28,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,11.04,0.00,69,Inventory
+13,2021-05-29,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,11.04,0.00,69,Inventory
+14,2021-05-29,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,0.00,11.04,69,Inventory
+17,2021-05-29,,Edit Inventory Item - Caridwen 1.5 oz,none,0,120.0 - Inventory,9.00,0.00,7,Inventory
+18,2021-05-29,,Edit Inventory Item - Caridwen 1.5 oz,none,0,400.3 - Inventory Adj,0.00,9.00,7,Inventory
+19,2021-05-29,,Edit Inventory Item - Iduna  1.5 oz,none,0,120.0 - Inventory,3.21,0.00,106,Inventory
+20,2021-05-29,,Edit Inventory Item - Iduna  1.5 oz,none,0,400.3 - Inventory Adj,0.00,3.21,106,Inventory
+21,2021-05-29,,Edit Inventory Item - Ceridwin 1.5 oz,none,0,120.0 - Inventory,0.00,20.50,105,Inventory
+22,2021-05-29,,Edit Inventory Item - Ceridwin 1.5 oz,none,0,400.3 - Inventory Adj,20.50,0.00,105,Inventory
+25,2021-05-29,,Edit Inventory Item - deleteIduna 1.5 oz,none,0,120.0 - Inventory,0.00,3.11,20,Inventory
+26,2021-05-29,,Edit Inventory Item - deleteIduna 1.5 oz,none,0,400.3 - Inventory Adj,3.11,0.00,20,Inventory
+27,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,23.68,69,Inventory
+28,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,23.68,0.00,69,Inventory
+29,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,17.76,0.00,69,Inventory
+30,2021-05-30,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,0.00,17.76,69,Inventory
+31,2021-05-30,,Recipe Creation - Labor,none,0,120.0 - Inventory,0.00,0.00,34,Recipe
+32,2021-05-30,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,0.00,34,Recipe
+33,2021-05-30,,Edit Inventory Item - Soft Body Wash 12oz,none,0,120.0 - Inventory,0.00,13.38,78,Inventory
+34,2021-05-30,,Edit Inventory Item - Soft Body Wash 12oz,none,0,400.3 - Inventory Adj,13.38,0.00,78,Inventory
+35,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,11.54,0.00,91,Inventory
+36,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,11.54,91,Inventory
+37,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,1.80,11,Inventory
+38,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,1.80,0.00,11,Inventory
+39,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,9.32,32,Inventory
+40,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,9.32,0.00,32,Inventory
+41,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,10.37,35,Inventory
+42,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,10.37,0.00,35,Inventory
+43,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.52,40,Inventory
+44,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.52,0.00,40,Inventory
+45,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,21.24,51,Inventory
+46,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,21.24,0.00,51,Inventory
+47,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,3.60,10,Inventory
+48,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,3.60,0.00,10,Inventory
+49,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,0.00,64,Inventory
+50,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,0.00,64,Inventory
+51,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,5.00,22,Inventory
+52,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,5.00,0.00,22,Inventory
+53,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.00,42,Inventory
+54,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.00,0.00,42,Inventory
+57,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,26.82,0.00,58,Inventory
+58,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,26.82,58,Inventory
+59,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,2.00,0.00,92,Inventory
+60,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.00,92,Inventory
+61,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,1.00,93,Inventory
+62,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,1.00,0.00,93,Inventory
+63,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,2.88,0.00,5,Inventory
+64,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.88,5,Inventory
+65,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,2.90,0.00,53,Inventory
+66,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.90,53,Inventory
+67,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.55,63,Inventory
+68,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.55,0.00,63,Inventory
+69,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,5.90,88,Inventory
+70,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,5.90,0.00,88,Inventory
+71,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,5.90,0.00,88,Inventory
+72,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,5.90,88,Inventory
+73,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.88,5,Inventory
+74,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.88,0.00,5,Inventory
+75,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.90,53,Inventory
+76,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.90,0.00,53,Inventory
+77,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,2.55,0.00,63,Inventory
+78,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.55,63,Inventory
+79,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,5.00,0.00,22,Inventory
+80,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,5.00,22,Inventory
+81,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,2.00,0.00,42,Inventory
+82,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.00,42,Inventory
+85,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,26.82,58,Inventory
+86,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,26.82,0.00,58,Inventory
+87,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.00,92,Inventory
+88,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.00,0.00,92,Inventory
+89,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,1.00,0.00,93,Inventory
+90,2021-05-31,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,1.00,93,Inventory
+120,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,5.90,88,Inventory
+121,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,5.90,0.00,88,Inventory
+122,2021-06-02,,Add Inventory Item - Mullien Infusion,none,0,120.0 - Inventory,3.60,0.00,117,Inventory
+123,2021-06-02,,Add Inventory Item - Mullien Infusion,none,0,400.3 - Inventory Adj,0.00,3.60,117,Inventory
+124,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,7.52,3,Inventory
+125,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,7.52,0.00,3,Inventory
+126,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,5.00,22,Inventory
+127,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,5.00,0.00,22,Inventory
+128,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.00,42,Inventory
+129,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.00,0.00,42,Inventory
+132,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,26.82,0.00,58,Inventory
+133,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,26.82,58,Inventory
+134,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,2.00,0.00,92,Inventory
+135,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.00,92,Inventory
+136,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,1.00,93,Inventory
+137,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,1.00,0.00,93,Inventory
+138,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,2.88,0.00,5,Inventory
+139,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.88,5,Inventory
+140,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,2.90,0.00,53,Inventory
+141,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.90,53,Inventory
+142,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.55,63,Inventory
+143,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.55,0.00,63,Inventory
+144,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.88,5,Inventory
+145,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.88,0.00,5,Inventory
+146,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.90,53,Inventory
+147,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.90,0.00,53,Inventory
+148,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,2.55,0.00,63,Inventory
+149,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,0.00,2.55,63,Inventory
+150,2021-06-02,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,2.55,63,Inventory
+151,2021-06-02,,Edit Inventory Item,none,0,400.3 - Inventory Adj,2.55,0.00,63,Inventory
+168,2021-06-02,,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,7.67,24,Cash
+169,2021-06-02,,Bank Deposit,none,0,101.1 - Petty Cash,7.67,0.00,24,Cash
+178,2021-06-05,Farmers Mkt,Sales Receipt,none,0,101.0 - Cash Drawer,35.00,0.00,34,Sales
+179,2021-06-05,Farmers Mkt,Sales Receipt,none,0,400.1 - Revenue,0.00,35.00,34,Sales
+180,2021-06-05,Farmers Mkt,Sales Receipt,none,0,120.0 - Inventory,0.00,13.24,34,Sales
+181,2021-06-05,Farmers Mkt,Sales Receipt,none,0,400.6 - Inventory COS,13.24,0.00,34,Sales
+182,2021-06-05,,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,103.00,23,Cash
+183,2021-06-05,,Bank Deposit,none,0,101.1 - Petty Cash,103.00,0.00,23,Cash
+187,2021-06-05,Farmers Mkt,fees and taxes,none,0,101.1 - Petty Cash,0.00,5.10,21,Cash
+188,2021-06-05,Farmers Mkt,fees and taxes,none,0,400.7 - Fees COS,5.10,0.00,21,Cash
+226,2021-06-05,Bank West,Jason rent,none,0,420.1 - Rent Income,0.00,350.00,4,General
+227,2021-06-05,Bank West,Mtg pmnt,none,0,230.1 - BankWest Mtg Loan,700.00,0.00,4,General
+228,2021-06-05,Bank West,Western bank ck,none,0,101.2 - Western State Bank - Checking,0.00,350.00,4,General
+239,2021-06-13,Farmers Mkt,gas,none,0,101.2 - Western State Bank - Checking,0.00,20.01,30,Cash
+240,2021-06-13,Farmers Mkt,gas,none,0,530.2 - Gas,20.01,0.00,30,Cash
+241,2021-06-12,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,30.00,0.00,36,Sales
+242,2021-06-12,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,30.00,36,Sales
+243,2021-06-12,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,9.00,36,Sales
+244,2021-06-12,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,9.00,0.00,36,Sales
+270,2021-06-16,Bank West,Mtg loan as of 060121,none,0,230.1 - BankWest Mtg Loan,0.00,29014.22,7,General
+271,2021-06-16,Bank West,Mtg loan as of 060121,none,0,300.1 - Pre period adjustments,29014.22,0.00,7,General
+274,2021-06-18,,Edit Inventory Item - Caridwen 1.5 oz,none,0,120.0 - Inventory,0.00,8.50,7,Inventory
+275,2021-06-18,,Edit Inventory Item - Caridwen 1.5 oz,none,0,400.3 - Inventory Adj,8.50,0.00,7,Inventory
+276,2021-06-19,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,76.00,0.00,37,Sales
+277,2021-06-19,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,80.00,37,Sales
+278,2021-06-19,Farmers Mkt,Sales Receipt,Cash,0,400.5 - Discounts,4.00,0.00,37,Sales
+279,2021-06-19,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,24.83,37,Sales
+280,2021-06-19,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,24.83,0.00,37,Sales
+301,2021-06-25,,Edit Inventory Item - Almond Oil Sweet 1/2 Oz,none,0,120.0 - Inventory,2.90,0.00,53,Inventory
+302,2021-06-25,,Edit Inventory Item - Almond Oil Sweet 1/2 Oz,none,0,400.3 - Inventory Adj,0.00,2.90,53,Inventory
+303,2021-06-25,,Edit Inventory Item - Basil Oil 1/2 oz,none,0,120.0 - Inventory,2.88,0.00,5,Inventory
+304,2021-06-25,,Edit Inventory Item - Basil Oil 1/2 oz,none,0,400.3 - Inventory Adj,0.00,2.88,5,Inventory
+305,2021-06-25,,Edit Inventory Item - Lemon Oil 1/2 oz,none,0,120.0 - Inventory,0.00,4.75,80,Inventory
+306,2021-06-25,,Edit Inventory Item - Lemon Oil 1/2 oz,none,0,400.3 - Inventory Adj,4.75,0.00,80,Inventory
+307,2021-06-26,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,10.00,0.00,38,Sales
+308,2021-06-26,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,10.00,38,Sales
+309,2021-06-26,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,2.30,38,Sales
+310,2021-06-26,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,2.30,0.00,38,Sales
+311,2021-07-02,,Add Inventory Item - Flax seed Oil 1/2 oz,none,0,120.0 - Inventory,2.50,0.00,119,Inventory
+312,2021-07-02,,Add Inventory Item - Flax seed Oil 1/2 oz,none,0,400.3 - Inventory Adj,0.00,2.50,119,Inventory
+313,2021-07-02,Ariel,Sales Receipt,Cash,0,101.0 - Cash Drawer,16.00,0.00,39,Sales
+314,2021-07-02,Ariel,Sales Receipt,Cash,0,400.1 - Revenue,0.00,16.00,39,Sales
+315,2021-07-02,Ariel,Sales Receipt,Cash,0,120.0 - Inventory,0.00,3.19,39,Sales
+316,2021-07-02,Ariel,Sales Receipt,Cash,0,400.6 - Inventory COS,3.19,0.00,39,Sales
+327,2021-07-03,Farmers Mkt,fees,none,0,101.1 - Petty Cash,0.00,3.75,37,Cash
+328,2021-07-03,Farmers Mkt,fees,none,0,400.7 - Fees COS,3.75,0.00,37,Cash
+329,2021-06-22,Mountain Rose Herbs,Purchasing Receipt,none,0,120.0 - Inventory,63.93,0.00,19,Purchasing
+330,2021-06-22,Mountain Rose Herbs,Purchasing Receipt,none,0,101.2 - Western State Bank - Checking,0.00,63.93,19,Purchasing
+340,2021-07-06,Thrive Mkt,crackers,none,0,101.2 - Western State Bank - Checking,0.00,61.24,38,Cash
+341,2021-07-06,Thrive Mkt,crackers,none,0,530.9 - Household,61.24,0.00,38,Cash
+350,2021-06-01,Vision Source,glasses,none,0,101.2 - Western State Bank - Checking,0.00,224.50,41,Cash
+351,2021-06-01,Vision Source,glasses,none,0,530.3 - Medical Exps,224.50,0.00,41,Cash
+352,2021-06-03,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,42,Cash
+353,2021-06-03,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,42,Cash
+356,2021-06-03,Jason's Computer,acct package,none,0,101.2 - Western State Bank - Checking,0.00,25.00,44,Cash
+357,2021-06-03,Jason's Computer,acct package,none,0,400.7 - Fees COS,25.00,0.00,44,Cash
+358,2021-06-04,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,40.55,45,Cash
+359,2021-06-04,St Francis Supers,food,none,0,530.9 - Household,40.55,0.00,45,Cash
+360,2021-06-04,Savings,monthly transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,46,Cash
+361,2021-06-04,Savings,monthly transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,46,Cash
+362,2021-06-08,Aetna Health Ins,health ins,none,0,101.2 - Western State Bank - Checking,0.00,102.38,47,Cash
+363,2021-06-08,Aetna Health Ins,health ins,none,0,530.3 - Medical Exps,102.38,0.00,47,Cash
+364,2021-06-14,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,12.00,48,Cash
+365,2021-06-14,St Francis Supers,food,none,0,530.9 - Household,12.00,0.00,48,Cash
+366,2021-06-16,Sounds True,recording,none,0,101.2 - Western State Bank - Checking,0.00,39.18,49,Cash
+367,2021-06-16,Sounds True,recording,none,0,530.9 - Household,39.18,0.00,49,Cash
+370,2021-06-23,SWTOR,starwars - paypal,none,0,101.2 - Western State Bank - Checking,0.00,16.41,51,Cash
+371,2021-06-23,SWTOR,starwars - paypal,none,0,530.9 - Household,16.41,0.00,51,Cash
+372,2021-06-30,Western State Bank,fee,none,0,101.2 - Western State Bank - Checking,0.00,3.50,52,Cash
+373,2021-06-30,Western State Bank,fee,none,0,530.9 - Household,3.50,0.00,52,Cash
+374,2021-07-02,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,53,Cash
+375,2021-07-02,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,53,Cash
+376,2021-07-02,Savings,monthly transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,54,Cash
+377,2021-07-02,Savings,monthly transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,54,Cash
+378,2021-07-06,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,47.32,55,Cash
+379,2021-07-06,St Francis Supers,food,none,0,530.9 - Household,47.32,0.00,55,Cash
+382,2021-07-08,Aetna Health Ins,health ins,none,0,101.2 - Western State Bank - Checking,0.00,102.38,56,Cash
+383,2021-07-08,Aetna Health Ins,health ins,none,0,530.3 - Medical Exps,102.38,0.00,56,Cash
+386,2021-07-08,Jason Padgett,Jason rent,none,0,420.1 - Rent Income,0.00,350.00,8,General
+387,2021-07-08,Jason Padgett,Mtg pmnt,none,0,230.1 - BankWest Mtg Loan,350.00,0.00,8,General
+388,2021-07-08,Bank West,Loan mtg,none,1219,101.2 - Western State Bank - Checking,0.00,350.00,58,Cash
+389,2021-07-08,Bank West,Loan mtg,none,1219,230.1 - BankWest Mtg Loan,350.00,0.00,58,Cash
+400,2021-06-22,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,20.23,40,Cash
+401,2021-06-22,St Francis Supers,food,none,0,530.9 - Household,20.23,0.00,40,Cash
+404,2021-06-15,Owens hardware,lawn mower,none,0,101.2 - Western State Bank - Checking,0.00,317.54,59,Cash
+405,2021-06-15,Owens hardware,lawn mower,none,0,530.9 - Household,317.54,0.00,59,Cash
+406,2021-07-09,canon,ink,none,0,101.2 - Western State Bank - Checking,0.00,59.11,60,Cash
+407,2021-07-09,canon,ink,none,0,400.2 - Shipping COS,59.11,0.00,60,Cash
+408,2021-07-09,Webstaurant,Purchasing Receipt,none,0,120.0 - Inventory,52.51,0.00,20,Purchasing
+409,2021-07-09,Webstaurant,Purchasing Receipt,none,0,101.2 - Western State Bank - Checking,0.00,52.51,20,Purchasing
+410,2021-07-09,,Edit Inventory Item - Wisks mini,none,0,120.0 - Inventory,0.00,20.72,175,Inventory
+411,2021-07-09,,Edit Inventory Item - Wisks mini,none,0,400.3 - Inventory Adj,20.72,0.00,175,Inventory
+412,2021-07-09,,Edit Inventory Item - DeGreaser,none,0,120.0 - Inventory,0.00,2.95,88,Inventory
+413,2021-07-09,,Edit Inventory Item - DeGreaser,none,0,400.3 - Inventory Adj,2.95,0.00,88,Inventory
+416,2021-07-10,Farmers Mkt,Sales Receipt,none,0,101.0 - Cash Drawer,87.00,0.00,42,Sales
+417,2021-07-10,Farmers Mkt,Sales Receipt,none,0,400.1 - Revenue,0.00,87.00,42,Sales
+418,2021-07-10,Farmers Mkt,Sales Receipt,none,0,120.0 - Inventory,0.00,32.49,42,Sales
+419,2021-07-10,Farmers Mkt,Sales Receipt,none,0,400.6 - Inventory COS,32.49,0.00,42,Sales
+430,2021-07-03,Farmers Mkt,Sales Receipt,none,0,101.0 - Cash Drawer,25.00,0.00,44,Sales
+431,2021-07-03,Farmers Mkt,Sales Receipt,none,0,400.1 - Revenue,0.00,25.00,44,Sales
+432,2021-07-03,Farmers Mkt,Sales Receipt,none,0,120.0 - Inventory,0.00,10.47,44,Sales
+433,2021-07-03,Farmers Mkt,Sales Receipt,none,0,400.6 - Inventory COS,10.47,0.00,44,Sales
+448,2021-07-16,,Edit Inventory Item - Ibormieth 1.5 oz,none,0,120.0 - Inventory,0.00,8.25,19,Inventory
+449,2021-07-16,,Edit Inventory Item - Ibormieth 1.5 oz,none,0,400.3 - Inventory Adj,8.25,0.00,19,Inventory
+450,2021-07-16,,Edit Inventory Item - Ibormeith Salve 1.5 oz,none,0,120.0 - Inventory,5.58,0.00,184,Inventory
+451,2021-07-16,,Edit Inventory Item - Ibormeith Salve 1.5 oz,none,0,400.3 - Inventory Adj,0.00,5.58,184,Inventory
+452,2021-07-17,,Add Inventory Item - Tea Homegrown 1/2 oz,none,0,120.0 - Inventory,30.00,0.00,187,Inventory
+453,2021-07-17,,Add Inventory Item - Tea Homegrown 1/2 oz,none,0,400.3 - Inventory Adj,0.00,30.00,187,Inventory
+454,2021-07-17,,Edit Inventory Item - Tea Homegrown 1/2 oz,none,0,120.0 - Inventory,0.00,27.00,187,Inventory
+455,2021-07-17,,Edit Inventory Item - Tea Homegrown 1/2 oz,none,0,400.3 - Inventory Adj,27.00,0.00,187,Inventory
+456,2021-07-17,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,46.00,0.00,47,Sales
+457,2021-07-17,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,46.00,47,Sales
+458,2021-07-17,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,14.76,47,Sales
+459,2021-07-17,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,14.76,0.00,47,Sales
+462,2021-07-17,Farmers Mkt,fees,none,0,101.0 - Cash Drawer,0.00,7.00,61,Cash
+463,2021-07-17,Farmers Mkt,fees,none,0,400.7 - Fees COS,7.00,0.00,61,Cash
+466,2021-07-16,Owens hardware,brackets,none,0,101.2 - Western State Bank - Checking,0.00,6.02,63,Cash
+467,2021-07-16,Owens hardware,brackets,none,0,530.9 - Household,6.02,0.00,63,Cash
+468,2021-07-16,CRVS,cigs,none,0,101.2 - Western State Bank - Checking,0.00,9.82,64,Cash
+469,2021-07-16,CRVS,cigs,none,0,530.9 - Household,9.82,0.00,64,Cash
+470,2021-07-16,WellCare,Diabetes stuff,none,0,101.2 - Western State Bank - Checking,0.00,39.40,65,Cash
+471,2021-07-16,WellCare,Diabetes stuff,none,0,530.3 - Medical Exps,39.40,0.00,65,Cash
+472,2021-07-16,Krien Pharm,Diabetes stuff,none,0,101.2 - Western State Bank - Checking,0.00,45.23,66,Cash
+473,2021-07-16,Krien Pharm,Diabetes stuff,none,0,530.3 - Medical Exps,45.23,0.00,66,Cash
+486,2020-12-30,Inventory,fix jojoba adj,none,0,400.3 - Inventory Adj,0.00,20014.28,6,General
+487,2020-12-30,Inventory,fix jojoba adj,none,0,300.1 - Pre period adjustments,20014.28,0.00,6,General
+488,2021-07-21,,Edit Inventory Item - Tea Homegrown 1/2 oz,none,0,120.0 - Inventory,2.50,0.00,187,Inventory
+489,2021-07-21,,Edit Inventory Item - Tea Homegrown 1/2 oz,none,0,400.3 - Inventory Adj,0.00,2.50,187,Inventory
+492,2021-06-03,Western State Bank,adj to bal 1418.92,none,0,300.1 - Pre period adjustments,0.00,1418.92,18,Cash
+493,2021-06-03,Western State Bank,adj to bal 1418.92,none,0,101.3 - Western St Bank - Savings,1418.92,0.00,18,Cash
+496,2021-07-23,,Edit Inventory Item - Lemon Oil 1/2 oz,none,0,120.0 - Inventory,4.75,0.00,80,Inventory
+497,2021-07-23,,Edit Inventory Item - Lemon Oil 1/2 oz,none,0,400.3 - Inventory Adj,0.00,4.75,80,Inventory
+498,2021-07-23,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,120.0 - Inventory,0.00,5.92,69,Inventory
+499,2021-07-23,,Edit Inventory Item - Silkie Shampoo 12oz,none,0,400.3 - Inventory Adj,5.92,0.00,69,Inventory
+500,2021-07-23,,Recipe Creation - Labor,none,0,120.0 - Inventory,0.00,0.00,34,Recipe
+501,2021-07-23,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,0.00,34,Recipe
+506,2021-06-07,Steam,tyto eco,none,0,101.2 - Western State Bank - Checking,0.00,7.65,27,Cash
+507,2021-06-07,Steam,tyto eco,none,0,530.9 - Household,7.65,0.00,27,Cash
+508,2021-06-25,Right Rope,macrame rope,none,0,101.2 - Western State Bank - Checking,0.00,42.99,32,Cash
+509,2021-06-25,Right Rope,macrame rope,none,0,530.9 - Household,42.99,0.00,32,Cash
+510,2021-06-25,Owens hardware,shelving,none,0,101.2 - Western State Bank - Checking,0.00,116.05,34,Cash
+511,2021-06-25,Owens hardware,shelving,none,0,530.9 - Household,116.05,0.00,34,Cash
+514,2021-07-23,,Home Value,none,0,130.0 - 411 E Washington,50000.00,0.00,9,General
+515,2021-07-23,,Home Value,none,0,300.1 - Pre period adjustments,0.00,50000.00,9,General
+518,2021-07-28,Bernadette,Purchasing Receipt,none,0,120.0 - Inventory,19.50,0.00,24,Purchasing
+519,2021-07-28,Bernadette,Purchasing Receipt,none,0,101.1 - Petty Cash,0.00,19.50,24,Purchasing
+520,2021-07-30,,Edit Inventory Item - Tea Homegrown 1/2 oz,none,0,120.0 - Inventory,2.00,0.00,187,Inventory
+521,2021-07-30,,Edit Inventory Item - Tea Homegrown 1/2 oz,none,0,400.3 - Inventory Adj,0.00,2.00,187,Inventory
+522,2021-07-31,Farmers Mkt,Sales Receipt,none,0,101.0 - Cash Drawer,53.00,0.00,48,Sales
+523,2021-07-31,Farmers Mkt,Sales Receipt,none,0,400.1 - Revenue,0.00,53.00,48,Sales
+524,2021-07-31,Farmers Mkt,Sales Receipt,none,0,120.0 - Inventory,0.00,19.00,48,Sales
+525,2021-07-31,Farmers Mkt,Sales Receipt,none,0,400.6 - Inventory COS,19.00,0.00,48,Sales
+528,2021-07-23,SWTOR,starwars - paypal,none,0,101.2 - Western State Bank - Checking,0.00,16.41,67,Cash
+529,2021-07-23,SWTOR,starwars - paypal,none,0,530.9 - Household,16.41,0.00,67,Cash
+530,2021-07-27,Vudu,movie,none,0,101.2 - Western State Bank - Checking,0.00,14.99,68,Cash
+531,2021-07-27,Vudu,movie,none,0,530.9 - Household,14.99,0.00,68,Cash
+532,2021-07-28,Melvin Dunn,dentist,none,0,101.2 - Western State Bank - Checking,0.00,148.00,69,Cash
+533,2021-07-28,Melvin Dunn,dentist,none,0,530.3 - Medical Exps,148.00,0.00,69,Cash
+534,2021-07-28,academia,yearly fee,none,0,101.2 - Western State Bank - Checking,0.00,99.00,70,Cash
+535,2021-07-28,academia,yearly fee,none,0,530.9 - Household,99.00,0.00,70,Cash
+536,2021-07-30,Western State Bank,fee,none,0,101.2 - Western State Bank - Checking,0.00,3.50,71,Cash
+537,2021-07-30,Western State Bank,fee,none,0,530.9 - Household,3.50,0.00,71,Cash
+538,2021-08-02,Western State Bank,square fee,none,0,101.2 - Western State Bank - Checking,0.00,1.01,72,Cash
+539,2021-08-02,Western State Bank,square fee,none,0,400.7 - Fees COS,1.01,0.00,72,Cash
+542,2021-08-02,Amazon,gift,none,0,101.2 - Western State Bank - Checking,0.00,50.00,74,Cash
+543,2021-08-02,Amazon,gift,none,0,530.9 - Household,50.00,0.00,74,Cash
+544,2021-08-03,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,75,Cash
+545,2021-08-03,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,75,Cash
+546,2021-08-03,Krien Pharm,Diabetes stuff,none,0,101.2 - Western State Bank - Checking,0.00,22.27,76,Cash
+547,2021-08-03,Krien Pharm,Diabetes stuff,none,0,530.3 - Medical Exps,22.27,0.00,76,Cash
+566,2021-08-07,Farmers Mkt,fees and taxes,none,0,101.1 - Petty Cash,0.00,31.65,79,Cash
+567,2021-08-07,Farmers Mkt,fees and taxes,none,0,400.7 - Fees COS,31.65,0.00,79,Cash
+582,2021-08-14,,Edit Inventory Item - Neroli Oil 5th,none,0,120.0 - Inventory,0.00,1.58,70,Inventory
+583,2021-08-14,,Edit Inventory Item - Neroli Oil 5th,none,0,400.3 - Inventory Adj,1.58,0.00,70,Inventory
+584,2021-08-18,,Edit Inventory Item - Smudge stick sage,none,0,120.0 - Inventory,45.00,0.00,202,Inventory
+585,2021-08-18,,Edit Inventory Item - Smudge stick sage,none,0,400.3 - Inventory Adj,0.00,45.00,202,Inventory
+586,2021-08-18,,Edit Inventory Item - Smudge stick sage,none,0,120.0 - Inventory,0.00,36.00,202,Inventory
+587,2021-08-18,,Edit Inventory Item - Smudge stick sage,none,0,400.3 - Inventory Adj,36.00,0.00,202,Inventory
+588,2021-08-14,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,50.00,0.00,50,Sales
+589,2021-08-14,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,50.00,50,Sales
+590,2021-08-14,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,12.04,50,Sales
+591,2021-08-14,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,12.04,0.00,50,Sales
+592,2021-08-13,Western State Bank,transfer fee,none,0,101.2 - Western State Bank - Checking,0.00,10.00,84,Cash
+593,2021-08-13,Western State Bank,transfer fee,none,0,530.9 - Household,10.00,0.00,84,Cash
+594,2021-08-13,Amazon,books -,none,0,101.2 - Western State Bank - Checking,0.00,43.65,85,Cash
+595,2021-08-13,Amazon,books -,none,0,530.9 - Household,43.65,0.00,85,Cash
+596,2021-08-09,Farmers Mkt,square fees,none,0,101.2 - Western State Bank - Checking,0.00,0.36,82,Cash
+597,2021-08-09,Farmers Mkt,square fees,none,0,400.7 - Fees COS,0.36,0.00,82,Cash
+614,2021-08-13,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,0.00,800.00,80,Cash
+615,2021-08-13,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,800.00,0.00,80,Cash
+618,2021-08-10,Bank West,Loan mtg,none,0,101.2 - Western State Bank - Checking,0.00,350.00,86,Cash
+619,2021-08-10,Bank West,Loan mtg,none,0,230.1 - BankWest Mtg Loan,350.00,0.00,86,Cash
+620,2021-08-04,Western State Bank,monthly transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,78,Cash
+621,2021-08-04,Western State Bank,monthly transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,78,Cash
+628,2021-08-06,Bank West,Jason rent,none,0,420.1 - Rent Income,0.00,350.00,10,General
+629,2021-08-06,Bank West,loan mtg,none,0,230.1 - BankWest Mtg Loan,350.00,0.00,10,General
+646,2021-08-02,Farmers Mkt,square purchase,none,0,101.2 - Western State Bank - Checking,35.00,0.00,87,Cash
+647,2021-08-02,Farmers Mkt,square purchase,none,0,101.1 - Petty Cash,0.00,35.00,87,Cash
+650,2021-08-04,St Francis Supers,Food,none,0,101.2 - Western State Bank - Checking,0.00,24.95,89,Cash
+651,2021-08-04,St Francis Supers,Food,none,0,530.9 - Household,24.95,0.00,89,Cash
+654,2021-08-09,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,20.38,91,Cash
+655,2021-08-09,St Francis Supers,food,none,0,530.9 - Household,20.38,0.00,91,Cash
+656,2021-08-09,Aetna Health Ins,health ins,none,0,101.2 - Western State Bank - Checking,0.00,102.38,92,Cash
+657,2021-08-09,Aetna Health Ins,health ins,none,0,530.3 - Medical Exps,102.38,0.00,92,Cash
+658,2021-08-10,Vudu,movie,none,0,101.2 - Western State Bank - Checking,0.00,9.99,93,Cash
+659,2021-08-10,Vudu,movie,none,0,530.9 - Household,9.99,0.00,93,Cash
+662,2021-08-12,Western State Bank,deposit,none,0,101.2 - Western State Bank - Checking,100.00,0.00,95,Cash
+663,2021-08-12,Western State Bank,deposit,none,0,101.1 - Petty Cash,0.00,100.00,95,Cash
+664,2021-08-12,Bonnie,bonnie,none,0,101.2 - Western State Bank - Checking,117.74,0.00,96,Cash
+665,2021-08-12,Bonnie,bonnie,none,0,420.2 - Bonnie Income,0.00,117.74,96,Cash
+666,2021-08-13,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,31.44,97,Cash
+667,2021-08-13,St Francis Supers,food,none,0,530.9 - Household,31.44,0.00,97,Cash
+672,2021-08-18,WellCare,prescription ins,none,0,101.2 - Western State Bank - Checking,0.00,39.40,100,Cash
+673,2021-08-18,WellCare,prescription ins,none,0,530.3 - Medical Exps,39.40,0.00,100,Cash
+674,2021-08-20,majestic,cigs,none,0,101.2 - Western State Bank - Checking,0.00,17.52,101,Cash
+675,2021-08-20,majestic,cigs,none,0,530.9 - Household,17.52,0.00,101,Cash
+676,2021-08-20,Vudu,movie,none,0,101.2 - Western State Bank - Checking,0.00,19.99,102,Cash
+677,2021-08-20,Vudu,movie,none,0,530.9 - Household,19.99,0.00,102,Cash
+682,2021-05-28,Western State Bank,beg bal 5/39/21,none,0,101.2 - Western State Bank - Checking,1133.33,0.00,104,Cash
+683,2021-05-28,Western State Bank,beg bal 5/39/21,none,0,300.1 - Pre period adjustments,0.00,1133.33,104,Cash
+684,2021-06-01,Nature In A Bottle,pd inv #,none,0,101.2 - Western State Bank - Checking,0.00,230.78,3,Cash
+685,2021-06-01,Nature In A Bottle,pd inv #,none,0,210.0 - Accounts Payable,230.78,0.00,3,Cash
+686,2021-06-01,Nature In A Bottle,pd inv #,none,0,101.2 - Western State Bank - Checking,0.00,2.08,3,Cash
+687,2021-06-01,Nature In A Bottle,pd inv #,none,0,400.7 - Fees COS,2.08,0.00,3,Cash
+688,2021-07-12,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,52.12,62,Cash
+689,2021-07-12,St Francis Supers,food,none,0,530.9 - Household,52.12,0.00,62,Cash
+692,2021-06-16,Dollar General,Household,none,0,101.2 - Western State Bank - Checking,0.00,16.81,105,Cash
+693,2021-06-16,Dollar General,Household,none,0,530.9 - Household,16.81,0.00,105,Cash
+696,2021-06-01,Inventory,Beg bal 6-1-21,none,0,120.0 - Inventory,3067.66,0.00,11,General
+697,2021-06-01,Inventory,Beg bal 6-1-21,none,0,300.1 - Pre period adjustments,0.00,3067.66,11,General
+698,2021-06-02,Internal,adj inv to actual,none,0,120.0 - Inventory,0.00,432.63,2,General
+699,2021-06-02,Internal,adjust inv to actual,none,0,300.1 - Pre period adjustments,432.63,0.00,2,General
+700,2021-05-29,,Edit Inventory Item - delete this,none,0,120.0 - Inventory,0.00,105.69,104,Inventory
+701,2021-05-29,,Edit Inventory Item - delete this,none,0,300.1 - Pre period adjustments,105.69,0.00,104,Inventory
+702,2021-06-02,,Edit Inventory Item - Chamomile Oil,none,0,120.0 - Inventory,0.00,231.00,108,Inventory
+703,2021-06-02,,Edit Inventory Item - Chamomile Oil,none,0,300.1 - Pre period adjustments,231.00,0.00,108,Inventory
+716,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,48.00,57,Inventory
+717,2021-05-31,,Edit Inventory Item,none,0,300.1 - Pre period adjustments,48.00,0.00,57,Inventory
+718,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,48.00,0.00,57,Inventory
+719,2021-05-31,,Edit Inventory Item,none,0,300.1 - Pre period adjustments,0.00,48.00,57,Inventory
+720,2021-05-31,,Edit Inventory Item,none,0,120.0 - Inventory,0.00,39.00,57,Inventory
+721,2021-05-31,,Edit Inventory Item,none,0,300.1 - Pre period adjustments,39.00,0.00,57,Inventory
+722,2021-08-23,,Edit Inventory Item - Caridwen 1.5 oz,none,0,120.0 - Inventory,0.00,4.25,7,Inventory
+723,2021-08-23,,Edit Inventory Item - Caridwen 1.5 oz,none,0,400.3 - Inventory Adj,4.25,0.00,7,Inventory
+732,2021-08-21,Farmers Mkt,fees,none,0,101.1 - Petty Cash,0.00,9.50,106,Cash
+733,2021-08-21,Farmers Mkt,fees,none,0,400.7 - Fees COS,9.50,0.00,106,Cash
+734,2021-08-23,,Edit Inv Item - Airmieth Oil 1/2 oz,none,0,120.0 - Inventory,3.00,0.00,203,Inventory
+735,2021-08-23,,Edit Inv Item - Airmieth Oil 1/2 oz,none,0,400.3 - Inventory Adj,0.00,3.00,203,Inventory
+736,2021-08-17,Vision Source,glasses,Check,1228,101.2 - Western State Bank - Checking,0.00,78.47,98,Cash
+737,2021-08-17,Vision Source,glasses,Check,1228,530.3 - Medical Exps,78.47,0.00,98,Cash
+742,2021-08-02,Muslinbag,Purchasing Receipt,none,0,120.0 - Inventory,42.35,0.00,25,Purchasing
+743,2021-08-02,Muslinbag,Purchasing Receipt,none,0,101.2 - Western State Bank - Checking,0.00,42.35,25,Purchasing
+744,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,26.00,22,Cash
+745,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.1 - Petty Cash,26.00,0.00,22,Cash
+746,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,34.00,22,Cash
+747,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.1 - Petty Cash,34.00,0.00,22,Cash
+748,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,233.00,22,Cash
+749,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.1 - Petty Cash,233.00,0.00,22,Cash
+750,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,65.65,22,Cash
+751,2021-07-08,Farmers Mkt,Bank Deposit,none,0,101.1 - Petty Cash,65.65,0.00,22,Cash
+760,2021-08-11,Amazon,books -,Check,99999,101.2 - Western State Bank - Checking,0.00,38.05,94,Cash
+761,2021-08-11,Amazon,books -,Check,99999,530.9 - Household,38.05,0.00,94,Cash
+764,2021-08-18,St Francis Supers,food,Credit Card,99999,101.2 - Western State Bank - Checking,0.00,20.60,99,Cash
+765,2021-08-18,St Francis Supers,food,Credit Card,99999,530.9 - Household,20.60,0.00,99,Cash
+768,2021-08-25,,Edit Inv Item - Jars 1.5 oz clear act to actual,none,0,120.0 - Inventory,0.00,20.60,204,Inventory
+769,2021-08-25,,Edit Inv Item - Jars 1.5 oz clear adj to actual,none,0,400.3 - Inventory Adj,20.60,0.00,204,Inventory
+770,2021-08-24,costco,food,Check,99999,101.2 - Western State Bank - Checking,0.00,108.34,107,Cash
+771,2021-08-24,costco,food,Check,99999,530.9 - Household,108.34,0.00,107,Cash
+772,2021-08-13,David Padgett,loan bank transfer,Check,99999,101.2 - Western State Bank - Checking,0.00,800.00,83,Cash
+773,2021-08-13,David Padgett,loan bank transfer,Check,99999,110.0 - Account Receivables,800.00,0.00,83,Cash
+774,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,50.00,0.00,52,Sales
+775,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,50.00,52,Sales
+776,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,15.88,52,Sales
+777,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,15.88,0.00,52,Sales
+778,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,50.00,0.00,52,Sales
+779,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,50.00,52,Sales
+780,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,15.88,52,Sales
+781,2021-08-21,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,15.88,0.00,52,Sales
+782,2021-08-25,,Recipe Creation - Labor,none,0,120.0 - Inventory,0.00,0.00,13,Recipe
+783,2021-08-25,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,0.00,13,Recipe
+801,2021-06-02,Nature In A Bottle,Purchasing Receipt,none,0,120.0 - Inventory,230.78,0.00,15,Purchasing
+802,2021-06-02,Nature In A Bottle,Purchasing Receipt,none,0,210.0 - Accounts Payable,0.00,230.78,15,Purchasing
+815,2021-08-26,,Edit Inv Item - Melissa infusion/jojo,none,0,120.0 - Inventory,0.00,4.04,205,Inventory
+816,2021-08-26,,Edit Inv Item - Melissa infusion/jojo,none,0,400.3 - Inventory Adj,4.04,0.00,205,Inventory
+817,2021-08-26,,Edit Inv Item - Eucalyptus Oil,none,0,120.0 - Inventory,0.00,44.01,206,Inventory
+818,2021-08-26,,Edit Inv Item - Eucalyptus Oil,none,0,400.3 - Inventory Adj,44.01,0.00,206,Inventory
+819,2021-08-26,Bonnie,sitting w/bonnie,Check,3560,101.2 - Western State Bank - Checking,110.82,0.00,108,Cash
+820,2021-08-26,Bonnie,sitting w/bonnie,Check,3560,420.2 - Bonnie Income,0.00,110.82,108,Cash
+825,2021-08-26,various,various,Cash,0,101.0 - Cash Drawer,0.00,240.00,109,Cash
+826,2021-08-26,various,various,Cash,0,530.9 - Household,240.00,0.00,109,Cash
+829,2021-08-26,various,various,none,0,101.1 - Petty Cash,0.00,264.82,110,Cash
+830,2021-08-26,various,various,none,0,530.9 - Household,264.82,0.00,110,Cash
+831,2021-08-27,,Edit Inv Item - Myrrh 4th,none,0,120.0 - Inventory,0.00,9.60,207,Inventory
+832,2021-08-27,,Edit Inv Item - Myrrh 4th,none,0,400.3 - Inventory Adj,9.60,0.00,207,Inventory
+833,2021-08-27,,Edit Inv Item - Myrrh Moroccan Oil,none,0,120.0 - Inventory,0.00,5.20,208,Inventory
+834,2021-08-27,,Edit Inv Item - Myrrh Moroccan Oil,none,0,400.3 - Inventory Adj,5.20,0.00,208,Inventory
+835,2021-08-27,,Edit Inv Item - Myrrh Oil 100%,none,0,120.0 - Inventory,0.00,37.89,209,Inventory
+836,2021-08-27,,Edit Inv Item - Myrrh Oil 100%,none,0,400.3 - Inventory Adj,37.89,0.00,209,Inventory
+837,2021-08-28,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,60.00,0.00,53,Sales
+838,2021-08-28,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,60.00,53,Sales
+839,2021-08-28,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,19.98,53,Sales
+840,2021-08-28,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,19.98,0.00,53,Sales
+841,2021-08-29,,Edit Inv Item - Ibormeith Salve 1.5 oz,none,0,120.0 - Inventory,0.00,2.79,210,Inventory
+842,2021-08-29,,Edit Inv Item - Ibormeith Salve 1.5 oz,none,0,400.3 - Inventory Adj,2.79,0.00,210,Inventory
+843,2021-08-29,,Edit Inv Item - Caridwen 1.5 oz,none,0,120.0 - Inventory,0.00,4.25,211,Inventory
+844,2021-08-29,,Edit Inv Item - Caridwen 1.5 oz,none,0,400.3 - Inventory Adj,4.25,0.00,211,Inventory
+845,2021-08-29,,Edit Inv Item - Relax Salve 1.5 oz,none,0,120.0 - Inventory,0.00,2.94,212,Inventory
+846,2021-08-29,,Edit Inv Item - Relax Salve 1.5 oz,none,0,400.3 - Inventory Adj,2.94,0.00,212,Inventory
+847,2021-08-29,,Edit Inv Item - DeGreaser,none,0,120.0 - Inventory,0.00,5.90,213,Inventory
+848,2021-08-29,,Edit Inv Item - DeGreaser,none,0,400.3 - Inventory Adj,5.90,0.00,213,Inventory
+861,2021-08-30,,Edit Inv Item - Muslin bag,none,0,120.0 - Inventory,3.16,0.00,216,Inventory
+862,2021-08-30,,Edit Inv Item - Muslin bag,none,0,400.3 - Inventory Adj,0.00,3.16,216,Inventory
+863,2021-08-30,,Edit Inv Item - Myrrh 50% Nature in a bottle,none,0,120.0 - Inventory,0.00,11.70,217,Inventory
+864,2021-08-30,,Edit Inv Item - Myrrh 50% Nature in a bottle,none,0,400.3 - Inventory Adj,11.70,0.00,217,Inventory
+867,2021-08-30,,Edit Inv Item - Jojoba oil,none,0,120.0 - Inventory,49.54,0.00,218,Inventory
+868,2021-08-30,,Edit Inv Item - Jojoba oil,none,0,400.3 - Inventory Adj,0.00,49.54,218,Inventory
+869,2021-08-30,,Edit Inv Item - Distilled H2O,none,0,120.0 - Inventory,0.64,0.00,219,Inventory
+870,2021-08-30,,Edit Inv Item - Distilled H2O,none,0,400.3 - Inventory Adj,0.00,0.64,219,Inventory
+871,2021-08-30,,Edit Inv Item - Jars 1.5 oz clear,none,0,120.0 - Inventory,4.00,0.00,220,Inventory
+872,2021-08-30,,Edit Inv Item - Jars 1.5 oz clear,none,0,400.3 - Inventory Adj,0.00,4.00,220,Inventory
+873,2021-08-25,Internal,adjust inv to actual,none,0,120.0 - Inventory,0.00,58.31,12,General
+874,2021-08-25,Internal,adjust inv to actual,none,0,300.1 - Pre period adjustments,58.31,0.00,12,General
+877,2021-08-31,Specialty Bottle Supply,Purchasing Receipt,none,99999,120.0 - Inventory,58.12,0.00,30,Purchasing
+878,2021-08-31,Specialty Bottle Supply,Purchasing Receipt,none,99999,101.2 - Western State Bank - Checking,0.00,58.12,30,Purchasing
+879,2021-08-31,Mountain Rose Herbs,Purchasing Receipt,Check,99999,120.0 - Inventory,68.44,0.00,31,Purchasing
+880,2021-08-31,Mountain Rose Herbs,Purchasing Receipt,Check,99999,101.2 - Western State Bank - Checking,0.00,68.44,31,Purchasing
+885,2021-08-23,SWTOR,starwars - paypal,Check,99999,101.2 - Western State Bank - Checking,0.00,16.41,113,Cash
+886,2021-08-23,SWTOR,starwars - paypal,Check,99999,530.9 - Household,16.41,0.00,113,Cash
+887,2021-08-30,Vudu,movies,Check,99999,101.2 - Western State Bank - Checking,0.00,9.99,114,Cash
+888,2021-08-30,Vudu,movies,Check,99999,530.9 - Household,9.99,0.00,114,Cash
+889,2021-08-30,Thrive Mkt,Purchasing Receipt,none,99999,120.0 - Inventory,40.96,0.00,32,Purchasing
+890,2021-08-30,Thrive Mkt,Purchasing Receipt,none,99999,101.2 - Western State Bank - Checking,0.00,40.96,32,Purchasing
+891,2021-08-23,Muslinbag,Purchasing Receipt 100 bags,none,0,120.0 - Inventory,78.71,0.00,29,Purchasing
+892,2021-08-23,Muslinbag,Purchasing Receipt,none,0,101.2 - Western State Bank - Checking,0.00,78.71,29,Purchasing
+893,2021-09-01,Heidi,Sales Receipt,Cash,0,101.0 - Cash Drawer,13.00,0.00,54,Sales
+894,2021-09-01,Heidi,Sales Receipt,Cash,0,400.1 - Revenue,0.00,13.00,54,Sales
+895,2021-09-01,Heidi,Sales Receipt,Cash,0,120.0 - Inventory,0.00,3.63,54,Sales
+896,2021-09-01,Heidi,Sales Receipt,Cash,0,400.6 - Inventory COS,3.63,0.00,54,Sales
+897,2021-08-28,Farmers Mkt,fees and taxes,Cash,0,101.0 - Cash Drawer,0.00,9.00,115,Cash
+898,2021-08-28,Farmers Mkt,fees and taxes,Cash,0,400.7 - Fees COS,9.00,0.00,115,Cash
+899,2021-08-31,,Recipe Creation - Labor,none,0,120.0 - Inventory,9.00,0.00,55,Recipe
+900,2021-08-31,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,9.00,55,Recipe
+901,2021-09-02,,Recipe Creation - Labor,none,0,120.0 - Inventory,6.75,0.00,55,Recipe
+902,2021-09-02,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,6.75,55,Recipe
+905,2021-09-03,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,117,Cash
+906,2021-09-03,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,117,Cash
+907,2021-09-03,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,116,Cash
+908,2021-09-03,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,116,Cash
+909,2021-09-01,Krien Pharm,Diabetes stuff,Cash,0,101.0 - Cash Drawer,0.00,5.00,118,Cash
+910,2021-09-01,Krien Pharm,Diabetes stuff,Cash,0,530.3 - Medical Exps,5.00,0.00,118,Cash
+911,2021-09-03,St Francis Supers,food,Cash,0,101.0 - Cash Drawer,0.00,40.00,119,Cash
+912,2021-09-03,St Francis Supers,food,Cash,0,530.9 - Household,40.00,0.00,119,Cash
+913,2021-09-04,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,80.75,0.00,55,Sales
+914,2021-09-04,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,85.00,55,Sales
+915,2021-09-04,Farmers Mkt,Sales Receipt,Cash,0,400.5 - Discounts,4.25,0.00,55,Sales
+916,2021-09-04,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,27.87,55,Sales
+917,2021-09-04,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,27.87,0.00,55,Sales
+918,2021-09-04,,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,82.10,120,Cash
+919,2021-09-04,,Bank Deposit,none,0,101.1 - Petty Cash,82.10,0.00,120,Cash
+922,2021-09-04,Farmers Mkt,fees and taxes,Cash,0,101.1 - Petty Cash,0.00,12.00,122,Cash
+923,2021-09-04,Farmers Mkt,fees and taxes,Cash,0,400.7 - Fees COS,12.00,0.00,122,Cash
+924,2021-09-04,various,misc,Cash,0,101.1 - Petty Cash,0.00,70.10,123,Cash
+925,2021-09-04,various,misc,Cash,0,530.9 - Household,70.10,0.00,123,Cash
+926,2021-09-04,Jedwards International,Purchasing Receipt,Check,99999,120.0 - Inventory,337.70,0.00,33,Purchasing
+927,2021-09-04,Jedwards International,Purchasing Receipt,Check,99999,101.2 - Western State Bank - Checking,0.00,337.70,33,Purchasing
+928,2021-09-04,,Edit Inv Item - food,none,0,120.0 - Inventory,0.00,22.74,221,Inventory
+929,2021-09-04,,Edit Inv Item - food,none,0,400.3 - Inventory Adj,22.74,0.00,221,Inventory
+930,2021-09-07,Ariel,Sales Receipt,Cash,0,101.0 - Cash Drawer,10.00,0.00,56,Sales
+931,2021-09-07,Ariel,Sales Receipt,Cash,0,400.1 - Revenue,0.00,10.00,56,Sales
+932,2021-09-07,Ariel,Sales Receipt,Cash,0,120.0 - Inventory,0.00,4.36,56,Sales
+933,2021-09-07,Ariel,Sales Receipt,Cash,0,400.6 - Inventory COS,4.36,0.00,56,Sales
+934,2021-09-08,Bank West,mtg loan,Check,1223,101.2 - Western State Bank - Checking,0.00,350.00,13,General
+935,2021-09-08,Bank West,Mtg pmnt,Check,1223,230.1 - BankWest Mtg Loan,700.00,0.00,13,General
+936,2021-09-08,Bank West,jason - rent pmnt,Check,1223,420.1 - Rent Income,0.00,350.00,13,General
+939,2021-09-08,Ariel,Sales Receipt,Cash,0,101.0 - Cash Drawer,23.00,0.00,57,Sales
+940,2021-09-08,Ariel,Sales Receipt,Cash,0,400.1 - Revenue,0.00,23.00,57,Sales
+941,2021-09-08,Ariel,Sales Receipt,Cash,0,120.0 - Inventory,0.00,5.06,57,Sales
+942,2021-09-08,Ariel,Sales Receipt,Cash,0,400.6 - Inventory COS,5.06,0.00,57,Sales
+943,2021-08-07,Farmers Mkt,Sales Receipt,none,0,101.0 - Cash Drawer,205.00,0.00,49,Sales
+944,2021-08-07,Farmers Mkt,Sales Receipt,none,0,400.1 - Revenue,0.00,215.00,49,Sales
+945,2021-08-07,Farmers Mkt,Sales Receipt,none,0,120.0 - Inventory,0.00,46.98,49,Sales
+946,2021-08-07,Farmers Mkt,Sales Receipt,none,0,400.6 - Inventory COS,46.98,0.00,49,Sales
+947,2021-08-07,Farmers Mkt,Sales Receipt-square,none,0,101.2 - Western State Bank - Checking,10.00,0.00,49,Sales
+948,2021-08-31,Western State Bank,monthly fee,none,0,101.2 - Western State Bank - Checking,0.00,3.50,111,Cash
+949,2021-08-31,Western State Bank,monthly fee,none,0,530.9 - Household,3.50,0.00,111,Cash
+950,2021-09-04,,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,30.00,121,Cash
+951,2021-09-04,,Bank Deposit,none,0,101.2 - Western State Bank - Checking,30.00,0.00,121,Cash
+952,2021-09-07,St Francis Supers,food,Check,99999,101.2 - Western State Bank - Checking,0.00,52.06,125,Cash
+953,2021-09-07,St Francis Supers,food,Check,99999,530.9 - Household,52.06,0.00,125,Cash
+954,2021-09-07,St Francis Supers,food,Check,99999,101.2 - Western State Bank - Checking,0.00,41.21,126,Cash
+955,2021-09-07,St Francis Supers,food,Check,99999,530.9 - Household,41.21,0.00,126,Cash
+956,2021-09-08,Aetna Health Ins,health ins,Check,99999,101.2 - Western State Bank - Checking,0.00,102.38,127,Cash
+957,2021-09-08,Aetna Health Ins,health ins,Check,99999,530.3 - Medical Exps,102.38,0.00,127,Cash
+958,2021-08-24,Dollar General,food,none,0,101.0 - Cash Drawer,0.00,16.81,50,Cash
+959,2021-08-24,Dollar General,food,none,0,530.9 - Household,16.81,0.00,50,Cash
+960,2021-09-08,David Padgett,pmnt on loan,Check,88888,101.2 - Western State Bank - Checking,50.00,0.00,124,Cash
+961,2021-09-08,David Padgett,pmnt on loan,Check,88888,110.0 - Account Receivables,0.00,50.00,124,Cash
+962,2021-09-10,,Edit Inv Item - Jojoba oil,none,0,120.0 - Inventory,2.24,0.00,222,Inventory
+963,2021-09-10,,Edit Inv Item - Jojoba oil,none,0,400.3 - Inventory Adj,0.00,2.24,222,Inventory
+964,2021-09-12,Farmers Mkt,Sales Receipt,none,0,101.0 - Cash Drawer,58.00,0.00,58,Sales
+965,2021-09-12,Farmers Mkt,Sales Receipt,none,0,400.1 - Revenue,0.00,58.00,58,Sales
+966,2021-09-12,Farmers Mkt,Sales Receipt,none,0,120.0 - Inventory,0.00,19.63,58,Sales
+967,2021-09-12,Farmers Mkt,Sales Receipt,none,0,400.6 - Inventory COS,19.63,0.00,58,Sales
+978,2021-09-13,Bonnie,Edit Inv Item - Frankincense Oil 3rd 1/2 oz gift,none,0,120.0 - Inventory,0.00,4.08,223,Inventory
+979,2021-09-13,Bonnie,Edit Inv Item - Frankincense Oil 3rd 1/2 oz gift,none,0,400.3 - Inventory Adj,4.08,0.00,223,Inventory
+982,2021-09-16,,Edit Inv Item - DeGreaser 2 homeuse,none,0,120.0 - Inventory,0.00,7.44,224,Inventory
+983,2021-09-16,,Edit Inv Item - DeGreaser,none,0,400.3 - Inventory Adj,7.44,0.00,224,Inventory
+988,2021-09-17,Western State Bank,transfer,Check,88888,101.3 - Western St Bank - Savings,0.00,200.00,129,Cash
+989,2021-09-17,Western State Bank,transfer,Check,88888,101.2 - Western State Bank - Checking,200.00,0.00,129,Cash
+990,2021-09-12,,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,20.00,128,Cash
+991,2021-09-12,,Bank Deposit,none,0,101.0 - Cash Drawer,20.00,0.00,128,Cash
+992,2021-09-12,,various,none,0,101.0 - Cash Drawer,0.00,19.19,128,Cash
+993,2021-09-12,,various,none,0,530.9 - Household,19.19,0.00,128,Cash
+994,2021-09-17,hilltop,food,none,0,101.2 - Western State Bank - Checking,0.00,38.54,130,Cash
+995,2021-09-17,hilltop,food,none,0,530.9 - Household,38.54,0.00,130,Cash
+996,2021-09-17,Arbot,donation,none,99999,101.2 - Western State Bank - Checking,0.00,15.00,131,Cash
+997,2021-09-17,Arbot,donation,none,99999,530.9 - Household,15.00,0.00,131,Cash
+998,2021-09-17,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,31.00,132,Cash
+999,2021-09-17,St Francis Supers,food,none,0,530.9 - Household,31.00,0.00,132,Cash
+1000,2021-09-17,,Add Inv Item - Ginger Oil,none,0,120.0 - Inventory,12.00,0.00,225,Inventory
+1001,2021-09-17,,Add Inv Item - Ginger Oil,none,0,400.3 - Inventory Adj,0.00,12.00,225,Inventory
+1002,2021-09-17,,Add Inv Item - Nutmeg Oil,none,0,120.0 - Inventory,9.00,0.00,226,Inventory
+1003,2021-09-17,,Add Inv Item - Nutmeg Oil,none,0,400.3 - Inventory Adj,0.00,9.00,226,Inventory
+1004,2021-09-17,,Edit Inv Item - Ginger Oil,none,0,120.0 - Inventory,0.00,3.00,227,Inventory
+1005,2021-09-17,,Edit Inv Item - Ginger Oil,none,0,400.3 - Inventory Adj,3.00,0.00,227,Inventory
+1006,2021-09-17,Chyenne Co Clinic,medical bills,Check,1221,101.2 - Western State Bank - Checking,0.00,135.00,133,Cash
+1007,2021-09-17,Chyenne Co Clinic,medical bills,Check,1221,530.3 - Medical Exps,135.00,0.00,133,Cash
+1008,2021-09-18,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,66.00,0.00,59,Sales
+1009,2021-09-18,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,66.00,59,Sales
+1010,2021-09-18,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,22.07,59,Sales
+1011,2021-09-18,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,22.07,0.00,59,Sales
+1012,2021-09-18,Farmers Mkt,fees and taxes,none,0,101.0 - Cash Drawer,0.00,10.00,134,Cash
+1013,2021-09-18,Farmers Mkt,fees and taxes,none,0,400.7 - Fees COS,10.00,0.00,134,Cash
+1014,2021-09-21,,Recipe Creation - Labor,none,0,120.0 - Inventory,18.00,0.00,55,Recipe
+1015,2021-09-21,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,18.00,55,Recipe
+1016,2021-09-22,,Add Inv Item - Yellow Dock Tincture,none,0,120.0 - Inventory,30.00,0.00,228,Inventory
+1017,2021-09-22,,Add Inv Item - Yellow Dock Tincture,none,0,400.3 - Inventory Adj,0.00,30.00,228,Inventory
+1018,2021-09-22,,Recipe Creation - Labor,none,0,120.0 - Inventory,33.75,0.00,55,Recipe
+1019,2021-09-22,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,33.75,55,Recipe
+1020,2021-09-23,,Recipe Creation - Labor,none,0,120.0 - Inventory,6.75,0.00,55,Recipe
+1021,2021-09-23,,Recipe Creation - Labor,none,0,220.0 - Labor Production,0.00,6.75,55,Recipe
+1022,2021-09-23,,Edit Inv Item - Yellow Dock Tnctr 1/2 oz,none,0,120.0 - Inventory,0.00,15.80,229,Inventory
+1023,2021-09-23,,Edit Inv Item - Yellow Dock Tnctr 1/2 oz,none,0,400.3 - Inventory Adj,15.80,0.00,229,Inventory
+1024,2021-09-23,,Edit Inv Item - Sting poultice packet,none,0,120.0 - Inventory,0.00,1.12,230,Inventory
+1025,2021-09-23,,Edit Inv Item - Sting poultice packet,none,0,400.3 - Inventory Adj,1.12,0.00,230,Inventory
+1026,2021-09-24,David Padgett,pmnt on loan,Check,88888,101.2 - Western State Bank - Checking,50.00,0.00,135,Cash
+1027,2021-09-24,David Padgett,pmnt on loan,Check,88888,110.0 - Account Receivables,0.00,50.00,135,Cash
+1028,2021-09-25,Farmers Mkt,Sales Receipt,Cash,0,101.0 - Cash Drawer,63.00,0.00,60,Sales
+1029,2021-09-25,Farmers Mkt,Sales Receipt,Cash,0,400.1 - Revenue,0.00,63.00,60,Sales
+1030,2021-09-25,Farmers Mkt,Sales Receipt,Cash,0,120.0 - Inventory,0.00,17.16,60,Sales
+1031,2021-09-25,Farmers Mkt,Sales Receipt,Cash,0,400.6 - Inventory COS,17.16,0.00,60,Sales
+1032,2021-09-25,Farmers Mkt,fees and taxes,Cash,0,101.0 - Cash Drawer,0.00,8.00,136,Cash
+1033,2021-09-25,Farmers Mkt,fees and taxes,Cash,0,400.7 - Fees COS,8.00,0.00,136,Cash
+1034,2021-09-25,various,misc,Cash,0,101.0 - Cash Drawer,0.00,96.00,137,Cash
+1035,2021-09-25,various,misc,Cash,0,530.9 - Household,96.00,0.00,137,Cash
+1036,2021-09-23,St Francis Supers,food,Credit Card,99999,101.2 - Western State Bank - Checking,0.00,51.90,138,Cash
+1037,2021-09-23,St Francis Supers,food,Credit Card,99999,530.9 - Household,51.90,0.00,138,Cash
+1038,2021-09-21,Vudu,movie,Credit Card,99999,101.2 - Western State Bank - Checking,0.00,19.99,139,Cash
+1039,2021-09-21,Vudu,movie,Credit Card,99999,530.9 - Household,19.99,0.00,139,Cash
+1040,2021-09-20,SWTOR,starwars - paypal,Credit Card,99999,101.2 - Western State Bank - Checking,0.00,16.41,140,Cash
+1041,2021-09-20,SWTOR,starwars - paypal,Credit Card,99999,530.9 - Household,16.41,0.00,140,Cash
+1042,2021-09-20,WellCare,health ins,Credit Card,99999,101.2 - Western State Bank - Checking,0.00,39.40,141,Cash
+1043,2021-09-20,WellCare,health ins,Credit Card,99999,530.3 - Medical Exps,39.40,0.00,141,Cash
+1044,2021-09-16,Vudu,movie,Credit Card,99999,101.2 - Western State Bank - Checking,0.00,7.99,142,Cash
+1045,2021-09-16,Vudu,movie,Credit Card,99999,530.9 - Household,7.99,0.00,142,Cash
+1046,2021-09-25,Walmart,pens,Credit Card,9999,101.2 - Western State Bank - Checking,0.00,23.01,143,Cash
+1047,2021-09-25,Walmart,pens,Credit Card,9999,530.9 - Household,23.01,0.00,143,Cash
+1048,2021-09-27,Blizzard,WOW,Check,9999,101.2 - Western State Bank - Checking,0.00,14.99,144,Cash
+1049,2021-09-27,Blizzard,WOW,Check,9999,530.9 - Household,14.99,0.00,144,Cash
+1050,2021-10-01,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,145,Cash
+1051,2021-10-01,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,145,Cash
+1052,2021-10-04,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,146,Cash
+1053,2021-10-04,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,146,Cash
+1054,2021-09-30,Western State Bank,bank fee,none,0,101.2 - Western State Bank - Checking,0.00,3.50,147,Cash
+1055,2021-09-30,Western State Bank,bank fee,none,0,530.9 - Household,3.50,0.00,147,Cash
+1056,2021-10-03,Walmart,food,Check,99999,101.2 - Western State Bank - Checking,0.00,167.01,148,Cash
+1057,2021-10-03,Walmart,food,Check,99999,530.9 - Household,167.01,0.00,148,Cash
+1062,2021-10-04,Bank West,Loan mtg,Check,1222,101.2 - Western State Bank - Checking,0.00,350.00,150,Cash
+1063,2021-10-04,Bank West,Loan mtg,Check,1222,230.1 - BankWest Mtg Loan,700.00,0.00,150,Cash
+1064,2021-10-04,Bank West,jason - rent pmnt,Check,1222,420.1 - Rent Income,0.00,350.00,150,Cash
+1065,2021-10-11,,Add Inv Item - Juniper Tincture,none,0,120.0 - Inventory,120.00,0.00,231,Inventory
+1066,2021-10-11,,Add Inv Item - Juniper Tincture,none,0,400.3 - Inventory Adj,0.00,120.00,231,Inventory
+1067,2021-10-11,,Edit Inv Item - Juniper Tincture,none,0,120.0 - Inventory,0.00,108.00,232,Inventory
+1068,2021-10-11,,Edit Inv Item - Juniper Tincture,none,0,400.3 - Inventory Adj,108.00,0.00,232,Inventory
+1069,2021-10-09,Ariel,Sales Receipt,none,0,110.0 - Account Receivables,10.00,0.00,61,Sales
+1070,2021-10-09,Ariel,Sales Receipt,none,0,400.1 - Revenue,0.00,10.00,61,Sales
+1071,2021-10-09,Ariel,Sales Receipt,none,0,120.0 - Inventory,0.00,1.58,61,Sales
+1072,2021-10-09,Ariel,Sales Receipt,none,0,400.6 - Inventory COS,1.58,0.00,61,Sales
+1073,2021-10-07,Aetna Health Ins,health ins,none,0,101.2 - Western State Bank - Checking,0.00,102.38,151,Cash
+1074,2021-10-07,Aetna Health Ins,health ins,none,0,530.3 - Medical Exps,102.38,0.00,151,Cash
+1075,2021-10-06,hilltop,food,none,0,101.2 - Western State Bank - Checking,0.00,28.75,152,Cash
+1076,2021-10-06,hilltop,food,none,0,530.9 - Household,28.75,0.00,152,Cash
+1083,2021-10-11,Amazon,grow lights,none,0,101.2 - Western State Bank - Checking,0.00,48.15,154,Cash
+1084,2021-10-11,Amazon,grow lights,none,0,530.9 - Household,48.15,0.00,154,Cash
+1085,2021-10-12,,Edit Inv Item - Lavender Oil,none,0,120.0 - Inventory,0.00,16.80,233,Inventory
+1086,2021-10-12,,Edit Inv Item - Lavender Oil,none,0,400.3 - Inventory Adj,16.80,0.00,233,Inventory
+1087,2021-10-12,,Add Inv Item - Raspberry Leaf,none,0,120.0 - Inventory,16.64,0.00,234,Inventory
+1088,2021-10-12,,Add Inv Item - Raspberry Leaf,none,0,400.3 - Inventory Adj,0.00,16.64,234,Inventory
+1095,2021-10-13,St Francis Supers,Food,none,0,101.2 - Western State Bank - Checking,0.00,59.86,155,Cash
+1096,2021-10-13,St Francis Supers,Food,none,0,530.9 - Household,59.86,0.00,155,Cash
+1097,2021-10-14,mahra,yard work,Check,1225,101.2 - Western State Bank - Checking,0.00,20.00,156,Cash
+1098,2021-10-14,mahra,yard work,Check,1225,530.9 - Household,20.00,0.00,156,Cash
+1099,2021-10-18,St Francis Tire,patch tire,none,0,101.2 - Western State Bank - Checking,0.00,19.16,157,Cash
+1100,2021-10-18,St Francis Tire,patch tire,none,0,530.9 - Household,19.16,0.00,157,Cash
+1101,2021-10-18,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,40.32,158,Cash
+1102,2021-10-18,St Francis Supers,food,none,0,530.9 - Household,40.32,0.00,158,Cash
+1103,2021-10-13,WellCare,prescription ins,none,0,101.2 - Western State Bank - Checking,0.00,39.40,159,Cash
+1104,2021-10-13,WellCare,prescription ins,none,0,530.3 - Medical Exps,39.40,0.00,159,Cash
+1105,2021-10-19,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,200.00,0.00,160,Cash
+1106,2021-10-19,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,0.00,200.00,160,Cash
+1107,2021-10-20,usps,ship to April,none,0,101.2 - Western State Bank - Checking,0.00,10.15,161,Cash
+1108,2021-10-20,usps,ship to April,none,0,400.2 - Shipping COS,10.15,0.00,161,Cash
+1109,2021-10-21,SWTOR,starwars - paypal,none,0,101.2 - Western State Bank - Checking,0.00,16.41,162,Cash
+1110,2021-10-21,SWTOR,starwars - paypal,none,0,530.9 - Household,16.41,0.00,162,Cash
+1111,2021-10-22,Unger,back work,none,0,101.2 - Western State Bank - Checking,0.00,42.47,163,Cash
+1112,2021-10-22,Unger,back work,none,0,530.3 - Medical Exps,42.47,0.00,163,Cash
+1113,2021-10-25,Unger,back work,none,0,101.2 - Western State Bank - Checking,0.00,75.17,164,Cash
+1114,2021-10-25,Unger,back work,none,0,530.3 - Medical Exps,75.17,0.00,164,Cash
+1115,2021-10-25,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,41.37,165,Cash
+1116,2021-10-25,St Francis Supers,food,none,0,530.9 - Household,41.37,0.00,165,Cash
+1117,2021-10-26,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,100.00,0.00,166,Cash
+1118,2021-10-26,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,0.00,100.00,166,Cash
+1119,2021-10-12,St Francis Supers,Food,none,0,101.2 - Western State Bank - Checking,0.00,28.21,167,Cash
+1120,2021-10-12,St Francis Supers,Food,none,0,530.9 - Household,28.21,0.00,167,Cash
+1121,2021-10-01,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,68.39,149,Cash
+1122,2021-10-01,St Francis Supers,food,none,0,530.9 - Household,68.39,0.00,149,Cash
+1134,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,110.0 - Account Receivables,23.00,0.00,62,Sales
+1135,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,400.1 - Revenue,0.00,20.00,62,Sales
+1136,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,400.2 - Shipping COS,0.00,5.00,62,Sales
+1137,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,400.5 - Discounts,2.00,0.00,62,Sales
+1138,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,120.0 - Inventory,0.00,7.02,62,Sales
+1139,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,400.6 - Inventory COS,7.02,0.00,62,Sales
+1140,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,101.2 - Western State Bank - Checking,25.00,0.00,62,Sales
+1141,2021-11-01,April Oestman,Sales Receipt,Credit Card,0,110.0 - Account Receivables,0.00,23.00,62,Sales
+1142,2021-11-01,April Oestman,,Credit Card,0,400.5 - Discounts,0.00,2.00,62,Sales
+1145,2021-11-02,David Padgett,pmnt on loan,none,0,101.2 - Western State Bank - Checking,50.00,0.00,168,Cash
+1146,2021-11-02,David Padgett,pmnt on loan,none,0,110.0 - Account Receivables,0.00,50.00,168,Cash
+1149,2021-11-06,Mountain Rose Herbs,Purchasing Receipt,none,0,120.0 - Inventory,104.23,0.00,34,Purchasing
+1150,2021-11-06,Mountain Rose Herbs,Purchasing Receipt,none,0,101.2 - Western State Bank - Checking,0.00,104.23,34,Purchasing
+1153,2021-11-03,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,169,Cash
+1154,2021-11-03,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,169,Cash
+1155,2021-11-03,Bank West,mtg loan,Check,1271,101.2 - Western State Bank - Checking,0.00,350.00,14,General
+1156,2021-11-03,Bank West,mtg loan,Check,1271,230.1 - BankWest Mtg Loan,700.00,0.00,14,General
+1157,2021-11-03,Bank West,mtg loan,Check,1271,420.1 - Rent Income,0.00,350.00,14,General
+1158,2021-11-04,Savings,transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,170,Cash
+1159,2021-11-04,Savings,transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,170,Cash
+1160,2021-11-04,Melvin Dunn,dentist,none,0,101.2 - Western State Bank - Checking,0.00,122.00,171,Cash
+1161,2021-11-04,Melvin Dunn,dentist,none,0,530.3 - Medical Exps,122.00,0.00,171,Cash
+1162,2021-11-04,Michaels,crafting,none,0,101.2 - Western State Bank - Checking,0.00,18.01,172,Cash
+1163,2021-11-04,Michaels,crafting,none,0,530.9 - Household,18.01,0.00,172,Cash
+1166,2021-10-31,Western State Bank,fees,none,0,101.2 - Western State Bank - Checking,0.00,3.50,174,Cash
+1167,2021-10-31,Western State Bank,fees,none,0,400.7 - Fees COS,3.50,0.00,174,Cash
+1168,2021-10-27,Blizzard,WOW,none,0,101.2 - Western State Bank - Checking,0.00,14.99,175,Cash
+1169,2021-10-27,Blizzard,WOW,none,0,530.9 - Household,14.99,0.00,175,Cash
+1170,2021-10-26,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,58.64,176,Cash
+1171,2021-10-26,St Francis Supers,food,none,0,530.9 - Household,58.64,0.00,176,Cash
+1172,2021-11-23,Medicare,Ins,none,0,101.0 - Cash Drawer,59.08,0.00,177,Cash
+1173,2021-11-23,Medicare,Ins,none,0,530.3 - Medical Exps,0.00,59.08,177,Cash
+1174,2021-11-21,David Padgett,Food,none,0,110.0 - Account Receivables,0.00,100.00,15,General
+1175,2021-11-21,David Padgett,Dave,none,0,530.9 - Household,100.00,0.00,15,General
+1176,2021-11-08,Michaels,Crafting,none,0,101.2 - Western State Bank - Checking,0.00,39.35,178,Cash
+1177,2021-11-08,Michaels,Crafting,none,0,530.9 - Household,39.35,0.00,178,Cash
+1178,2021-11-08,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,37.27,179,Cash
+1179,2021-11-08,St Francis Supers,food,none,0,530.9 - Household,37.27,0.00,179,Cash
+1180,2021-11-08,Aetna Health Ins,Ins,none,0,101.2 - Western State Bank - Checking,0.00,102.38,180,Cash
+1181,2021-11-08,Aetna Health Ins,Ins,none,0,530.3 - Medical Exps,102.38,0.00,180,Cash
+1182,2021-11-10,Jason&#39;s Computer,dream journal,none,0,101.2 - Western State Bank - Checking,0.00,50.00,181,Cash
+1183,2021-11-10,Jason&#39;s Computer,dream journal,none,0,530.9 - Household,50.00,0.00,181,Cash
+1184,2021-11-10,Ernzen,counselor,none,0,101.2 - Western State Bank - Checking,0.00,60.00,182,Cash
+1185,2021-11-10,Ernzen,counselor,none,0,530.3 - Medical Exps,60.00,0.00,182,Cash
+1186,2021-11-15,Amazon,food,none,0,101.2 - Western State Bank - Checking,0.00,57.44,183,Cash
+1187,2021-11-15,Amazon,food,none,0,530.9 - Household,57.44,0.00,183,Cash
+1188,2021-11-17,Vudu,movie,none,0,101.2 - Western State Bank - Checking,0.00,14.99,184,Cash
+1189,2021-11-17,Vudu,movie,none,0,530.9 - Household,14.99,0.00,184,Cash
+1190,2021-11-18,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,100.00,0.00,185,Cash
+1191,2021-11-18,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,0.00,100.00,185,Cash
+1192,2021-11-18,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,36.56,186,Cash
+1193,2021-11-18,St Francis Supers,food,none,0,530.9 - Household,36.56,0.00,186,Cash
+1196,2021-11-18,WellCare,Ins,none,0,101.2 - Western State Bank - Checking,0.00,39.40,187,Cash
+1197,2021-11-18,WellCare,Ins,none,0,530.3 - Medical Exps,39.40,0.00,187,Cash
+1198,2021-11-22,SWTOR,starwars - paypal,none,0,101.2 - Western State Bank - Checking,0.00,16.41,188,Cash
+1199,2021-11-22,SWTOR,starwars - paypal,none,0,530.9 - Household,16.41,0.00,188,Cash
+1200,2021-11-24,David Padgett,LOAN,none,0,101.2 - Western State Bank - Checking,50.00,0.00,189,Cash
+1201,2021-11-24,David Padgett,LOAN,none,0,110.0 - Account Receivables,0.00,50.00,189,Cash
+1202,2021-10-06,Krien Pharm,Diabetes stuff,Cash,0,101.0 - Cash Drawer,0.00,15.00,153,Cash
+1203,2021-10-06,Krien Pharm,Diabetes stuff,Cash,0,530.3 - Medical Exps,15.00,0.00,153,Cash
+1204,2021-12-06,,Edit Inv Item - Yogert greek - calories 5.3 oz,none,0,120.0 - Inventory,92.00,0.00,235,Inventory
+1205,2021-12-06,,Edit Inv Item - Yogert greek - calories 5.3 oz,none,0,400.3 - Inventory Adj,0.00,92.00,235,Inventory
+1206,2021-11-29,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,27.29,190,Cash
+1207,2021-11-29,St Francis Supers,food,none,0,530.9 - Household,27.29,0.00,190,Cash
+1208,2021-11-29,Hometown mkt,food,none,0,101.2 - Western State Bank - Checking,0.00,7.64,191,Cash
+1209,2021-11-29,Hometown mkt,food,none,0,530.9 - Household,7.64,0.00,191,Cash
+1210,2021-11-29,Blizzard,starwars - paypal,none,0,101.2 - Western State Bank - Checking,0.00,14.99,192,Cash
+1211,2021-11-29,Blizzard,starwars - paypal,none,0,530.9 - Household,14.99,0.00,192,Cash
+1212,2021-11-30,Western State Bank,fees,none,0,101.2 - Western State Bank - Checking,0.00,3.50,193,Cash
+1213,2021-11-30,Western State Bank,fees,none,0,530.9 - Household,3.50,0.00,193,Cash
+1214,2021-12-01,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,100.00,0.00,194,Cash
+1215,2021-12-01,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,0.00,100.00,194,Cash
+1216,2021-12-01,Ernzen,counseling,none,0,101.2 - Western State Bank - Checking,0.00,60.00,195,Cash
+1217,2021-12-01,Ernzen,counseling,none,0,530.3 - Medical Exps,60.00,0.00,195,Cash
+1218,2021-12-01,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,55.58,196,Cash
+1219,2021-12-01,St Francis Supers,food,none,0,530.9 - Household,55.58,0.00,196,Cash
+1220,2021-12-02,CRVS,food,none,0,101.2 - Western State Bank - Checking,0.00,15.15,197,Cash
+1221,2021-12-02,CRVS,food,none,0,530.9 - Household,15.15,0.00,197,Cash
+1222,2021-12-03,social security,ss,none,0,101.2 - Western State Bank - Checking,954.00,0.00,198,Cash
+1223,2021-12-03,social security,ss,none,0,410.0 - Social Security pmnt,0.00,954.00,198,Cash
+1224,2021-12-03,Western State Bank,transfer,none,0,101.2 - Western State Bank - Checking,0.00,56.00,199,Cash
+1225,2021-12-03,Western State Bank,transfer,none,0,101.3 - Western St Bank - Savings,56.00,0.00,199,Cash
+1226,2021-12-06,Melvin Dunn,dentist,none,0,101.2 - Western State Bank - Checking,0.00,133.00,200,Cash
+1227,2021-12-06,Melvin Dunn,dentist,none,0,530.3 - Medical Exps,133.00,0.00,200,Cash
+1230,2021-12-07,,Edit Inv Item - Neroli Oil 5th 1/2 oz,none,0,120.0 - Inventory,0.00,1.38,236,Inventory
+1231,2021-12-07,,Edit Inv Item - Neroli Oil 5th 1/2 oz,none,0,400.3 - Inventory Adj,1.38,0.00,236,Inventory
+1232,2021-12-08,Star Expos,Sales Receipt,none,0,110.0 - Account Receivables,809.25,0.00,63,Sales
+1233,2021-12-08,Star Expos,Sales Receipt,none,0,400.1 - Revenue,0.00,1079.00,63,Sales
+1234,2021-12-08,Star Expos,Sales Receipt,none,0,400.5 - Discounts,269.75,0.00,63,Sales
+1235,2021-12-08,Star Expos,Sales Receipt,none,0,120.0 - Inventory,0.00,290.21,63,Sales
+1236,2021-12-08,Star Expos,Sales Receipt,none,0,400.6 - Inventory COS,290.21,0.00,63,Sales
+1237,2021-12-09,,Edit Inv Item - S,none,0,120.0 - Inventory,0.00,15.04,237,Inventory
+1238,2021-12-09,,Edit Inv Item - S,none,0,400.3 - Inventory Adj,15.04,0.00,237,Inventory
+1239,2021-12-15,,Edit Inv Item - Wax Bee's,none,0,120.0 - Inventory,8.38,0.00,238,Inventory
+1240,2021-12-15,,Edit Inv Item - Wax Bee's,none,0,400.3 - Inventory Adj,0.00,8.38,238,Inventory
+1241,2021-12-06,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,40.43,202,Cash
+1242,2021-12-06,St Francis Supers,food,none,0,101.0 - Cash Drawer,40.43,0.00,202,Cash
+1245,2021-12-07,Aetna Health Ins,Ins,none,0,101.2 - Western State Bank - Checking,0.00,110.12,203,Cash
+1246,2021-12-07,Aetna Health Ins,Ins,none,0,101.0 - Cash Drawer,110.12,0.00,203,Cash
+1247,2021-12-09,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,25.53,204,Cash
+1248,2021-12-09,St Francis Supers,food,none,0,101.0 - Cash Drawer,25.53,0.00,204,Cash
+1249,2021-12-13,Bird City Thrift store,misc,none,0,101.2 - Western State Bank - Checking,0.00,7.00,205,Cash
+1250,2021-12-13,Bird City Thrift store,misc,none,0,101.0 - Cash Drawer,7.00,0.00,205,Cash
+1251,2021-12-13,St Francis Supers,food,none,0,101.2 - Western State Bank - Checking,0.00,59.62,206,Cash
+1252,2021-12-13,St Francis Supers,food,none,0,101.0 - Cash Drawer,59.62,0.00,206,Cash
+1255,2021-12-16,Ernzen,counseling,none,0,101.2 - Western State Bank - Checking,0.00,60.00,208,Cash
+1256,2021-12-16,Ernzen,counseling,none,0,530.3 - Medical Exps,60.00,0.00,208,Cash
+1263,2021-12-22,Vudu,movie,none,0,101.2 - Western State Bank - Checking,0.00,7.99,212,Cash
+1264,2021-12-22,Vudu,movie,none,0,530.9 - Household,7.99,0.00,212,Cash
+1265,2021-12-27,Steam,game,none,0,101.2 - Western State Bank - Checking,0.00,10.94,213,Cash
+1266,2021-12-27,Steam,game,none,0,530.9 - Household,10.94,0.00,213,Cash
+1267,2021-12-27,Blizzard,game,none,0,101.2 - Western State Bank - Checking,0.00,14.99,214,Cash
+1268,2021-12-27,Blizzard,game,none,0,530.9 - Household,14.99,0.00,214,Cash
+1269,2021-12-28,Jason&#39;s Computer,gift,none,0,101.2 - Western State Bank - Checking,200.00,0.00,215,Cash
+1270,2021-12-28,Jason&#39;s Computer,gift,none,0,530.9 - Household,0.00,200.00,215,Cash
+1271,2021-12-31,Krien Pharm,Diabetes stuff,none,0,101.2 - Western State Bank - Checking,0.00,15.00,216,Cash
+1272,2021-12-31,Krien Pharm,Diabetes stuff,none,0,530.3 - Medical Exps,15.00,0.00,216,Cash
+1277,2021-12-15,Thrive Mkt,food,none,0,101.2 - Western State Bank - Checking,0.00,26.17,207,Cash
+1278,2021-12-15,Thrive Mkt,food,none,0,101.0 - Cash Drawer,26.17,0.00,207,Cash
+1279,2021-12-20,SWTOR,starwars - paypal,none,0,101.2 - Western State Bank - Checking,0.00,16.41,210,Cash
+1280,2021-12-20,SWTOR,starwars - paypal,none,0,530.9 - Household,16.41,0.00,210,Cash
+1283,2021-12-15,Aetna Health Ins,Aetna reimburse,none,0,530.3 - Medical Exps,0.00,17.00,16,General
+1284,2021-12-15,Aetna Health Ins,Aetna reimburse,none,0,530.9 - Household,17.00,0.00,16,General
+1287,2021-12-06,Bank West,Loan mtg,none,0,101.2 - Western State Bank - Checking,0.00,350.00,201,Cash
+1288,2021-12-06,Bank West,Loan mtg,none,0,230.1 - BankWest Mtg Loan,700.00,0.00,201,Cash
+1289,2021-12-06,Bank West,jason - rent pmnt,none,0,420.1 - Rent Income,0.00,350.00,201,Cash
+1335,2021-12-30,Bank West,escrow bal per bank 6/1,none,0,130.1 - Escrow fund Mtg,2814.99,0.00,17,General
+1336,2021-12-30,Bank West,escrow bal per bank 6/1,none,0,130.1 - Escrow fund Mtg,0.00,312.34,17,General
+1337,2021-12-30,Bank West,escrow pmnt june-dec,none,0,130.1 - Escrow fund Mtg,2194.43,0.00,17,General
+1338,2021-12-30,Bank West,escrow pmnt june-dec,none,0,230.1 - BankWest Mtg Loan,312.34,0.00,17,General
+1339,2021-12-30,Bank West,escrow pmnt june-dec,none,0,230.1 - BankWest Mtg Loan,0.00,2194.43,17,General
+1340,2021-12-30,Bank West,escrow dispurs,none,0,130.1 - Escrow fund Mtg,0.00,3970.81,17,General
+1341,2021-12-30,Bank West,homeowners ins,none,0,530.9 - Household,1576.08,0.00,17,General
+1342,2021-12-30,Bank West,taxes,none,0,530.9 - Household,2394.73,0.00,17,General
+1343,2021-12-30,Bank West,interest on loan,none,0,530.1 - Interest Exp,576.69,0.00,17,General
+1344,2021-12-30,Bank West,escrow bal per bank 6/1,none,0,300.1 - Pre period adjustments,0.00,2814.99,17,General
+1345,2021-12-30,Bank West,interest on loan,none,0,230.1 - BankWest Mtg Loan,0.00,576.69,17,General
+1367,2021-12-20,Taylor & Francis,online book - Jung,none,0,101.2 - Western State Bank - Checking,0.00,26.36,226,Cash
+1368,2021-12-20,Taylor & Francis,online book - Jung,none,0,530.9 - Household,26.36,0.00,226,Cash
+1371,2021-12-20,welcare,prescription ins,none,0,101.2 - Western State Bank - Checking,0.00,39.40,227,Cash
+1372,2021-12-20,welcare,prescription ins,none,0,530.3 - Medical Exps,39.40,0.00,227,Cash
+1373,2021-06-02,Janet,Sales Receipt,Cash,0,101.0 - Cash Drawer,7.67,0.00,32,Sales
+1374,2021-06-02,Janet,Sales Receipt,Cash,0,400.1 - Revenue,0.00,7.67,32,Sales
+1375,2021-06-02,Janet,Sales Receipt,Cash,0,120.0 - Inventory,0.00,3.00,32,Sales
+1376,2021-06-02,Janet,Sales Receipt,Cash,0,400.6 - Inventory COS,3.00,0.00,32,Sales
+,,,,,,,,,,,
+Totals,,,,,,,,,,,
+Account Number,Account Name,Debit Amount,Credit Amount,Total,,,,,,,
+101.0,Cash Drawer,1462.37,1067.42,394.95,,,,,,,
+101.1,Petty Cash,551.42,551.42,5.6843418860808E-14,,,,,,,
+101.2,Western State Bank - Checking,10139.89,9947.48,192.41,,,,,,,
+101.3,Western St Bank - Savings,1810.92,1500,310.92,,,,,,,
+101.4,Fund test - Funds Account,,,,,,,,,,
+110.0,Account Receivables,1642.25,323,1319.25,,,,,,,
+120.0,Inventory,4898.74,2239.53,2659.21,,,,,,,
+130.0,411 E Washington,50000,0,50000,,,,,,,
+130.1,Escrow fund Mtg,5009.42,4283.15,726.27,,,,,,,
+200.0,Sales Tax Payable,,,,,,,,,,
+210.0,Accounts Payable,230.78,230.78,0,,,,,,,
+210.1,Credit card test - Credit Card,,,,,,,,,,
+220.0,Labor Production,0,74.25,74.25,,,,,,,
+230.1,BankWest Mtg Loan,5212.34,31785.34,26573,,,,,,,
+300.0,Owners Capital,,,,,,,,,,
+300.1,Pre period adjustments,49943.13,58482.9,8539.77,,,,,,,
+380.0,Net Income,,,,,,,,,,
+399.9,Retained Earnings,,,,,,,,,,
+400.1,Revenue,0,2241.67,2241.67,,,,,,,
+400.2,Shipping COS,69.26,5,-64.26,,,,,,,
+400.3,Inventory Adj,683.27,20625.88,19942.61,,,,,,,
+400.4,Fees Revenue,,,,,,,,,,
+400.5,Discounts,280,2,-278,,,,,,,
+400.6,Inventory COS,641.63,0,-641.63,,,,,,,
+400.7,Fees COS,127.95,0,-127.95,,,,,,,
+400.8,Taxes COS,,,,,,,,,,
+410.0,Social Security pmnt,0,6678,6678,,,,,,,
+420.1,Rent Income,0,2450,2450,,,,,,,
+420.2,Bonnie Income,0,228.56,228.56,,,,,,,
+500.0,Rent Expense,,,,,,,,,,
+530.1,Interest Exp,576.69,0,576.69,,,,,,,
+530.2,Gas,20.01,0,20.01,,,,,,,
+530.3,Medical Exps,2091.79,76.08,2015.71,,,,,,,
+530.4,Food Exp,,,,,,,,,,
+530.5,Games,,,,,,,,,,
+530.9,Household,7600.6,200,7400.6,,,,,,,

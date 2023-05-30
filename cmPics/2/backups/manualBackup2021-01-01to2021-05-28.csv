@@ -1,0 +1,39 @@
+id,date,contact,description,cashCheckCC,checkNumber,account,debitAmount,creditAmount,refNumber,typeCode,dailyConfirm
+5,2021-05-07,In House,Sales Receipt,Cash,0,110.0 - Account Receivables,39.57,0.00,9,Sales Recipt,0
+6,2021-05-07,In House,Sales Receipt,Cash,0,400.1 - Revenue,0.00,30.00,9,Sales Recipt,0
+7,2021-05-07,In House,Sales Receipt,Cash,0,200.0 - Sales Tax Payable,0.00,2.57,9,Sales Recipt,0
+8,2021-05-07,In House,Sales Receipt,Cash,0,400.2 - Shipping COS,0.00,10.00,9,Sales Recipt,0
+9,2021-05-07,In House,Sales Receipt,Cash,0,400.5 - Discounts,3.00,0.00,9,Sales Recipt,0
+10,2021-05-07,In House,Sales Receipt,Cash,0,120.0 - Inventory,0.00,8.93,9,Sales Recipt,0
+11,2021-05-07,In House,Sales Receipt,Cash,0,400.6 - Inventory COS,8.93,0.00,9,Sales Recipt,0
+12,2021-05-12,test,Sales Receipt,Cash,0,101.0 - Cash Drawer,20.95,0.00,10,Sales Recipt,1
+13,2021-05-12,test,Sales Receipt,Cash,0,400.1 - Revenue,0.00,10.00,10,Sales Recipt,0
+14,2021-05-12,test,Sales Receipt,Cash,0,200.0 - Sales Tax Payable,0.00,0.95,10,Sales Recipt,0
+15,2021-05-12,test,Sales Receipt,Cash,0,400.2 - Shipping COS,0.00,10.00,10,Sales Recipt,0
+16,2021-05-12,test,Sales Receipt,Cash,0,120.0 - Inventory,0.00,3.97,10,Sales Recipt,0
+17,2021-05-12,test,Sales Receipt,Cash,0,400.6 - Inventory COS,3.97,0.00,10,Sales Recipt,0
+18,2021-05-12,cosco,Journal Entry,Check,999,101.3 - USAA - Checking,0.00,15.00,13,Cash Transaction,0
+19,2021-05-12,cosco,Journal Entry,Check,999,400.6 - Inventory COS,15.00,0.00,15,Cash Transaction,0
+20,2021-05-16,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,20.95,15,Cash Transaction,1
+21,2021-05-16,In House,Bank Deposit,none,0,101.3 - USAA - Checking,20.95,0.00,1,Cash Transaction,1
+22,2021-05-16,Nature in a Bottle,Purchasing Receipt,Check,999,120.0 - Inventory,60.88,0.00,4,Purchasing Recipt,0
+23,2021-05-16,Nature in a Bottle,Purchasing Receipt,Check,999,101.2 - Western State Bank - Checking,0.00,60.88,4,Purchasing Recipt,0
+24,2021-05-21,In House,test,Cash,0,101.3 - USAA - Checking,0.00,10.00,1,Cash Transaction,0
+25,2021-05-21,In House,test,Cash,0,101.0 - Cash Drawer,10.00,0.00,15,Cash Transaction,1
+26,2021-05-22,In House,Bank Deposit,none,0,101.0 - Cash Drawer,0.00,10.00,17,Cash Transaction,1
+27,2021-05-22,In House,Bank Deposit,none,0,101.1 - Petty Cash,10.00,0.00,1,Cash Transaction,1
+28,2021-05-23,In House,dryjh dfyj,none,0,101.0 - Cash Drawer,0.00,10.00,1,General Journal,0
+29,2021-05-23,In House,drytf drtyhdrty ,none,0,101.2 - Western State Bank - Checking,5.00,0.00,1,General Journal,0
+30,2021-05-23,In House,drty hdrtyh j,none,0,101.3 - USAA - Checking,5.00,0.00,1,General Journal,0
+31,2021-05-26,In House,Sales Receipt,Cash,0,101.0 - Cash Drawer,16.83,0.00,11,Sales Recipt,0
+32,2021-05-26,In House,Sales Receipt,Cash,0,400.1 - Revenue,0.00,12.00,11,Sales Recipt,0
+33,2021-05-26,In House,Sales Receipt,Cash,0,200.0 - Sales Tax Payable,0.00,1.03,11,Sales Recipt,0
+34,2021-05-26,In House,Sales Receipt,Cash,0,400.2 - Shipping COS,0.00,5.00,11,Sales Recipt,0
+35,2021-05-26,In House,Sales Receipt,Cash,0,400.5 - Discounts,1.20,0.00,11,Sales Recipt,0
+36,2021-05-26,In House,Sales Receipt,Cash,0,120.0 - Inventory,0.00,18.16,11,Sales Recipt,0
+37,2021-05-26,In House,Sales Receipt,Cash,0,400.6 - Inventory COS,18.16,0.00,11,Sales Recipt,0
+38,2021-01-01,In House,Sales Receipt,none,0,110.0 - Account Receivables,32.85,0.00,12,Sales Recipt,0
+39,2021-01-01,In House,Sales Receipt,none,0,400.1 - Revenue,0.00,30.00,12,Sales Recipt,0
+40,2021-01-01,In House,Sales Receipt,none,0,200.0 - Sales Tax Payable,0.00,2.85,12,Sales Recipt,0
+41,2021-01-01,In House,Sales Receipt,none,0,120.0 - Inventory,0.00,39.02,12,Sales Recipt,0
+42,2021-01-01,In House,Sales Receipt,none,0,400.6 - Inventory COS,39.02,0.00,12,Sales Recipt,0
