@@ -4,7 +4,6 @@ session_start();
 include "../globalFunctions.php";
 
 $db = db_sfi();
-
 $debugging = 0; // 1 for debug info showing, 0 for not showing
 $beta = 0; // 1 for beta, 0 for complete
 
