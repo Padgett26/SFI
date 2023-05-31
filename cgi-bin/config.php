@@ -87,7 +87,6 @@ if ($myId == '0' &&
 
 $SA = 0;
 $saId = $myId;
-
 $Sget = $db->prepare("SELECT subOf, denyAccess FROM users WHERE id = ?");
 $Sget->execute(array(
         $myId
