@@ -222,15 +222,15 @@ if ($myId >= 1 && $SA == 0) {
 						}
 						$avg [1] += $tot;
 						$avg [0] ++;
-						echo "<td style='border:1px solid black; text-align:right;'>" . money ( $tot, $currency, $langCode ) . "</td>\n";
+						echo "<td style='border:1px solid black; text-align:right;'>" . money_sfi ( $tot, $currency, $langCode ) . "</td>\n";
 					}
 					$termAvg = ($avg [0] >= 1) ? ($avg [1] / $avg [0]) : 0.00;
 					$yearAvg = ($termAvg * $est);
 					$runningTerm += $termAvg;
 					$runningYear += $yearAvg;
 					$runningBudget += $accBudget;
-					echo "<td style='border:1px solid black; text-align:right;'>" . money ( $termAvg, $currency, $langCode ) . "</td>\n";
-					echo "<td style='border:1px solid black; text-align:right;'>" . money ( $yearAvg, $currency, $langCode ) . "</td>\n";
+					echo "<td style='border:1px solid black; text-align:right;'>" . money_sfi ( $termAvg, $currency, $langCode ) . "</td>\n";
+					echo "<td style='border:1px solid black; text-align:right;'>" . money_sfi ( $yearAvg, $currency, $langCode ) . "</td>\n";
 					echo "<td style='border:1px solid black;'><input type='number' name='budget$accId' value='$accBudget' step='.01'></td>\n";
 					echo "</tr>\n";
 				}
@@ -238,9 +238,9 @@ if ($myId >= 1 && $SA == 0) {
 			echo "<tr>\n";
 			echo "<td style='border:1px solid black; text-align:center;'><input type='submit' value=' Set $title Budget '><input type='hidden' name='bUp' value='1'></td>\n";
 			echo "<td style='border:1px solid black;' colspan='$c'>&nbsp;</td>\n";
-			echo "<td style='border:1px solid black; text-align:right;'>" . money ( $runningTerm, $currency, $langCode ) . "</td>\n";
-			echo "<td style='border:1px solid black; text-align:right;'>" . money ( $runningYear, $currency, $langCode ) . "</td>\n";
-			echo "<td style='border:1px solid black; text-align:right;'>" . money ( $runningBudget, $currency, $langCode ) . "</td>\n";
+			echo "<td style='border:1px solid black; text-align:right;'>" . money_sfi ( $runningTerm, $currency, $langCode ) . "</td>\n";
+			echo "<td style='border:1px solid black; text-align:right;'>" . money_sfi ( $runningYear, $currency, $langCode ) . "</td>\n";
+			echo "<td style='border:1px solid black; text-align:right;'>" . money_sfi ( $runningBudget, $currency, $langCode ) . "</td>\n";
 			echo "</tr>\n";
 			echo "</table></div>\n";
 		}

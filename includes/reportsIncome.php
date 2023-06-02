@@ -113,16 +113,16 @@ Income Statement
 						?></td>
             <td style="width: 150px; text-align:left; border-top:1px solid #dddddd;"></td>
                 <td style="width: 100px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo ($bd >= 0.01) ? money ( $bd, $currency, $langCode ) : "";
+						echo ($bd >= 0.01) ? money_sfi ( $bd, $currency, $langCode ) : "";
 						?></td>
 						<td style="width: 100px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo ($bc >= 0.01) ? money ( $bc, $currency, $langCode ) : "";
+						echo ($bc >= 0.01) ? money_sfi ( $bc, $currency, $langCode ) : "";
 						?></td>
                         <td style="width: 100px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo money ( $tP, $currency, $langCode );
+						echo money_sfi ( $tP, $currency, $langCode );
 						?></td>
 						<td style="width: 150px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo money ( $tY, $currency, $langCode );
+						echo money_sfi ( $tY, $currency, $langCode );
 						?></td>
             </tr>
 			<tr>
@@ -168,10 +168,10 @@ Income Statement
 							echo $bDescription;
 							?></td>
                 <td style="width: 100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo ($bDebit >= 0.01) ? money ( $bDebit, $currency, $langCode ) : "";
+							echo ($bDebit >= 0.01) ? money_sfi ( $bDebit, $currency, $langCode ) : "";
 							?></td>
 						<td style="width: 100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo ($bCredit >= 0.01) ? money ( $bCredit, $currency, $langCode ) : "";
+							echo ($bCredit >= 0.01) ? money_sfi ( $bCredit, $currency, $langCode ) : "";
 							?></td>
                         <td style="width:100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
 							echo "Pay Type - " . $PAYTYPES [$bccc];
@@ -201,10 +201,10 @@ Income Statement
 					?></td>
 						<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Total</td>
                         <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-					echo money ( $gtP, $currency, $langCode );
+					echo money_sfi ( $gtP, $currency, $langCode );
 					?></td>
 					<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-					echo money ( $gtY, $currency, $langCode );
+					echo money_sfi ( $gtY, $currency, $langCode );
 					?></td>
             </tr>
             <?php
@@ -217,10 +217,10 @@ Income Statement
                 <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Income - Expenses</td>
 						<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Total</td>
                         <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-						echo money ( $IandEP, $currency, $langCode );
+						echo money_sfi ( $IandEP, $currency, $langCode );
 						?></td>
 					<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-						echo money ( $IandEY, $currency, $langCode );
+						echo money_sfi ( $IandEY, $currency, $langCode );
 						?></td>
             </tr>
 

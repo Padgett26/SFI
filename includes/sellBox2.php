@@ -131,7 +131,7 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
 						echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input type='number' name='invQty$j' step='.01' min='0.00' value='$lineQty' size='8'><br />$lineUOM<input type='hidden' name='invUOM$j' value='$intUOM'></td>\n";
 						echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>";
 						if ($linePrice >= .01) {
-							echo money ( $lineQty * $linePrice, $currency, $langCode ) . "<input type='hidden' name='invPrice$j' value='$linePrice'>";
+							echo money_sfi ( $lineQty * $linePrice, $currency, $langCode ) . "<input type='hidden' name='invPrice$j' value='$linePrice'>";
 						} else {
 							echo "Price per $lineUOM:<br /><input type='number' name='invPrice$j' step='.01' min='0.00'>";
 						}
@@ -162,7 +162,7 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
 				echo "<tr>\n";
 				echo "<td></td>\n";
 				echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Tax</td>\n";
-				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $tax, $currency, $langCode ) . "<input type='hidden' name='taxes' value='$tax'><br />Tax Exempt? <input type='checkbox' name='taxExempt' value='Y'";
+				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $tax, $currency, $langCode ) . "<input type='hidden' name='taxes' value='$tax'><br />Tax Exempt? <input type='checkbox' name='taxExempt' value='Y'";
 				echo ($SChargeTax == 0) ? " checked" : "";
 				echo "></td>\n";
 				echo "</tr>\n";
@@ -179,7 +179,7 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
 				echo "<tr>\n";
 				echo "<td></td>\n";
 				echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Total Sales Items</td>\n";
-				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $total, $currency, $langCode ) . "</td>\n";
+				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $total, $currency, $langCode ) . "</td>\n";
 				echo "</tr>\n";
 				echo "<tr>\n";
 				echo "<td></td>\n";
@@ -190,13 +190,13 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
 					echo ">$p</option>\n";
 				}
 				echo "</select></td>\n";
-				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>(" . money ( $discount, $currency, $langCode ) . ")<input type='hidden' name='discountAmount' value='$discount'></td>\n";
+				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>(" . money_sfi ( $discount, $currency, $langCode ) . ")<input type='hidden' name='discountAmount' value='$discount'></td>\n";
 				echo "</tr>\n";
 				echo "<tr>\n";
 				echo "<td></td>\n";
 				echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Total</td>\n";
 				$totalBill = ($total + $tax + $SShipping + $SFees - $discount);
-				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $totalBill, $currency, $langCode ) . "</td>\n";
+				echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $totalBill, $currency, $langCode ) . "</td>\n";
 				echo "</tr>\n";
 				echo "<tr>\n";
 				echo "<td colspan='3' style='padding:5px; border:1px solid #000000; text-align:left;'><input type='radio' name='paid' value='0'";

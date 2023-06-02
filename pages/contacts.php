@@ -673,7 +673,7 @@ if ($myId >= 1) {
 	$getSR = $getS->fetch ();
 	$ss = $s = ($getSR) ? $getSR ['startingBalance'] : 0.00;
 	$bpaid = ($getSR) ? $getSR ['balancePaid'] : 0;
-	echo money ( $s, $currency, $langCode );
+	echo money_sfi ( $s, $currency, $langCode );
 	?>
 	</td>
     <td style="text-align:center;">
@@ -730,17 +730,17 @@ if ($myId >= 1) {
 		?>
     </td>
     <td><?php
-		echo ($v [1] >= 0.01) ? money ( $v [1], $currency, $langCode ) : "";
+		echo ($v [1] >= 0.01) ? money_sfi ( $v [1], $currency, $langCode ) : "";
 		?></td>
     <td><?php
-		echo ($v [2] >= 0.01) ? money ( $v [2], $currency, $langCode ) : "";
+		echo ($v [2] >= 0.01) ? money_sfi ( $v [2], $currency, $langCode ) : "";
 		?></td>
     <td></td>
     <td style="text-align:center;">
     <?php
 		$tAmt = ($v [1] - $v [2]);
 		$s += $tAmt;
-		echo money ( $s, $currency, $langCode );
+		echo money_sfi ( $s, $currency, $langCode );
 		?>
 	</td>
     <td style="text-align:center;">

@@ -7,8 +7,7 @@ if ($myId >= 1) {
 
     if (filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_STRING)) {
         $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
-        $upName = filter_var(
-                htmlEntities(trim($_POST['name']), ENT_QUOTES),
+        $upName = filter_var(htmlEntities(trim($_POST['name']), ENT_QUOTES),
                 FILTER_SANITIZE_STRING);
         $upDesc = filter_var(
                 htmlEntities(trim($_POST['description']), ENT_QUOTES),
@@ -526,7 +525,7 @@ if ($myId >= 1) {
                                 <?php
     echo ($invId != 1) ? "Suggested retail based off of the " . ($markUp * 100) .
             "% mark-up in settings: " .
-            money((1 + $markUp) * $cost, $currency, $langCode) . "<br />" : "";
+            money_sfi((1 + $markUp) * $cost, $currency, $langCode) . "<br />" : "";
     ?>
                                 <input type="number" name="price" value="<?php
     echo $price;

@@ -141,10 +141,10 @@ foreach ( $_POST as $key => $val ) {
 							echo date ( "m-d-Y", $lastChanged );
 							?></div></td>
                             <td style="text-align:center;">$<?php
-							echo money ( $cost, $currency, $langCode ) . " " . $unit;
+							echo money_sfi ( $cost, $currency, $langCode ) . " " . $unit;
 							?></td>
                             <td style="text-align:center;">$<?php
-							echo money ( $price, $currency, $langCode );
+							echo money_sfi ( $price, $currency, $langCode );
 							?></td>
                             <td style="text-align:center;"><?php
 							echo $quantity . " " . $unit;
@@ -201,11 +201,11 @@ foreach ( $_POST as $key => $val ) {
 								?></div></td>
                                 <td style="text-align:center;"><?php
 
-								echo money ( $cost2, $currency, $langCode ) . " " . $unit2;
+								echo money_sfi ( $cost2, $currency, $langCode ) . " " . $unit2;
 								?></td>
                                 <td style="text-align:center;">$<?php
 
-								echo money ( $price2, $currency, $langCode );
+								echo money_sfi ( $price2, $currency, $langCode );
 								?></td>
                                 <td style="text-align:center;"><?php
 
@@ -239,13 +239,13 @@ foreach ( $_POST as $key => $val ) {
                     <td style="text-align:left; font-weight:bold;">Totals</td>
                     <td style="text-align:center; font-weight:bold;">$<?php
 
-					echo money ( $totalCost, $currency, $langCode );
+					echo money_sfi ( $totalCost, $currency, $langCode );
 					?></td>
                     <td style="text-align:center; font-weight:bold;"><?php
 					echo $totalItems;
 					?></td>
                     <td style="text-align:center; font-weight:bold;"><?php
-					echo money ( $totalQty, $currency, $langCode );
+					echo money_sfi ( $totalQty, $currency, $langCode );
 					?></td>
                     <td colspan="2"></td>
                 </tr>

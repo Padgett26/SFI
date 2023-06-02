@@ -145,16 +145,16 @@ Balance Sheet
 						?></td>
             <td style="text-align: left; border-top:1px solid #dddddd;"></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo ($bd >= 0.01) ? money ( $bd, $currency, $langCode ) : "";
+						echo ($bd >= 0.01) ? money_sfi ( $bd, $currency, $langCode ) : "";
 						?></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo ($bc >= 0.01) ? money ( $bc, $currency, $langCode ) : "";
+						echo ($bc >= 0.01) ? money_sfi ( $bc, $currency, $langCode ) : "";
 						?></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo money ( $tP, $currency, $langCode );
+						echo money_sfi ( $tP, $currency, $langCode );
 						?></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo money ( $tY, $currency, $langCode );
+						echo money_sfi ( $tY, $currency, $langCode );
 						?></td>
 	</tr>
 	<tr>
@@ -197,10 +197,10 @@ Balance Sheet
 							echo $description;
 							?></td>
 					<td style="width:100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo ($debitAmount >= 0.01) ? money ( $debitAmount, $currency, $langCode ) : "";
+							echo ($debitAmount >= 0.01) ? money_sfi ( $debitAmount, $currency, $langCode ) : "";
 							?></td>
 					<td style="width:100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo ($creditAmount >= 0.01) ? money ( $creditAmount, $currency, $langCode ) : "";
+							echo ($creditAmount >= 0.01) ? money_sfi ( $creditAmount, $currency, $langCode ) : "";
 							?></td>
 					<td style="width:100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
 							echo "Pay Type - " . $PAYTYPES [$ccc];
@@ -233,11 +233,11 @@ Balance Sheet
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;">Total</td>
 		<td
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-					echo money ( $gtP, $currency, $langCode );
+					echo money_sfi ( $gtP, $currency, $langCode );
 					?></td>
 		<td
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-					echo money ( $gtY, $currency, $langCode );
+					echo money_sfi ( $gtY, $currency, $langCode );
 					?></td>
 	</tr>
             <?php
@@ -254,11 +254,11 @@ Balance Sheet
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;">Total</td>
 		<td
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-						echo money ( $LandCP, $currency, $langCode );
+						echo money_sfi ( $LandCP, $currency, $langCode );
 						?></td>
 		<td
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-						echo money ( $LandCY, $currency, $langCode );
+						echo money_sfi ( $LandCY, $currency, $langCode );
 						?></td>
 	</tr>
             <?php

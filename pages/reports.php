@@ -204,7 +204,7 @@ if ($myId >= 1 && $SA == 0) {
 		while ( $getPR2 = $getPay2->fetch () ) {
 			$sb += ($getPR2 ['creditAmount'] - $getPR2 ['debitAmount']);
 		}
-		echo ($sb != 0) ? "<tr><td style='text-align:left;'><a href='index.php?page=contacts&contactId=$k'>$v</a></td><td style='text-align:right;'>" . money ( $sb, $currency, $langCode ) . "</td></tr>" : "";
+		echo ($sb != 0) ? "<tr><td style='text-align:left;'><a href='index.php?page=contacts&contactId=$k'>$v</a></td><td style='text-align:right;'>" . money_sfi ( $sb, $currency, $langCode ) . "</td></tr>" : "";
 	}
 	?>
 	</table>

@@ -94,12 +94,12 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
 								echo "<td></td>\n";
 								echo "<td></td>\n";
 								echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Total Purchased Items</td>\n";
-								echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $total, $currency, $langCode ) . "</td>\n";
+								echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $total, $currency, $langCode ) . "</td>\n";
 								echo "</tr>\n";
 								echo "<tr>\n";
 								echo "<td colspan='2'></td>\n";
 								echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Total</td>\n";
-								echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $total + $SShipping + $SFees + $STaxes, $currency, $langCode ) . "</td>\n";
+								echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $total + $SShipping + $SFees + $STaxes, $currency, $langCode ) . "</td>\n";
 								echo "</tr>\n";
 								echo "<tr>\n";
 								echo "<td style='width:200px; padding:5px; border:1px solid #000000; text-align:center;'>Finalize Purchase Receipt <input type='checkbox' name='done' value='1'><br /><span style='font-size:.75em;'>This will close the purchase receipt and make changes in your Inv</span></td>\n";

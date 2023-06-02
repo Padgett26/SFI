@@ -111,7 +111,7 @@ Start Balance
 </td>
 <td style="text-align:right; font-weight:bold; border-left:1px solid #000000; border-right:2px solid #000000;" colspan="3">
 <?php
-						echo money ( $startBalance, $currency, $langCode );
+						echo money_sfi ( $startBalance, $currency, $langCode );
 						?>
 </td>
 </tr>
@@ -162,10 +162,10 @@ Start Balance
 								switch ($accountNumber) {
 									case '110.0' :
 										// account receivable
-										echo money ( $debitAmount, $currency, $langCode );
+										echo money_sfi ( $debitAmount, $currency, $langCode );
 										break;
 									default :
-										echo money ( $debitAmount, $currency, $langCode );
+										echo money_sfi ( $debitAmount, $currency, $langCode );
 								}
 								?>
 </td>
@@ -174,10 +174,10 @@ Start Balance
 								switch ($accountNumber) {
 									case '110.0' :
 										// account receivable
-										echo money ( $creditAmount, $currency, $langCode );
+										echo money_sfi ( $creditAmount, $currency, $langCode );
 										break;
 									default :
-										echo money ( $creditAmount, $currency, $langCode );
+										echo money_sfi ( $creditAmount, $currency, $langCode );
 										break;
 								}
 								?>
@@ -191,7 +191,7 @@ Start Balance
 										$startBalance -= $creditAmount;
 										break;
 								}
-								echo money ( $startBalance, $currency, $langCode );
+								echo money_sfi ( $startBalance, $currency, $langCode );
 								?>
 </td>
 </tr>
@@ -207,7 +207,7 @@ Start Balance
 </td>
 <td style="text-align:right; font-weight:bold; border-right:2px solid #000000; border-bottom:2px solid #000000; border-top:2px solid #000000;">
 <?php
-						echo money ( abs ( $startBalance ), $currency, $langCode );
+						echo money_sfi ( abs ( $startBalance ), $currency, $langCode );
 						?>
 </td>
 </tr>

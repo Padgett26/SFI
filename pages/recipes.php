@@ -465,7 +465,7 @@ if ($myId >= 1 && $SA == 0) {
                                 <td>Total Cost
                                 <td><div id="cost"><?php
 
-        echo money($totalCost, $currency, $langCode);
+        echo money_sfi($totalCost, $currency, $langCode);
         ?> each</div>
                                     <input id="costUp" type="hidden" name="cost" value="<?php
 
@@ -481,7 +481,7 @@ if ($myId >= 1 && $SA == 0) {
         ?>" step='.01' placeholder='0.00'><br />
                                     <?php
         echo "<div id='suggestedPrice'>Suggested retail based off of the price amounts in your inventory: " .
-                money($suggestedPrice, $currency, $langCode) . " each.</div>";
+                money_sfi($suggestedPrice, $currency, $langCode) . " each.</div>";
         ?>
 
                             </tr>
@@ -639,7 +639,7 @@ if ($myId >= 1 && $SA == 0) {
                 ?></td>
                                                 <td style='width:100px; padding:5px; border:1px solid #000000; text-align:center;'><?php
 
-                echo ($i[1] != 1) ? money($total, $currency, $langCode) : money(
+                echo ($i[1] != 1) ? money($total, $currency, $langCode) : money_sfi(
                         $tLabor, $currency, $langCode);
                 ?></td>
                                                 <td style='width:100px; padding:5px; border:1px solid #000000; text-align:center;'><input type='submit' value=' Edit Ingredient '></td>

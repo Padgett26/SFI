@@ -239,8 +239,8 @@ if ($myId >= 1 && $SA == 0) {
 			$cashCheckCC = $PAYTYPES [$getLR ['cashCheckCC']];
 			$checkNumber = $getLR ['checkNumber'];
 			$accountNumber = $getLR ['accountNumber'];
-			$debitAmount = money ( $getLR ['debitAmount'], $currency, $langCode );
-			$creditAmount = money ( $getLR ['creditAmount'], $currency, $langCode );
+			$debitAmount = money_sfi ( $getLR ['debitAmount'], $currency, $langCode );
+			$creditAmount = money_sfi ( $getLR ['creditAmount'], $currency, $langCode );
 			$refNumber = $getLR ['refNumber'];
 			$typeCode = $TYPECODES [$getLR ['typeCode']];
 			$dailyConfirm = $getLR ['dailyConfirm'];
@@ -268,8 +268,8 @@ if ($myId >= 1 && $SA == 0) {
 		$getL2->execute ();
 		while ( $getL2R = $getL2->fetch () ) {
 			$accountNumber = $getL2R ['accountNumber'];
-			$debitAmount = money ( $getL2R ['debitAmount'], $currency, $langCode );
-			$creditAmount = money ( $getL2R ['creditAmount'], $currency, $langCode );
+			$debitAmount = money_sfi ( $getL2R ['debitAmount'], $currency, $langCode );
+			$creditAmount = money_sfi ( $getL2R ['creditAmount'], $currency, $langCode );
 			$totals ["D$accountNumber"] += $debitAmount;
 			$totals ["C$accountNumber"] += $creditAmount;
 			if (($accountNumber >= 100 && $accountNumber <= 199.9) || ($accountNumber >= 500 && $accountNumber <= 599.9)) {
@@ -645,20 +645,20 @@ if ($myId >= 1 && $SA == 0) {
 				?></td>
             <td style="text-align: left; border-top:1px solid #dddddd;"></td>
             <td style="text-align: right; border-top:1px solid #dddddd;"><?php
-				echo money ( $start, $currency, $langCode );
+				echo money_sfi ( $start, $currency, $langCode );
 				?></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-				echo ($bd >= 0.01) ? money ( $bd, $currency, $langCode ) : "";
+				echo ($bd >= 0.01) ? money_sfi ( $bd, $currency, $langCode ) : "";
 				?></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-				echo ($bc >= 0.01) ? money ( $bc, $currency, $langCode ) : "";
+				echo ($bc >= 0.01) ? money_sfi ( $bc, $currency, $langCode ) : "";
 				?></td>
 		<td style="text-align: right; border-top:1px solid #dddddd;"><?php
-				echo money ( $tY, $currency, $langCode );
+				echo money_sfi ( $tY, $currency, $langCode );
 				?><input type='hidden' name='endB<?php
 				echo $aId;
 				?>' value='<?php
-				echo money ( $tY, $currency, $langCode );
+				echo money_sfi ( $tY, $currency, $langCode );
 				?>'></td>
 	</tr>
 	<tr>
@@ -762,7 +762,7 @@ if ($myId >= 1 && $SA == 0) {
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;">></td>
 		<td
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-			echo money ( $gtY, $currency, $langCode );
+			echo money_sfi ( $gtY, $currency, $langCode );
 			?></td>
 	</tr>
             <?php
@@ -781,7 +781,7 @@ if ($myId >= 1 && $SA == 0) {
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"></td>
 		<td
 			style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-				echo money ( $LandCY, $currency, $langCode );
+				echo money_sfi ( $LandCY, $currency, $langCode );
 				?></td>
 	</tr>
             <?php
@@ -796,7 +796,7 @@ if ($myId >= 1 && $SA == 0) {
 						<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Total</td>
                         <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"></td>
 					<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-				echo money ( $IandEY, $currency, $langCode );
+				echo money_sfi ( $IandEY, $currency, $langCode );
 				?><input type="hidden" name="retainedEarnings" value="<?php
 				$getR = $db->prepare ( "SELECT startBalance FROM $myFAccounts WHERE accountNumber = ?" );
 				$getR->execute ( array (

@@ -103,7 +103,7 @@ include "cgi-bin/functions.php";
                 <tr>
                     <td>Total Cost
                     <td><div id="cost"><?php
-									echo money ( $totalCost, $currency, $langCode );
+									echo money_sfi ( $totalCost, $currency, $langCode );
 									?></div>
                 </tr>
                 <tr>
@@ -112,7 +112,7 @@ include "cgi-bin/functions.php";
 									echo $price;
 									?><br />
                         <?php
-									echo "<div id='suggestedPrice'>Suggested retail based off of the price amounts in your inventory: " . money ( $suggestedPrice, $currency, $langCode ) . ".</div>";
+									echo "<div id='suggestedPrice'>Suggested retail based off of the price amounts in your inventory: " . money_sfi ( $suggestedPrice, $currency, $langCode ) . ".</div>";
 									?>
                 </tr>
                 <tr>
@@ -162,7 +162,7 @@ include "cgi-bin/functions.php";
 										echo $onhand . " in Inv";
 										?></span></td>
                                     <td style='width:100px; padding:5px; border-top:1px solid #000000; text-align:center;'><?php
-										echo money ( $total, $currency, $langCode );
+										echo money_sfi ( $total, $currency, $langCode );
 										?></td>
                                 </tr>
                                 <?php

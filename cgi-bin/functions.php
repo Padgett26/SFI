@@ -526,6 +526,13 @@ function selectNewUOM ($unitOfMeasure, $db)
     return $r;
 }
 
+function money_sfi ($amt, $symbol, $code)
+{
+    settype($amt, "float");
+    $a = new NumberFormatter($code, NumberFormatter::CURRENCY);
+    return $a->formatCurrency($amt, $symbol);
+}
+
 function showHelpLeft ($t, $db)
 {
     $get = $db->prepare("SELECT writeUp FROM helpPage WHERE id = ?");

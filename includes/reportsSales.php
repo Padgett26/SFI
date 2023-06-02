@@ -27,7 +27,7 @@ Amount
 Start Balance<br />
 <?php
 
-echo money ( $startBal, $currency, $langCode );
+echo money_sfi ( $startBal, $currency, $langCode );
 ?>
 </td>
 </tr>
@@ -46,12 +46,12 @@ while ( $getPur1R = $getPur1->fetch () ) {
 <td style='font-weight: bold; font-size: 1.5em; border-bottom: 1px solid #dddddd;' colspan='5'>Money Spent</td>
 <td style='border-bottom: 1px solid #dddddd;text-align:right;'>
 <?php
-echo money ( $totCredit, $currency, $langCode );
+echo money_sfi ( $totCredit, $currency, $langCode );
 ?>
 </td>
 <td style='border-bottom: 1px solid #dddddd; text-align:right;'>
 <?php
-echo money ( $startBal, $currency, $langCode );
+echo money_sfi ( $startBal, $currency, $langCode );
 ?>
 </td>
 </tr>
@@ -97,7 +97,7 @@ while ( $getPurR = $getPur->fetch () ) {
 	echo $pCheckNumber;
 	?></td>
 	<td style='text-align:right;'><?php
-	echo money ( $pCreditAmount, $currency, $langCode );
+	echo money_sfi ( $pCreditAmount, $currency, $langCode );
 	?></td>
 	<td><?php
 	if ($pTypeCode == 2 && $pRefNumber >= 1) {
@@ -129,12 +129,12 @@ while ( $getSale1R = $getSale1->fetch () ) {
 <td style='font-weight: bold; font-size: 1.5em; border-bottom: 1px solid #dddddd;' colspan='5'>Money Taken In</td>
 <td style='border-bottom: 1px solid #dddddd; text-align:right;'>
 <?php
-echo money ( $totDebit, $currency, $langCode );
+echo money_sfi ( $totDebit, $currency, $langCode );
 ?>
 </td>
 <td style='border-bottom: 1px solid #dddddd; text-align:right;'>
 <?php
-echo money ( $startBal, $currency, $langCode );
+echo money_sfi ( $startBal, $currency, $langCode );
 ?>
 </td>
 </tr>
@@ -194,7 +194,7 @@ while ( $getPurR = $getPur->fetch () ) {
 	echo ($pCheckNumber != 0) ? $pCheckNumber : "";
 	?></td>
 	<td style='text-align:right;'><?php
-	echo money ( $pDebitAmount, $currency, $langCode );
+	echo money_sfi ( $pDebitAmount, $currency, $langCode );
 	?></td>
 	<td><?php
 	if ($pTypeCode == 1 && $pRefNumber >= 1) {
@@ -216,21 +216,21 @@ $close = implode ( ",", $confirm );
 <td colspan='5'></td>
 <td style="border-top:1px solid #dddddd; font-weight:bold;">Cash received</td>
 <td style="border-top:1px solid #dddddd; font-weight:bold; text-align:right;"><?php
-echo money ( $cash, $currency, $langCode );
+echo money_sfi ( $cash, $currency, $langCode );
 ?></td>
 </tr>
 <tr>
 <td colspan='5'></td>
 <td style="font-weight:bold;">Checks Received</td>
 <td style="font-weight:bold; text-align:right;"><?php
-echo money ( $check, $currency, $langCode );
+echo money_sfi ( $check, $currency, $langCode );
 ?></td>
 </tr>
 <tr>
 <td colspan='5'></td>
 <td style="font-weight:bold;">CC Received</td>
 <td style="font-weight:bold; text-align:right;"><?php
-echo money ( $cc, $currency, $langCode );
+echo money_sfi ( $cc, $currency, $langCode );
 ?></td>
 </tr>
 <tr>

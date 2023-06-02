@@ -65,7 +65,7 @@ while ( $transRow = $transactions->fetch () ) {
 	echo "<div id='showPaid" . $transId . "' style='position:absolute; right:5px; bottom:5px; font-size:.5em; font-weight:normal; display:block;'>";
 	echo ($paid == 1) ? "Paid" : "";
 	echo "</div></td>\n";
-	echo "<td style='width:50px; padding:5px; border:1px solid #000000;'>" . money ( $showTotal, $currency, $langCode ) . "</td>\n";
+	echo "<td style='width:50px; padding:5px; border:1px solid #000000;'>" . money_sfi ( $showTotal, $currency, $langCode ) . "</td>\n";
 	echo "<td style='width:50px; padding:5px; border:1px solid #000000; text-align:center;'>";
 	if ($finalized == '1') {
 		echo "<button onclick='transactionToggle(\"$transId\")'> View </button></td>\n";
@@ -115,28 +115,28 @@ while ( $transRow = $transactions->fetch () ) {
 		echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>$lineQty</td>\n";
 		echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>$lineName</td>\n";
 		echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>$lineUOM</td>\n";
-		echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $lineCost, $currency, $langCode ) . "</td>\n";
+		echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $lineCost, $currency, $langCode ) . "</td>\n";
 		echo "</tr>\n";
 	}
 	echo "<tr>\n";
 	echo "<td colspan='2'></td>\n";
 	echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Tax</td>\n";
-	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $transTaxes, $currency, $langCode ) . "</td>\n";
+	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $transTaxes, $currency, $langCode ) . "</td>\n";
 	echo "</tr>\n";
 	echo "<tr>\n";
 	echo "<td colspan='2'></td>\n";
 	echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Shipping</td>\n";
-	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $transShipping, $currency, $langCode ) . "</td>\n";
+	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $transShipping, $currency, $langCode ) . "</td>\n";
 	echo "</tr>\n";
 	echo "<tr>\n";
 	echo "<td colspan='2'></td>\n";
 	echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Other Fees</td>\n";
-	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $transFees, $currency, $langCode ) . "</td>\n";
+	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $transFees, $currency, $langCode ) . "</td>\n";
 	echo "</tr>\n";
 	echo "<tr>\n";
 	echo "<td colspan='2'></td>\n";
 	echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Discount<br />$discountPercent%</td>\n";
-	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>(" . money ( $discount, $currency, $langCode ) . ")</td>\n";
+	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>(" . money_sfi ( $discount, $currency, $langCode ) . ")</td>\n";
 	echo "</tr>\n";
 	echo "<tr>\n";
 	echo "<td></td>\n";
@@ -154,7 +154,7 @@ while ( $transRow = $transactions->fetch () ) {
 	}
 	echo "</td>\n";
 	echo "<td style='padding:5px; border:1px solid #000000; text-align:right;'>Total</td>\n";
-	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money ( $total, $currency, $langCode ) . "</td>\n";
+	echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'>" . money_sfi ( $total, $currency, $langCode ) . "</td>\n";
 	echo "</tr>\n";
 	echo "<tr>\n";
 	if (isset ( $notes ) && $notes != "" && $notes != " ") {

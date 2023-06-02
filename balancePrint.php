@@ -157,16 +157,16 @@ $dateRangeEnd = filter_input ( INPUT_POST, 'dateRangeEnd', FILTER_SANITIZE_NUMBE
 						?></td>
   <td style="text-align: left; border-top:1px solid #dddddd;"></td>
   <td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo ($bd >= 0.01) ? money ( $bd, $currency, $langCode ) : "";
+						echo ($bd >= 0.01) ? money_sfi ( $bd, $currency, $langCode ) : "";
 						?></td>
   <td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo ($bc >= 0.01) ? money ( $bc, $currency, $langCode ) : "";
+						echo ($bc >= 0.01) ? money_sfi ( $bc, $currency, $langCode ) : "";
 						?></td>
   <td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo money ( $tP, $currency, $langCode );
+						echo money_sfi ( $tP, $currency, $langCode );
 						?></td>
   <td style="text-align: right; border-top:1px solid #dddddd;"><?php
-						echo money ( $tY, $currency, $langCode );
+						echo money_sfi ( $tY, $currency, $langCode );
 						?></td>
 </tr>
 <tr>
@@ -268,11 +268,11 @@ $dateRangeEnd = filter_input ( INPUT_POST, 'dateRangeEnd', FILTER_SANITIZE_NUMBE
  style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;">Total</td>
  <td
  style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-					echo money ( $gtP, $currency, $langCode );
+					echo money_sfi ( $gtP, $currency, $langCode );
 					?></td>
  <td
  style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-					echo money ( $gtY, $currency, $langCode );
+					echo money_sfi ( $gtY, $currency, $langCode );
 					?></td>
 </tr>
 <?php
@@ -289,11 +289,11 @@ $dateRangeEnd = filter_input ( INPUT_POST, 'dateRangeEnd', FILTER_SANITIZE_NUMBE
   style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;">Total</td>
   <td
   style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-						echo money ( $LandCP, $currency, $langCode );
+						echo money_sfi ( $LandCP, $currency, $langCode );
 						?></td>
   <td
   style="text-align: right; font-weight: bold; border-top: 1px solid #dddddd;"><?php
-						echo money ( $LandCY, $currency, $langCode );
+						echo money_sfi ( $LandCY, $currency, $langCode );
 						?></td>
 </tr>
 <?php

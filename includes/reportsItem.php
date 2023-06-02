@@ -92,13 +92,13 @@ while ( $transRow = $transactions->fetch () ) {
 					echo $v2 [1];
 					?></td>
             <td style="text-align:right;"><?php
-					echo money ( $v2 [2], $currency, $langCode );
+					echo money_sfi ( $v2 [2], $currency, $langCode );
 					?></td>
             <td style="text-align:right;"><?php
-					echo money ( $v2 [3], $currency, $langCode );
+					echo money_sfi ( $v2 [3], $currency, $langCode );
 					?></td>
             <td style="text-align:right;"><?php
-					echo money ( ((($v2 [3] - $v2 [2]) / $v2 [2]) * 100), $currency, $langCode );
+					echo money_sfi ( ((($v2 [3] - $v2 [2]) / $v2 [2]) * 100), $currency, $langCode );
 					?>%</td>
         </tr>
         <?php
@@ -110,13 +110,13 @@ while ( $transRow = $transactions->fetch () ) {
 								echo $Tqty;
 								?></td>
         <td style="text-align:right;"><?php
-								echo money ( $Tcost, $currency, $langCode );
+								echo money_sfi ( $Tcost, $currency, $langCode );
 								?></td>
         <td style="text-align:right;"><?php
-								echo money ( $Tprice, $currency, $langCode );
+								echo money_sfi ( $Tprice, $currency, $langCode );
 								?></td>
         <td style="text-align:right;"><?php
-								echo ($Tcost != 0) ? money ( ((($Tprice - $Tcost) / $Tcost) * 100), $currency, $langCode ) : "0";
+								echo ($Tcost != 0) ? money_sfi ( ((($Tprice - $Tcost) / $Tcost) * 100), $currency, $langCode ) : "0";
 								?>%</td>
     </tr>
 </table>
