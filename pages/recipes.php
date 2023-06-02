@@ -140,7 +140,7 @@ if ($myId >= 1 && $SA == 0) {
                 if ($width != null && $height != null) {
                     $imageType = getPicType($_FILES["image"]['type']);
                     $imageName = $time . "." . $imageType;
-                    processPic("$domain/cmPic/$myId", $imageName, $image, 800,
+                    processPic("cmPic/$myId", $imageName, $image, 800,
                             150);
                     $p1stmt = $db->prepare(
                             "UPDATE $myRecipes SET picture=? WHERE id=?");

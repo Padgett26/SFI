@@ -197,7 +197,7 @@ if ($myId >= 1) {
             if ($width != null && $height != null) {
                 $imageType = getPicType($_FILES["image"]['type']);
                 $imageName = $time . "." . $imageType;
-                processPic("$domain/cmPic/$myId", $imageName, $image, 800, 150);
+                processPic("cmPic/$myId", $imageName, $image, 800, 150);
                 $p1stmt = $db->prepare(
                         "UPDATE $myInventory SET picture=? WHERE id=?");
                 $p1stmt->execute(array(
