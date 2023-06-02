@@ -289,7 +289,7 @@ prevBalancePaid INT(2) UNSIGNED DEFAULT 0
 )");
     $contacts->execute();
     $contacts1 = db_sfi()->prepare(
-            "INSERT INTO $table VALUES(1,'In House','','','','',?,'1','0','0.00','0','0')");
+            "INSERT INTO $table VALUES(1,'In House','','','','',?,'1','0','0.00','0.00','0','0')");
     $contacts1->execute(array(
             time()
     ));
