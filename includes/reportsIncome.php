@@ -23,23 +23,23 @@ Income Statement
 </td>
 </tr>
     <?php
-				$IandEP = 0;
-				$IandEY = 0;
+    $IandEP = 0;
+    $IandEY = 0;
 
-				for($i = 4; $i <= 5; ++ $i) {
-					$j = $i . "00.0";
-					$k = $i . "99.9";
+    for ($i = 4; $i <= 5; ++ $i) {
+        $j = $i . "00.0";
+        $k = $i . "99.9";
 
-					$type = $ACCOUNTTYPES [$i];
+        $type = $ACCOUNTTYPES[$i];
 
-					$gtP = 0;
-					$gtY = 0;
-					?>
+        $gtP = 0;
+        $gtY = 0;
+        ?>
         <tr>
             <td style="text-align:left; font-weight:bold; font-size:1.5em; background-color:#eeeeee;" colspan="7"><?php
 
-					echo ucfirst ( $type );
-					?></td>
+        echo ucfirst($type);
+        ?></td>
         </tr>
         <tr>
             <td style="text-align:left; font-weight:bold;">Account #</td>
@@ -51,165 +51,171 @@ Income Statement
             <td style="text-align:right; font-weight:bold;">Fiscal Year to Date</td>
         </tr>
         <?php
-					$getA2 = $db->prepare ( "SELECT id, accountNumber, accountName, startBalance FROM $myFAccounts WHERE accountNumber >= ? AND accountNumber <= ? ORDER BY accountNumber" );
-					$getA2->execute ( array (
-							$j,
-							$k
-					) );
-					while ( $getAR2 = $getA2->fetch () ) {
-						$aId = $getAR2 ['id'];
-						$aNumber = $getAR2 ['accountNumber'];
-						$aName = html_entity_decode ( $getAR2 ['accountName'], ENT_QUOTES );
-						$tY = $getAR2 ['startBalance'];
+        $getA2 = $db->prepare(
+                "SELECT id, accountNumber, accountName, startBalance FROM $myFAccounts WHERE accountNumber >= ? AND accountNumber <= ? ORDER BY accountNumber");
+        $getA2->execute(array(
+                $j,
+                $k
+        ));
+        while ($getAR2 = $getA2->fetch()) {
+            $aId = $getAR2['id'];
+            $aNumber = $getAR2['accountNumber'];
+            $aName = html_entity_decode($getAR2['accountName'], ENT_QUOTES);
+            $tY = $getAR2['startBalance'];
 
-						$bd = 0;
-						$bc = 0;
-						$tP = 0;
+            $bd = 0;
+            $bc = 0;
+            $tP = 0;
 
-						$getA3 = $db->prepare ( "SELECT date, debitAmount, creditAmount FROM $myFLedger WHERE accountNumber = ? AND date >= ? AND date <= ?" );
-						$getA3->execute ( array (
-								$aNumber,
-								$fiscalYear,
-								$dateRangeEnd
-						) );
-						while ( $getAR3 = $getA3->fetch () ) {
-							$aDate = $getAR3 ['date'];
-							$aDebit = $getAR3 ['debitAmount'];
-							$aCredit = $getAR3 ['creditAmount'];
+            $getA3 = $db->prepare(
+                    "SELECT date, debitAmount, creditAmount FROM $myFLedger WHERE accountNumber = ? AND date >= ? AND date <= ?");
+            $getA3->execute(array(
+                    $aNumber,
+                    $fiscalYear,
+                    $dateRangeEnd
+            ));
+            while ($getAR3 = $getA3->fetch()) {
+                $aDate = $getAR3['date'];
+                $aDebit = $getAR3['debitAmount'];
+                $aCredit = $getAR3['creditAmount'];
 
-							if ($i == 4) {
-								$tY += ($aCredit - $aDebit);
-								$IandEY += ($aCredit - $aDebit);
-								if ($aDate >= $dateRangeStart) {
-									$bd += $aDebit;
-									$bc += $aCredit;
-									$tP += ($aCredit - $aDebit);
-									$IandEP += ($aCredit - $aDebit);
-								}
-							} else {
-								$tY += ($aDebit - $aCredit);
-								$IandEY -= ($aDebit - $aCredit);
-								if ($aDate >= $dateRangeStart) {
-									$bd += $aDebit;
-									$bc += $aCredit;
-									$tP += ($aDebit - $aCredit);
-									$IandEP -= ($aDebit - $aCredit);
-								}
-							}
-						}
-						$gtY += $tY;
-						$gtP += $tP;
-						?>
+                if ($i == 4) {
+                    $tY += ($aCredit - $aDebit);
+                    $IandEY += ($aCredit - $aDebit);
+                    if ($aDate >= $dateRangeStart) {
+                        $bd += $aDebit;
+                        $bc += $aCredit;
+                        $tP += ($aCredit - $aDebit);
+                        $IandEP += ($aCredit - $aDebit);
+                    }
+                } else {
+                    $tY += ($aDebit - $aCredit);
+                    $IandEY -= ($aDebit - $aCredit);
+                    if ($aDate >= $dateRangeStart) {
+                        $bd += $aDebit;
+                        $bc += $aCredit;
+                        $tP += ($aDebit - $aCredit);
+                        $IandEP -= ($aDebit - $aCredit);
+                    }
+                }
+            }
+            $gtY += $tY;
+            $gtP += $tP;
+            ?>
             <tr style="cursor: pointer;" onclick="toggleview('show<?php
-						echo $aId;
-						?>')">
+            echo $aId;
+            ?>')">
                 <td style="width: 100px; text-align:left; border-top:1px solid #dddddd;"><?php
 
-						echo $aNumber;
-						?></td>
+            echo $aNumber;
+            ?></td>
                 <td style="width: 150px; text-align:left; border-top:1px solid #dddddd;"><?php
 
-						echo $aName;
-						?></td>
+            echo $aName;
+            ?></td>
             <td style="width: 150px; text-align:left; border-top:1px solid #dddddd;"></td>
                 <td style="width: 100px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo ($bd >= 0.01) ? money_sfi ( $bd, $currency, $langCode ) : "";
-						?></td>
+            echo ($bd >= 0.01) ? money_sfi($bd, $currency, $langCode) : "";
+            ?></td>
 						<td style="width: 100px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo ($bc >= 0.01) ? money_sfi ( $bc, $currency, $langCode ) : "";
-						?></td>
+            echo ($bc >= 0.01) ? money_sfi($bc, $currency, $langCode) : "";
+            ?></td>
                         <td style="width: 100px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo money_sfi ( $tP, $currency, $langCode );
-						?></td>
+            echo money_sfi($tP, $currency, $langCode);
+            ?></td>
 						<td style="width: 150px; text-align:right; border-top:1px solid #dddddd;"><?php
-						echo money_sfi ( $tY, $currency, $langCode );
-						?></td>
+            echo money_sfi($tY, $currency, $langCode);
+            ?></td>
             </tr>
 			<tr>
 			<td colspan="7">
 			<table style="display:none;" id="show<?php
-						echo $aId;
-						?>">
+            echo $aId;
+            ?>">
 						<tr>
 						<td style="text-align:center; border-top:1px solid #dddddd; background-color:#eeeeee;" colspan='7'><?php
-						echo "<a href='index.php?page=accountDetail&account=$aId' target='_self'>View Account Detail Page</a>";
-						?></td>
+            echo "<a href='index.php?page=accountDetail&account=$aId' target='_self'>View Account Detail Page</a>";
+            ?></td>
 				</tr>
             <?php
-						$getA4 = $db->prepare ( "SELECT * FROM $myFLedger WHERE accountNumber = ? AND date >= ? AND date <= ? ORDER BY date" );
-						$getA4->execute ( array (
-								$aNumber,
-								$dateRangeStart,
-								$dateRangeEnd
-						) );
-						while ( $getAR4 = $getA4->fetch () ) {
-							$bDate = date ( "Y-m-d", $getAR4 ['date'] );
-							$bContact = html_entity_decode ( getContact ( $getAR4 ['contact'], $db, $myContacts ), ENT_QUOTES );
-							$bccc = $getAR4 ['cashCheckCC'];
-							$bCkNum = $getAR4 ['checkNumber'];
-							$bDescription = html_entity_decode ( $getAR4 ['description'], ENT_QUOTES );
-							$bDebit = $getAR4 ['debitAmount'];
-							$bCredit = $getAR4 ['creditAmount'];
-							$bRefNum = $getAR4 ['refNumber'];
-							$bTypeCode = $getAR4 ['typeCode'];
+            $getA4 = $db->prepare(
+                    "SELECT * FROM $myFLedger WHERE accountNumber = ? AND date >= ? AND date <= ? ORDER BY date");
+            $getA4->execute(array(
+                    $aNumber,
+                    $dateRangeStart,
+                    $dateRangeEnd
+            ));
+            while ($getAR4 = $getA4->fetch()) {
+                $bDate = date("Y-m-d", $getAR4['date']);
+                $bContact = html_entity_decode(
+                        getContact($getAR4['contact'], $myContacts), ENT_QUOTES);
+                $bccc = $getAR4['cashCheckCC'];
+                $bCkNum = $getAR4['checkNumber'];
+                $bDescription = html_entity_decode($getAR4['description'],
+                        ENT_QUOTES);
+                $bDebit = $getAR4['debitAmount'];
+                $bCredit = $getAR4['creditAmount'];
+                $bRefNum = $getAR4['refNumber'];
+                $bTypeCode = $getAR4['typeCode'];
 
-							?>
+                ?>
             <tr>
                 <td style="width: 100px; text-align:left; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
 
-							echo $bDate;
-							?></td>
+                echo $bDate;
+                ?></td>
                 <td style="width: 150px; text-align:left; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
 
-							echo $bContact;
-							?></td>
+                echo $bContact;
+                ?></td>
             <td style="width: 150px; text-align:left; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
 
-							echo $bDescription;
-							?></td>
+                echo $bDescription;
+                ?></td>
                 <td style="width: 100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo ($bDebit >= 0.01) ? money_sfi ( $bDebit, $currency, $langCode ) : "";
-							?></td>
+                echo ($bDebit >= 0.01) ? money_sfi($bDebit, $currency, $langCode) : "";
+                ?></td>
 						<td style="width: 100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo ($bCredit >= 0.01) ? money_sfi ( $bCredit, $currency, $langCode ) : "";
-							?></td>
+                echo ($bCredit >= 0.01) ? money_sfi($bCredit, $currency,
+                        $langCode) : "";
+                ?></td>
                         <td style="width:100px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo "Pay Type - " . $PAYTYPES [$bccc];
-							if ($bccc == 2) {
-								echo " #" . $bCkNum;
-							}
-							?></td>
+                echo "Pay Type - " . $PAYTYPES[$bccc];
+                if ($bccc == 2) {
+                    echo " #" . $bCkNum;
+                }
+                ?></td>
 					<td style="width:150px; text-align:right; border-top:1px solid #dddddd; background-color:#eeeeee;"><?php
-							echo "<a href='index.php?page=journals&r=general&je=$bRefNum&type=$bTypeCode' target='_self'>View</a>";
-							?></td>
+                echo "<a href='index.php?page=journals&r=general&je=$bRefNum&type=$bTypeCode' target='_self'>View</a>";
+                ?></td>
             </tr>
             <?php
-						}
-						?>
+            }
+            ?>
 			</table>
 			</td>
 			</tr>
             <?php
-					}
-					?>
+        }
+        ?>
             <tr>
                 <td style="text-align:left;"></td>
                 <td style="text-align:left;"></td>
                 <td style="text-align:left;"></td>
                 <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-					echo ucfirst ( $type );
-					?></td>
+        echo ucfirst($type);
+        ?></td>
 						<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Total</td>
                         <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-					echo money_sfi ( $gtP, $currency, $langCode );
-					?></td>
+        echo money_sfi($gtP, $currency, $langCode);
+        ?></td>
 					<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-					echo money_sfi ( $gtY, $currency, $langCode );
-					?></td>
+        echo money_sfi($gtY, $currency, $langCode);
+        ?></td>
             </tr>
             <?php
-					if ($i == 5) {
-						?>
+        if ($i == 5) {
+            ?>
             <tr>
                 <td style="text-align:left;"></td>
                 <td style="text-align:left;"></td>
@@ -217,15 +223,15 @@ Income Statement
                 <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Income - Expenses</td>
 						<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;">Total</td>
                         <td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-						echo money_sfi ( $IandEP, $currency, $langCode );
-						?></td>
+            echo money_sfi($IandEP, $currency, $langCode);
+            ?></td>
 					<td style="text-align:right; font-weight:bold; border-top:1px solid #dddddd;"><?php
-						echo money_sfi ( $IandEY, $currency, $langCode );
-						?></td>
+            echo money_sfi($IandEY, $currency, $langCode);
+            ?></td>
             </tr>
 
             <?php
-					}
-				}
-				?>
+        }
+    }
+    ?>
 </table>

@@ -43,9 +43,9 @@ if ($myId >= 1) {
         $value = ($upQuantity * $upCost);
 
         $category = ($upCategorySelect == '0') ? catCheck($upCategoryName,
-                $upSubOf, $db, $myCategories) : $upCategorySelect;
+                $upSubOf, $myCategories) : $upCategorySelect;
 
-        $contact = ($upContactSelect == '0') ? conCheck($upContactName, $db,
+        $contact = ($upContactSelect == '0') ? conCheck($upContactName,
                 $myContacts, $time, '1') : $upContactSelect;
 
         if ($delId == "1") {
@@ -56,7 +56,7 @@ if ($myId >= 1) {
                     $invId
             ));
         } else {
-            $xNum = getNext('4', $db, $myFLedger);
+            $xNum = getNext('4', $myFLedger);
             if ($invId == 0) {
                 $newInv = $db->prepare(
                         "INSERT INTO $myInventory VALUES(NULL,?,?,?,?,?,?,?,'0.xxx',?,?,'0','0')");
@@ -384,7 +384,7 @@ if ($myId >= 1) {
             <td style="padding:5px; border:1px solid black;">
             <div style="text-align:right;">
     <?php
-    echo showHelpLeft(6, $db) . " " . showHelpLeft(19, $db);
+    echo showHelpLeft(6) . " " . showHelpLeft(19);
     ?>
     </div>
                 <?php
@@ -416,7 +416,7 @@ if ($myId >= 1) {
         $price = $giR['price'];
         $picture = $giR['picture'];
         $contactId = $giR['contactId'];
-        $contactName = getContact($contactId, $db, $myContacts);
+        $contactName = getContact($contactId, $myContacts);
         $categoryId = $giR['categoryId'];
         $recipeId = $giR['recipeId'];
         $taxed = $giR['taxed'];
@@ -487,7 +487,7 @@ if ($myId >= 1) {
     } else {
         ?>
                                     <select name="unitOfMeasure" size="1"><?php
-        echo selectNewUOM($unitOfMeasure, $db);
+        echo selectNewUOM($unitOfMeasure);
         ?>
                                     </select>
                                     <?php

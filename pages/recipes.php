@@ -38,7 +38,7 @@ if ($myId >= 1 && $SA == 0) {
                     $upId
             ));
         } else {
-            $catId = ($upCatSelect == 0) ? catCheck($upCatName, $upCatSubOf, $db,
+            $catId = ($upCatSelect == 0) ? catCheck($upCatName, $upCatSubOf,
                     $myCategories) : $upCatSelect;
 
             $upItems = array();
@@ -71,7 +71,7 @@ if ($myId >= 1 && $SA == 0) {
 
             foreach ($upItems as $v1) {
                 if ($v1[0] > 0) {
-                    $v1[1] = ($v1[2] == 0) ? invCheck($v1[1], $v1[3], $db,
+                    $v1[1] = ($v1[2] == 0) ? invCheck($v1[1], $v1[3],
                             $myInventory, $time) : $v1[2];
                     for ($j = 0; $j < 2; ++ $j) {
                         $upItemsString .= $v1[$j];
@@ -159,7 +159,7 @@ if ($myId >= 1 && $SA == 0) {
                 ));
                 $getPicR = $getPic->fetch();
                 $pic = $getPicR['picture'];
-                $upInvId = invCheck($upName, $upUOM, $db, $myInventory, $time);
+                $upInvId = invCheck($upName, $upUOM, $myInventory, $time);
                 if ($upInvId >= 2) {
                     $upDone1 = $db->prepare(
                             "UPDATE $myInventory SET description = ?, unitOfMeasure = ?, quantity = quantity + ?, cost = ?, price = ?, picture = ?, categoryId = ?, recipeId = ? WHERE id = ?");
@@ -236,7 +236,7 @@ if ($myId >= 1 && $SA == 0) {
                         $getPR = $getP->fetch();
                         $laborPrice = $getPR['price'];
                         $value = ($laborPrice * $v2[0] * $upCreate);
-                        $refN = getNext('3', $db, $myFLedger);
+                        $refN = getNext('3', $myFLedger);
                         // id, date, contact, description, cashCheckCC,
                         // checkNumber, accountNumber, debitAmount,
                         // creditAmount, refNumber, typeCode
@@ -322,7 +322,7 @@ if ($myId >= 1 && $SA == 0) {
             <td id="recipeEdit" style="padding:5px; border:1px solid black;">
             <div style="text-align:right;">
     <?php
-    echo showHelpLeft(7, $db);
+    echo showHelpLeft(7);
     ?>
     </div>
                 <?php
@@ -544,7 +544,7 @@ if ($myId >= 1 && $SA == 0) {
         echo $upId;
         ?>">
                                     Create <input type='number' name='create' step='.01' size="8" value='0.00'> <select name="upUOM" size="1"><?php
-        echo selectNewUOM('0', $db);
+        echo selectNewUOM('0');
         ?></select> of this recipe<br />
                                     <span style="font-size:.75em;">This will affect your inventory</span><br />
                                     <input type='submit' value=' Update Recipe '>
@@ -574,7 +574,7 @@ if ($myId >= 1 && $SA == 0) {
         echo "</select></td>\n";
         echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input id='invQty0' type='number' name='invQty0' step='.01' value='' size='5'></td>\n";
         echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><select name='invUOM0'>";
-        echo selectNewUOM('0', $db);
+        echo selectNewUOM('0');
         echo "</select></td>\n";
         echo "<td style='padding:5px; border:1px solid #000000; text-align:left;'><input type='submit' value=' Add Ingredient '></td>\n";
         echo "</tr>\n";

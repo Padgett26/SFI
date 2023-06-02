@@ -1,8 +1,8 @@
 <?php
 
-function createSettings ($table, $db)
+function createSettings ($table)
 {
-    $settings = $db->prepare(
+    $settings = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(2) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100),
@@ -18,15 +18,15 @@ currency VARCHAR(5),
 budgetTerm INT(2) DEFAULT 0
 )");
     $settings->execute();
-    $settings2 = $db->prepare(
+    $settings2 = db_sfi()->prepare(
             "INSERT INTO $table VALUES(1,'name','address','city st zip','phone','email','0','0.0000','0','0','USD','0')");
     $settings2->execute();
     return true;
 }
 
-function createCategories ($table, $db)
+function createCategories ($table)
 {
-    $categories = $db->prepare(
+    $categories = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 category VARCHAR(100),
@@ -35,21 +35,22 @@ notUsed1 INT(2) DEFAULT 0,
 notUsed2 INT(2) DEFAULT 0
 )");
     $categories->execute();
-    $categories1 = $db->prepare(
+    $categories1 = db_sfi()->prepare(
             "INSERT INTO $table VALUES(1,'Labor','0','0','0')");
     $categories1->execute();
-    $categories2 = $db->prepare(
+    $categories2 = db_sfi()->prepare(
             "INSERT INTO $table VALUES(2,'Uncategorized','0','0','0')");
     $categories2->execute();
-    $categories3 = $db->prepare(
+    $categories3 = db_sfi()->prepare(
             "INSERT INTO $table VALUES(3,'Hidden','0','0','0')");
     $categories3->execute();
     return true;
 }
 
-function createFAccounts ($table, $db)
+function createFAccounts ($table)
 {
     $time = time();
+    $db = db_sfi();
     $fAccounts = $db->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -152,9 +153,9 @@ notUsed2 INT(2) DEFAULT 0
     return true;
 }
 
-function createFLedger ($table, $db)
+function createFLedger ($table)
 {
-    $fLedger = $db->prepare(
+    $fLedger = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 date INT(12) UNSIGNED,
@@ -175,9 +176,9 @@ reconcile INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
-function createFLedgerOld ($table, $db)
+function createFLedgerOld ($table)
 {
-    $fLedger = $db->prepare(
+    $fLedger = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 date INT(12) UNSIGNED,
@@ -198,9 +199,9 @@ reconcile INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
-function createInventory ($table, $db)
+function createInventory ($table)
 {
-    $inventory = $db->prepare(
+    $inventory = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 time INT(12) UNSIGNED,
@@ -217,7 +218,7 @@ recipeId INT(8) UNSIGNED DEFAULT 0,
 taxed INT(2) UNSIGNED DEFAULT 1
 )");
     $inventory->execute();
-    $inventory2 = $db->prepare(
+    $inventory2 = db_sfi()->prepare(
             "INSERT INTO $table VALUES(1,?,'Labor','Labor cost per hour','3','0','0.00','0.00','','0','1','0','0')");
     $inventory2->execute(array(
             time()
@@ -225,9 +226,9 @@ taxed INT(2) UNSIGNED DEFAULT 1
     return true;
 }
 
-function createSales ($table, $db)
+function createSales ($table)
 {
-    $sales = $db->prepare(
+    $sales = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 time INT(12) UNSIGNED,
@@ -248,9 +249,9 @@ notUsed2 INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
-function createPurchasing ($table, $db)
+function createPurchasing ($table)
 {
-    $purchasing = $db->prepare(
+    $purchasing = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 time INT(12) UNSIGNED,
@@ -268,9 +269,9 @@ notUsed2 INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
-function createContacts ($table, $db)
+function createContacts ($table)
 {
-    $contacts = $db->prepare(
+    $contacts = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100),
@@ -287,7 +288,7 @@ balancePaid INT(2) UNSIGNED DEFAULT 0,
 prevBalancePaid INT(2) UNSIGNED DEFAULT 0
 )");
     $contacts->execute();
-    $contacts1 = $db->prepare(
+    $contacts1 = db_sfi()->prepare(
             "INSERT INTO $table VALUES(1,'In House','','','','',?,'1','0','0.00','0','0')");
     $contacts1->execute(array(
             time()
@@ -295,9 +296,9 @@ prevBalancePaid INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
-function createRecipes ($table, $db)
+function createRecipes ($table)
 {
-    $recipes = $db->prepare(
+    $recipes = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100),
@@ -347,8 +348,9 @@ function sendPWResetEmail ($toId, $firstName, $email, $verifyCode)
             $message, $headers);
 }
 
-function invCheck ($name, $uom, $db, $myInventory, $time)
+function invCheck ($name, $uom, $myInventory, $time)
 {
+    $db = db_sfi();
     $getItemId = $db->prepare("SELECT id FROM $myInventory WHERE name=?");
     $getItemId->execute(array(
             $name
@@ -375,8 +377,9 @@ function invCheck ($name, $uom, $db, $myInventory, $time)
     }
 }
 
-function catCheck ($name, $catSubOf, $db, $myCategories)
+function catCheck ($name, $catSubOf, $myCategories)
 {
+    $db = db_sfi();
     $getCatId = $db->prepare("SELECT id FROM $myCategories WHERE category = ?");
     $getCatId->execute(array(
             $name
@@ -406,8 +409,9 @@ function catCheck ($name, $catSubOf, $db, $myCategories)
     }
 }
 
-function conCheck ($upContactName, $db, $myContacts, $time, $vendor)
+function conCheck ($upContactName, $myContacts, $time, $vendor)
 {
+    $db = db_sfi();
     $getContact = $db->prepare("SELECT id FROM $myContacts WHERE name = ?");
     $getContact->execute(array(
             $upContactName
@@ -458,8 +462,9 @@ function date2mktime ($date, $when)
     return mktime($h, $m, $s, $a[1], $a[2], $a[0]);
 }
 
-function getContact ($id, $db, $myContacts)
+function getContact ($id, $myContacts)
 {
+    $db = db_sfi();
     $name = "";
     $get = $db->prepare("SELECT name FROM $myContacts WHERE id = ?");
     $get->execute(array(
@@ -472,8 +477,9 @@ function getContact ($id, $db, $myContacts)
     return $name;
 }
 
-function getNext ($type, $db, $table)
+function getNext ($type, $table)
 {
+    $db = db_sfi();
     $next = 0;
     $get = $db->prepare(
             "SELECT refNumber FROM $table WHERE typeCode = ? ORDER BY refNumber DESC LIMIT 1");
@@ -488,8 +494,9 @@ function getNext ($type, $db, $table)
     return $next;
 }
 
-function selectNewUOM ($unitOfMeasure, $db)
+function selectNewUOM ($unitOfMeasure)
 {
+    $db = db_sfi();
     $r = "<option value='0'></option>\n";
     for ($i = 1; $i <= 6; ++ $i) {
         switch ($i) {
@@ -533,8 +540,9 @@ function money_sfi ($amt, $symbol, $code)
     return $a->formatCurrency($amt, $symbol);
 }
 
-function showHelpLeft ($t, $db)
+function showHelpLeft ($t)
 {
+    $db = db_sfi();
     $get = $db->prepare("SELECT writeUp FROM helpPage WHERE id = ?");
     $get->execute(array(
             $t
@@ -546,8 +554,9 @@ function showHelpLeft ($t, $db)
     return $text;
 }
 
-function showHelpRight ($t, $db)
+function showHelpRight ($t)
 {
+    $db = db_sfi();
     $get = $db->prepare("SELECT writeUp FROM helpPage WHERE id = ?");
     $get->execute(array(
             $t

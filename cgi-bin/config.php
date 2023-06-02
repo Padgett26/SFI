@@ -98,18 +98,16 @@ if (! file_exists("pages/" . $page . ".php")) {
 $errorMsg = "";
 $msg = "";
 
-$myInventory = $myId . "inventory";
-$myContacts = $myId . "contacts";
-$myCategories = $myId . "categories";
-$myPurchasing = $myId . "purchasing";
-$myRecipes = $myId . "recipes";
-$mySales = $myId . "sales";
-$mySettings = $myId . "settings";
-$mySubscription = $myId . "subscription";
-$myFAccounts = $myId . "fAccounts";
-$myFLedger = $myId . "fLedger";
-$myFLedgerOld = $myId . "fLedgerOld";
-$myFCashJournal = $myId . "fCashJournal";
+$myInventory = $myId . "__inventory";
+$myContacts = $myId . "__contacts";
+$myCategories = $myId . "__categories";
+$myPurchasing = $myId . "__purchasing";
+$myRecipes = $myId . "__recipes";
+$mySales = $myId . "__sales";
+$mySettings = $myId . "__settings";
+$myFAccounts = $myId . "__fAccounts";
+$myFLedger = $myId . "__fLedger";
+$myFLedgerOld = $myId . "__fLedgerOld";
 
 if ($myId >= 1) {
     $getSettings = $db->prepare("SELECT * FROM $mySettings WHERE id = ?");
