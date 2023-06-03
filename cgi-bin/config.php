@@ -108,6 +108,10 @@ $mySettings = $myId . "__settings";
 $myFAccounts = $myId . "__fAccounts";
 $myFLedger = $myId . "__fLedger";
 $myFLedgerOld = $myId . "__fLedgerOld";
+$myEmployees = $myId . "__employees";
+$myEmployeeTracking = $myId . "__employeeTracking";
+$myMilage = $myId . "__milage";
+$myVehicles = $myId . "__vehicles";
 
 if ($myId >= 1) {
     $getSettings = $db->prepare("SELECT * FROM $mySettings WHERE id = ?");

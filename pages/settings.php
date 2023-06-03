@@ -1174,27 +1174,52 @@ if ($myId >= 1 && $SA == 0) {
         ?>
 		<div style="text-align:center;">
 		<span style='font-weight:bold;'>Sales Associates</span><br /><br />
-		Here you can add employees. Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
+		Here you can add employees.<br><br>
 		<?php
         echo $SAerror;
         ?>
+        Employees:<br><select name="employee" size="1" onselect="getEmployeeEdit(this.value)">
+        <option value='0'>Add new</option>
+        <?php
+        foreach ($employees as $k => $v) {
+            echo "<option value='$k'>" . $v['name'] . "</option>\n";
+        }
+        ?>
+        </select>
+        <div id="employeeEdit" style="width:95%; border:1px solid black; padding:15px;">
+        <form action="index.php?page=settings&r=salesAssociate" method="post">
+        <label for="name">Name</label>
+        <input id="name" type='text' name='name'>
+        <label for="ssn">SSN</label>
+        <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'>
+        <label for="hireDate">Hire Date</label>
+        <input id="hireDate" type='date' name='hireDate' value='<?php
+        echo date('Y-m-d', $time);
+        ?>'>
+        <label for="terminateDate">Termination Date</label>
+        <input id="terminateDate" type='date' name='terminateDate'>
+        <label for="email">Email</label>
+        <input id="email" type='email' name='email'>
+        <label for="address">Address</label>
+        <input id="address" type='text' name='address'>
+        <label for="cityStZip">City, St Zip</label>
+        <input id="cityStZip" type='text' name='cityStZip'>
+        <label for="phone">Phone Number</label>
+        <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'>
+        <label for="hourlyPayRate">Hourly Pay Rate</label>
+        <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'>
+        <label for="salaryPayRate">Salary Pay Rate</label>
+        <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'>
+        <label for="siteAccess">SFI site access:</label>
+        <input id="siteAccess" type='radio' name='siteAccess' value='0'> No access to the SFI site
+        <input id="siteAccess" type='radio' name='siteAccess' value='1' checked> Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.
+        <label for="pwd">To log in as a sales associate, this employee will need a password.</label>
+        <input id="pwd" type='password' name='pwd'>
+        <input type='hidden' name='employeeUp' value='new'>
+        <button>Add Employee</button>
+        </form>
+        </div>
 		<table cellspacing='0px' style='margin:0px auto;'>
-			<tr>
-				<td style='font-weight:bold;'>Name</td>
-				<td style='font-weight:bold;'>Email</td>
-				<td style='font-weight:bold;'>Change<br>Pwd</td>
-				<td style='font-weight:bold;'>Password</td>
-				<td style='font-weight:bold;'>Deny<br>Access</td>
-				<td style='font-weight:bold;'></td>
-			</tr>
-			<tr>
-				<td style='font-weight:bold;'><form method='post' action='index.php?page=settings&SAid=new&r=salesAssociate'><input type='text' name='name' value='' placeholder='Name' size='30' required></td>
-				<td style='font-weight:bold;'><input type='email' name='email' value='' placeholder='Email' size='30' required></td>
-				<td style='font-weight:bold;'></td>
-				<td style='font-weight:bold;'><input type='password' name='pwd' value='' placeholder='password' size='30' required></td>
-				<td style='font-weight:bold;'></td>
-				<td style='font-weight:bold;'><input type='submit' value=' Add '></form></td>
-			</tr>
 		<?php
         $getSA = $db->prepare(
                 "SELECT id, name, email, denyAccess FROM users WHERE subOf = ? ORDER BY name");
@@ -1219,7 +1244,6 @@ if ($myId >= 1 && $SA == 0) {
         }
         ?>
 		</table>
-
 		<?php
     } elseif ($r == 'contribute') {
         ?>

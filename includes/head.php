@@ -6,10 +6,10 @@
 <meta name="description"            content="A simple financial and inventory system which tracks purchases and sales, calculates the cost and profit of your inventory, and tracks your cost and profit through the combination of ingredients in your custom recipes." />
 <meta http-equiv="X-UA-Compatible"  content="IE=edge" />
 <?php
-if (isset ( $name )) {
-	echo "<title>SFI || $page || $name</title>";
+if (isset($name)) {
+    echo "<title>SFI || $page || $name</title>";
 } else {
-	echo "<title>SFI || $page</title>";
+    echo "<title>SFI || $page</title>";
 }
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -130,6 +130,17 @@ if (isset ( $name )) {
                 }
             };
             xmlhttp.open("GET", "ajax/paid.php?table=" + table + "&id=" + id, true);
+            xmlhttp.send();
+        }
+
+        function getEmployeeEdit(id) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById('employeeEdit').innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "ajax/employeeEdit.php?id=" + id, true);
             xmlhttp.send();
         }
 
