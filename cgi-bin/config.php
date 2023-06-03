@@ -342,6 +342,10 @@ $tables = array(
         array(
                 'name' => 'milage',
                 'function' => 'createMilage'
+        ),
+        array(
+                'name' => 'employeeTracking',
+                'function' => 'createEmployeeTracking'
         )
 );
 

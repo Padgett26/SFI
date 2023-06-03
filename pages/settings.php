@@ -402,7 +402,7 @@ if ($myId >= 1 && $SA == 0) {
 			onclick="submitForm('SalesAssociate')">
 			<table style="width: 300px;">
 				<tr>
-					<td style="text-align: left;">Sales Associates</td>
+					<td style="text-align: left;">Employees</td>
 				</tr>
 			</table>
 		</div>
@@ -1174,7 +1174,7 @@ if ($myId >= 1 && $SA == 0) {
         ?>
 		<div style="text-align:center;">
 		<span style='font-weight:bold;'>Sales Associates</span><br /><br />
-		Here you can add or remove employees who have sales access only. The pages they would be able to open are: Sell, Inv, Contacts, and Help. There would be no access to your financial information.<br><br>
+		Here you can add or remove employees. Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
 		<?php
         echo $SAerror;
         ?>

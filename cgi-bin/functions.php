@@ -372,6 +372,22 @@ notUsed2 INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
+function createEmployeeTracking ($table)
+{
+    $recipes = db_sfi()->prepare(
+            "CREATE TABLE $table (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+employeeId INT(6) UNSIGNED,
+date INT(12) UNSIGNED,
+payRate DECIMAL(10,2) UNSIGNED DEFAULT 0.00,
+description TEXT,
+notUsed1 INT(2) UNSIGNED DEFAULT 0,
+notUsed2 INT(2) UNSIGNED DEFAULT 0
+)");
+    $recipes->execute();
+    return true;
+}
+
 function sendVerificationEmail ($toId, $firstName, $email, $verifyCode)
 {
     $link = hash('sha512', ($verifyCode . $firstName . $email), FALSE);
