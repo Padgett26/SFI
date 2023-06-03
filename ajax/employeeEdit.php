@@ -44,58 +44,58 @@ if ($getER) {
         <label for="name">Name</label>
         <input id="name" type='text' name='name' value='<?php
         echo $name;
-        ?>'>
+        ?>'><br><br>
         <label for="ssn">SSN</label>
         <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn' value='<?php
         echo $ssn;
-        ?>'>
+        ?>'><br><br>
         <label for="hireDate">Hire Date</label>
         <input id="hireDate" type='date' name='hireDate' value='<?php
         echo date('Y-m-d', $hireDate);
-        ?>'>
+        ?>'><br><br>
         <label for="terminateDate">Termination Date</label>
         <input id="terminateDate" type='date' name='terminateDate' value='<?php
         echo date('Y-m-d', $terminateDate);
-        ?>'>
+        ?>'><br><br>
         <label for="email">Email</label>
         <input id="email" type='email' name='email' value='<?php
         echo $email;
-        ?>'>
+        ?>'><br><br>
         <label for="address">Address</label>
         <input id="address" type='text' name='address' value='<?php
         echo $address;
-        ?>'>
+        ?>'><br><br>
         <label for="cityStZip">City, St Zip</label>
         <input id="cityStZip" type='text' name='cityStZip' value='<?php
         echo $cityStZip;
-        ?>'>
+        ?>'><br><br>
         <label for="phone">Phone Number</label>
         <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone' value='<?php
         echo $phone;
-        ?>'>
+        ?>'><br><br>
         <label for="hourlyPayRate">Hourly Pay Rate</label>
         <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate' value='<?php
         echo $hourlyPayRate;
-        ?>'>
+        ?>'><br><br>
         <label for="salaryPayRate">Salary Pay Rate</label>
         <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate' value='<?php
         echo $salaryPayRate;
-        ?>'>
+        ?>'><br><br>
         <label for="payRateDate">Pay rate effective Date</label>
         <input id="payRateDate" type='date' name='payRateDate' value='<?php
         echo date('Y-m-d', $time);
-        ?>'>
+        ?>'><br><br>
         <label for="description">Description of pay rate change</label>
-        <input id="description" type='text' name='description' value=''>
+        <input id="description" type='text' name='description' value=''><br><br>
         <label for="siteAccess">SFI site access:</label>
         <input id="siteAccess" type='radio' name='siteAccess' value='0'<?php
         echo ($access == 0) ? " checked" : "";
-        ?>> No access to the SFI site
+        ?>> No access to the SFI site<br>
         <input id="siteAccess" type='radio' name='siteAccess' value='1'<?php
         echo ($access == 1) ? " checked" : "";
-        ?>> Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.
+        ?>> Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
         <label for="pwd">To log in as a sales associate, this employee will need a password.</label>
-        <input id="pwd" type='password' name='pwd'>
+        <input id="pwd" type='password' name='pwd'><br><br>
         echo "<input type='hidden' name='employeeUp' value='<?php
         echo $getId;
         ?>'>";

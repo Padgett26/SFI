@@ -1278,32 +1278,34 @@ if ($myId >= 1 && $SA == 0) {
         <div id="employeeEdit" style="width:95%; border:1px solid black; padding:15px;">
         <form action="index.php?page=settings&r=salesAssociate" method="post">
         <label for="name">Name</label>
-        <input id="name" type='text' name='name'>
+        <input id="name" type='text' name='name'><br>
         <label for="ssn">SSN</label>
-        <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'>
+        <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'><br>
         <label for="hireDate">Hire Date</label>
         <input id="hireDate" type='date' name='hireDate' value='<?php
         echo date('Y-m-d', $time);
-        ?>'>
+        ?>'><br>
         <label for="terminateDate">Termination Date</label>
-        <input id="terminateDate" type='date' name='terminateDate'>
+        <input id="terminateDate" type='date' name='terminateDate'><br><br>
         <label for="email">Email</label>
-        <input id="email" type='email' name='email'>
+        <input id="email" type='email' name='email'><br><br>
         <label for="address">Address</label>
-        <input id="address" type='text' name='address'>
+        <input id="address" type='text' name='address'><br><br>
         <label for="cityStZip">City, St Zip</label>
-        <input id="cityStZip" type='text' name='cityStZip'>
+        <input id="cityStZip" type='text' name='cityStZip'><br><br>
         <label for="phone">Phone Number</label>
-        <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'>
+        <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'><br><br>
         <label for="hourlyPayRate">Hourly Pay Rate</label>
-        <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'>
+        <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'><br><br>
         <label for="salaryPayRate">Salary Pay Rate</label>
-        <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'>
-        <label for="siteAccess">SFI site access:</label>
-        <input id="siteAccess" type='radio' name='siteAccess' value='0'> No access to the SFI site
-        <input id="siteAccess" type='radio' name='siteAccess' value='1' checked> Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.
+        <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'><br><br>
+        <label for="description">Description of pay rate change</label>
+        <input id="description" type='text' name='description' value=''><br><br>
+        <label for="siteAccess">SFI site access:</label><br>
+        <input id="siteAccess" type='radio' name='siteAccess' value='0'> No access to the SFI site<br>
+        <input id="siteAccess" type='radio' name='siteAccess' value='1' checked> Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
         <label for="pwd">To log in as a sales associate, this employee will need a password.</label>
-        <input id="pwd" type='password' name='pwd'>
+        <input id="pwd" type='password' name='pwd'><br><br>
         <input type='hidden' name='employeeUp' value='new'>
         <button>Add Employee</button>
         </form>
