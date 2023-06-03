@@ -41,7 +41,9 @@ if ($je == 0) {
             ?>'></td>
             <td colspan='1'><input type='text' name='gContactName' value='<?php
             echo $gContactName;
-            ?>' placeholder='contact' onchange='getContactSelect("contactSelect", this.value)'>
+            ?>' placeholder='contact' onchange='getContactSelect("contactSelect", this.value, <?php
+            echo $myId;
+            ?>)'>
             <br />
             <select id='contactSelect' name='gContactNameSelect' size='1'>
             <?php

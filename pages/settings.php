@@ -1102,7 +1102,9 @@ if ($myId >= 1 && $SA == 0) {
     <tr>
         <td style="text-align:left;">
         <form action="index.php?page=settings&r=accounts" method="post">
-                <select name='accountType' size='1' onchange='getAccSelect("accSelect", this.value)'>
+                <select name='accountType' size='1' onchange='getAccSelect("accSelect", this.value, <?php
+        echo $myId;
+        ?>)'>
                     <option value='0'>Account Type</option>
                     <option value='1'>Asset</option>
                     <option value='6'> - Checking Account</option>

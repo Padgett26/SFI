@@ -569,7 +569,7 @@ if ($myId >= 1) {
                                     <input type='text' name='categoryName' value='<?php
         echo $categoryName;
         ?>' onkeyup='getCategorySelect("categorySelect", this.value, "<?php
-        echo $myCategories;
+        echo $myId;
         ?>")' placeholder="New"> Sub-category of: <select name="subOf" size="1">
                                         <option value='0'>New Primary category</option>
                                         <?php
@@ -599,7 +599,7 @@ if ($myId >= 1) {
         ?>
                                     </select><br />
                                     <input type='text' name='contactName' value='' onkeyup='getContactSelect("contactSelect", this.value, "<?php
-        echo $myContacts;
+        echo $myId;
         ?>")' placeholder="New">
                             </tr>
                             <?php

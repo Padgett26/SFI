@@ -74,47 +74,47 @@ if (isset($name)) {
             document.getElementById(linkId).innerHTML = "Example: $10.00 cost would be $" + amt + " retail.";
         }
 
-        function getInvSelect(linkId, name) {
+        function getInvSelect(linkId, name, myId) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     document.getElementById(linkId).innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "ajax/invSelect.php?getNames=" + name, true);
+            xmlhttp.open("GET", "ajax/invSelect.php?getNames=" + name + "&myId=" + myId, true);
             xmlhttp.send();
         }
 
-        function getContactSelect(linkId, name) {
+        function getContactSelect(linkId, name, myId) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     document.getElementById(linkId).innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "ajax/contactSelect.php?getNames=" + name, true);
+            xmlhttp.open("GET", "ajax/contactSelect.php?getNames=" + name + "&myId=" + myId, true);
             xmlhttp.send();
         }
 
-        function getCategorySelect(linkId, name) {
+        function getCategorySelect(linkId, name, myId) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     document.getElementById(linkId).innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "ajax/categorySelect.php?getNames=" + name, true);
+            xmlhttp.open("GET", "ajax/categorySelect.php?getNames=" + name + "&myId=" + myId, true);
             xmlhttp.send();
         }
 
-        function getAccSelect(linkId, name) {
+        function getAccSelect(linkId, name, myId) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     document.getElementById(linkId).innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "ajax/accSelect.php?getAcc=" + name, true);
+            xmlhttp.open("GET", "ajax/accSelect.php?getAcc=" + name + "&myId=" + myId, true);
             xmlhttp.send();
         }
 
@@ -144,9 +144,9 @@ if (isset($name)) {
             xmlhttp.send();
         }
 
-        function reconcile(id) {
+        function reconcile(id,myId) {
             var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", "ajax/reconcile.php?ledgerId=" + id, true);
+            xmlhttp.open("GET", "ajax/reconcile.php?ledgerId=" + id + "&myId=" + myId, true);
             xmlhttp.send();
         }
 

@@ -140,8 +140,7 @@ if ($myId >= 1 && $SA == 0) {
                 if ($width != null && $height != null) {
                     $imageType = getPicType($_FILES["image"]['type']);
                     $imageName = $time . "." . $imageType;
-                    processPic("cmPic/$myId", $imageName, $image, 800,
-                            150);
+                    processPic("cmPic/$myId", $imageName, $image, 800, 150);
                     $p1stmt = $db->prepare(
                             "UPDATE $myRecipes SET picture=? WHERE id=?");
                     $p1stmt->execute(array(
@@ -521,8 +520,7 @@ if ($myId >= 1 && $SA == 0) {
 
         echo $categoryName;
         ?>' onkeyup='getCategorySelect("categorySelect", this.value, "<?php
-
-        echo $myCategories;
+        echo $myId;
         ?>")' placeholder="New"> Sub-category of: <select name="subOf" size="1">
                                         <option value='0'>New Primary category</option>
                                         <?php
@@ -561,7 +559,7 @@ if ($myId >= 1 && $SA == 0) {
                                         </tr>
                                         <?php
         echo "<tr>\n";
-        echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input id='invName0' type='text' name='invName0' value='' onkeyup='getInvSelect(\"invSelect0\",this.value)'><br>\n";
+        echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input id='invName0' type='text' name='invName0' value='' onkeyup='getInvSelect(\"invSelect0\",this.value,$myId)'><br>\n";
         echo "<select id='invSelect0' name='invNameSelect0' size='1'>\n<option value='0'></option>\n";
         $getInvSelect = $db->prepare(
                 "SELECT id, name FROM $myInventory ORDER BY name");

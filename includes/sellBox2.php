@@ -90,7 +90,7 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
     echo "<tr>\n";
     echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input type='text' placeholder='Customer Name' name='contactName' value=\"" .
             $SContactName .
-            "\" onchange='getContactSelect(\"contactSelect\",this.value)'><br>\n";
+            "\" onchange='getContactSelect(\"contactSelect\",this.value,$myId)'><br>\n";
     echo "<select id='contactSelect' name='contactNameSelect' size='1'>\n<option value='0'></option>\n";
     foreach ($CONTACTS as $k => $v) {
         echo "<option value='$k'";
@@ -151,7 +151,7 @@ echo "<form action='receiptPrint.php' method='post'><input type='hidden' name='p
         }
     }
     echo "<tr>\n";
-    echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input type='text' name='invName0' value='' onkeyup='getInvSelect(\"invSelect0\",this.value)'><br>\n";
+    echo "<td style='padding:5px; border:1px solid #000000; text-align:center;'><input type='text' name='invName0' value='' onkeyup='getInvSelect(\"invSelect0\",this.value,$myId)'><br>\n";
     echo "<select id='invSelect0' name='invNameSelect0' size='1'>\n<option value='0'></option>\n";
     $getInvSelect = $db->prepare(
             "SELECT id, name FROM $myInventory ORDER BY name");

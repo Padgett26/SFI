@@ -41,7 +41,9 @@ echo $accName;
         ?>" min='<?php
         echo $dateMin;
         ?>'></td>
-        <td style=''><input type='text' name='jContactName' value='' placeholder='contact' onchange='getContactSelect("contactSelect", this.value)'><br>
+        <td style=''><input type='text' name='jContactName' value='' placeholder='contact' onchange='getContactSelect("contactSelect", this.value, <?php
+        echo $myId;
+        ?>)'><br>
             <select id='contactSelect' name='jContactNameSelect' size='1'>
                 <option value='0'>Select Contact</option>
                 <?php
@@ -162,7 +164,7 @@ echo $accName;
                                 "</td>\n";
                         echo "<td style='text-align:center;'><input type='checkbox' name='reconciled' value='1'";
                         echo ($xreconcile == 1) ? " checked" : "";
-                        echo " onclick='reconcile($xId)'></td>";
+                        echo " onclick='reconcile($xId,$myId)'></td>";
                         echo "</tr>\n";
                     }
                     echo "</div>";
