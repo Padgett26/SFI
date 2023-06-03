@@ -1174,7 +1174,7 @@ if ($myId >= 1 && $SA == 0) {
         ?>
 		<div style="text-align:center;">
 		<span style='font-weight:bold;'>Sales Associates</span><br /><br />
-		Here you can add or remove employees. Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
+		Here you can add employees. Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
 		<?php
         echo $SAerror;
         ?>
