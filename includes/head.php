@@ -133,14 +133,14 @@ if (isset($name)) {
             xmlhttp.send();
         }
 
-        function getEmployeeEdit(id) {
+        function getEmployeeEdit(id,myId) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     document.getElementById('employeeEdit').innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "ajax/employeeEdit.php?id=" + id, true);
+            xmlhttp.open("GET", "ajax/employeeEdit.php?id=" + id + "&myId=" + myId, true);
             xmlhttp.send();
         }
 

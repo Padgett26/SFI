@@ -5,8 +5,8 @@ if ($myId >= 1 && $SA == 0) {
             INPUT_GET, 'r', FILTER_SANITIZE_STRING) : '0';
     $SAerror = "";
 
-    if (filter_input(INPUT_GET, 'employeeUp', FILTER_SANITIZE_STRING)) {
-        $eId = filter_input(INPUT_GET, 'employeeUp', FILTER_SANITIZE_STRING);
+    if (filter_input(INPUT_POST, 'employeeUp', FILTER_SANITIZE_STRING)) {
+        $eId = filter_input(INPUT_POST, 'employeeUp', FILTER_SANITIZE_STRING);
         $eName = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $eEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $eSsn = filter_input(INPUT_POST, 'ssn', FILTER_SANITIZE_NUMBER_INT);
@@ -16,21 +16,22 @@ if ($myId >= 1 && $SA == 0) {
         $TD = explode("-",
                 filter_input(INPUT_POST, 'terminateDate',
                         FILTER_SANITIZE_NUMBER_INT));
-        $eTerminateDate = mktime(0, 0, 0, $TD[1], $TD[2], $TD[0]);
-        $eAddress = filter_input(INPUT_GET, 'address', FILTER_SANITIZE_STRING);
-        $eCityStZip = filter_input(INPUT_GET, 'cityStZip',
+        $eTerminateDate = ($TD[1] >= 1 && $TD[2] >= 1 && $TD[0] >= 1) ? mktime(
+                0, 0, 0, $TD[1], $TD[2], $TD[0]) : 0;
+        $eAddress = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+        $eCityStZip = filter_input(INPUT_POST, 'cityStZip',
                 FILTER_SANITIZE_STRING);
         $ePhone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
         $eHourlyPayRate = filter_input(INPUT_POST, 'hourlyPayRate',
-                FILTER_SANITIZE_NUMBER_FLOAT);
+                FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
         $eSalaryPayRate = filter_input(INPUT_POST, 'salaryPayRate',
-                FILTER_SANITIZE_NUMBER_FLOAT);
+                FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
         $PD = explode("-",
                 filter_input(INPUT_POST, 'payRateDate',
                         FILTER_SANITIZE_NUMBER_INT));
         $ePayRateDate = mktime(0, 0, 0, $PD[1], $PD[2], $PD[0]);
         $eDescription = htmlentities(
-                filter_input(INPUT_GET, 'description', FILTER_SANITIZE_STRING),
+                filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING),
                 ENT_QUOTES);
         $eSiteAccess = (filter_input(INPUT_POST, 'siteAccess',
                 FILTER_SANITIZE_NUMBER_INT) == 1) ? 1 : 0;
@@ -1267,7 +1268,9 @@ if ($myId >= 1 && $SA == 0) {
 		<tr><td style="text-align:center; padding:10px;" colspan='2'><?php
         echo $SAerror;
         ?></td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;">Employees:</td><td style="text-align:left; padding:10px; width:50%;"><select name="employee" size="1" onselect="getEmployeeEdit(this.value)">
+        <tr><td style="text-align:right; padding:10px; width:50%;">Employees:</td><td style="text-align:left; padding:10px; width:50%;"><select name="employee" size="1" onchange="getEmployeeEdit(this.value,'<?php
+        echo $myId;
+        ?>')">
         <option value='0'>Add new</option>
         <?php
         $e = $db->prepare("SELECT id,name FROM $myEmployees ORDER BY name");
@@ -1296,7 +1299,7 @@ if ($myId >= 1 && $SA == 0) {
         </tr>
         <tr>
         <td style="text-align:right; padding:10px; width:50%;"><label for="terminateDate">Termination Date</label></td>
-        <td style="text-align:left; padding:10px; width:50%;"><input id="terminateDate" type='date' name='terminateDate'></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="terminateDate" type='date' name='terminateDate' value='0-0-0'></td>
         </tr>
         <tr>
         <td style="text-align:right; padding:10px; width:50%;"><label for="email">Email</label></td>
@@ -1316,11 +1319,17 @@ if ($myId >= 1 && $SA == 0) {
         </tr>
         <tr>
         <td style="text-align:right; padding:10px; width:50%;"><label for="hourlyPayRate">Hourly Pay Rate</label></td>
-        <td style="text-align:left; padding:10px; width:50%;"><input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate' value="0.00"></td>
         </tr>
         <tr>
         <td style="text-align:right; padding:10px; width:50%;"><label for="salaryPayRate">Salary Pay Rate</label></td>
-        <td style="text-align:left; padding:10px; width:50%;"><input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate' value="0.00"></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="payRateDate">Pay Rate Effective Date</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="payRateDate" type='date' name='payRateDate' value='<?php
+        echo date('Y-m-d', $time);
+        ?>'></td>
         </tr>
         <tr>
         <td style="text-align:right; padding:10px; width:50%;"><label for="description">Description of pay rate change</label></td>
