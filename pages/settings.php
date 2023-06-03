@@ -1261,55 +1261,87 @@ if ($myId >= 1 && $SA == 0) {
 		<?php
     } elseif ($r == 'salesAssociate') {
         ?>
-		<div style="text-align:center;">
-		<span style='font-weight:bold;'>Sales Associates</span><br /><br />
-		Here you can add employees.<br><br>
-		<?php
+        <table style="margin:0px auto; width:50%;" cellspacing='0px'>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'><span style='font-weight:bold;'>Sales Associates</span></td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'>Here you can add employees.</td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'><?php
         echo $SAerror;
-        ?>
-        Employees:<br><select name="employee" size="1" onselect="getEmployeeEdit(this.value)">
+        ?></td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;">Employees:</td><td style="text-align:left; padding:10px; width:50%;"><select name="employee" size="1" onselect="getEmployeeEdit(this.value)">
         <option value='0'>Add new</option>
         <?php
         foreach ($employees as $k => $v) {
             echo "<option value='$k'>" . $v['name'] . "</option>\n";
         }
         ?>
-        </select>
-        <div id="employeeEdit" style="width:95%; border:1px solid black; padding:15px;">
-        <form action="index.php?page=settings&r=salesAssociate" method="post">
+        </select></td></tr></table>
+        <div id="employeeEdit" style="padding:20px; text-align:right;">
+        <table style="margin:0px auto; width:50%;" cellspacing='0px'>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><form action="index.php?page=settings&r=salesAssociate" method="post">
         <label for="name">Name</label>
-        <input id="name" type='text' name='name'><br>
-        <label for="ssn">SSN</label>
-        <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'><br>
-        <label for="hireDate">Hire Date</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="name" type='text' name='name'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="ssn">SSN</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="hireDate">Hire Date</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
         <input id="hireDate" type='date' name='hireDate' value='<?php
         echo date('Y-m-d', $time);
-        ?>'><br>
-        <label for="terminateDate">Termination Date</label>
-        <input id="terminateDate" type='date' name='terminateDate'><br><br>
-        <label for="email">Email</label>
-        <input id="email" type='email' name='email'><br><br>
-        <label for="address">Address</label>
-        <input id="address" type='text' name='address'><br><br>
-        <label for="cityStZip">City, St Zip</label>
-        <input id="cityStZip" type='text' name='cityStZip'><br><br>
-        <label for="phone">Phone Number</label>
-        <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'><br><br>
-        <label for="hourlyPayRate">Hourly Pay Rate</label>
-        <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'><br><br>
-        <label for="salaryPayRate">Salary Pay Rate</label>
-        <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'><br><br>
-        <label for="description">Description of pay rate change</label>
-        <input id="description" type='text' name='description' value=''><br><br>
-        <label for="siteAccess">SFI site access:</label><br>
-        <input id="siteAccess" type='radio' name='siteAccess' value='0'> No access to the SFI site<br>
-        <input id="siteAccess" type='radio' name='siteAccess' value='1' checked> Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.<br><br>
-        <label for="pwd">To log in as a sales associate, this employee will need a password.</label>
-        <input id="pwd" type='password' name='pwd'><br><br>
-        <input type='hidden' name='employeeUp' value='new'>
-        <button>Add Employee</button>
-        </form>
-        </div>
+        ?>'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="terminateDate">Termination Date</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="terminateDate" type='date' name='terminateDate'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="email">Email</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="email" type='email' name='email'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="address">Address</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="address" type='text' name='address'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="cityStZip">City, St Zip</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="cityStZip" type='text' name='cityStZip'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="phone">Phone Number</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="hourlyPayRate">Hourly Pay Rate</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="salaryPayRate">Salary Pay Rate</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="description">Description of pay rate change</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="description" type='text' name='description' value=''>
+        </td></tr>
+        <tr><td style="text-align:center; padding:10px;" colspan='2'><label for="siteAccess">SFI site access:</label>
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='0'>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        No access to the SFI site
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='1' checked>
+        </td><td style="text-align:left; padding:10px; width:50%;">Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.
+        </td></tr>
+        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="pwd">To log in as a sales associate, this employee will need a password.</label>
+        </td><td style="text-align:left; padding:10px; width:50%;">
+        <input id="pwd" type='password' name='pwd'>
+        </td></tr>
+        <tr><td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='new'>
+        <button>Add Employee</button></form>
+        </td></tr>
+        </table>
+
 		<table cellspacing='0px' style='margin:0px auto;'>
 		<?php
         $getSA = $db->prepare(
@@ -1334,7 +1366,7 @@ if ($myId >= 1 && $SA == 0) {
             echo "</tr>";
         }
         ?>
-		</table>
+		</table></div>
 		<?php
     } elseif ($r == 'contribute') {
         ?>
