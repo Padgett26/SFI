@@ -5,38 +5,98 @@ if ($myId >= 1 && $SA == 0) {
             INPUT_GET, 'r', FILTER_SANITIZE_STRING) : '0';
     $SAerror = "";
 
-    if (filter_input(INPUT_GET, 'SAid', FILTER_SANITIZE_STRING)) {
-        $Sid1 = filter_input(INPUT_GET, 'SAid', FILTER_SANITIZE_STRING);
-        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $pwd = filter_input(INPUT_POST, 'pwd', FILTER_SANITIZE_STRING);
-        $newPwd = (filter_input(INPUT_POST, 'newPwd', FILTER_SANITIZE_NUMBER_INT) ==
-                1) ? 1 : 0;
-        $deny = (filter_input(INPUT_POST, 'deny', FILTER_SANITIZE_NUMBER_INT) ==
-                1) ? 1 : 0;
-        if ($Sid1 == 'new') {
-            $checkEmail = $db->prepare(
-                    "SELECT COUNT(*) FROM users WHERE email = ?");
-            $checkEmail->execute(array(
-                    $email
+    if (filter_input(INPUT_GET, 'employeeUp', FILTER_SANITIZE_STRING)) {
+        $eId = filter_input(INPUT_GET, 'employeeUp', FILTER_SANITIZE_STRING);
+        $eName = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $eEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $eSsn = filter_input(INPUT_POST, 'ssn', FILTER_SANITIZE_NUMBER_INT);
+        $HD = explode("-",
+                filter_input(INPUT_POST, 'hireDate', FILTER_SANITIZE_NUMBER_INT));
+        $eHireDate = mktime(0, 0, 0, $HD[1], $HD[2], $HD[0]);
+        $TD = explode("-",
+                filter_input(INPUT_POST, 'terminateDate',
+                        FILTER_SANITIZE_NUMBER_INT));
+        $eTerminateDate = mktime(0, 0, 0, $TD[1], $TD[2], $TD[0]);
+        $eAddress = filter_input(INPUT_GET, 'address', FILTER_SANITIZE_STRING);
+        $eCityStZip = filter_input(INPUT_GET, 'cityStZip',
+                FILTER_SANITIZE_STRING);
+        $ePhone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
+        $eHourlyPayRate = filter_input(INPUT_POST, 'hourlyPayRate',
+                FILTER_SANITIZE_NUMBER_FLOAT);
+        $eSalaryPayRate = filter_input(INPUT_POST, 'salaryPayRate',
+                FILTER_SANITIZE_NUMBER_FLOAT);
+        $PD = explode("-",
+                filter_input(INPUT_POST, 'payRateDate',
+                        FILTER_SANITIZE_NUMBER_INT));
+        $ePayRateDate = mktime(0, 0, 0, $PD[1], $PD[2], $PD[0]);
+        $eDescription = htmlentities(
+                filter_input(INPUT_GET, 'description', FILTER_SANITIZE_STRING),
+                ENT_QUOTES);
+        $eSiteAccess = (filter_input(INPUT_POST, 'siteAccess',
+                FILTER_SANITIZE_NUMBER_INT) == 1) ? 1 : 0;
+        $ePwd = filter_input(INPUT_POST, 'pwd', FILTER_SANITIZE_STRING);
+
+        if ($eId == 'new') {
+            $eSet = $db->prepare(
+                    "INSERT INTO $myEmployees VALUES(NULL,'','0','0','0','','','','0','0','0')");
+            $eSet->execute();
+
+            $eGet = $db->prepare(
+                    "SELECT id FROM $myEmployees ORDER BY id DESC LIMIT 1");
+            $eGet->execute();
+            $eGetR = $eGet->fetch();
+            if ($eGetR) {
+                $eId = $eGetR['id'];
+            }
+        }
+        $eUp = $db->prepare(
+                "UPDATE $myEmployees SET name = ?,ssn = ?,hireDate = ?,terminateDate = ?,email = ?,address = ?,cityStZip = ?,phone = ? WHERE id = ?");
+        $eUp->execute(
+                array(
+                        $eName,
+                        $eSsn,
+                        $eHireDate,
+                        $eTerminateDate,
+                        $eEmail,
+                        $eAddress,
+                        $eCityStZip,
+                        $ePhone,
+                        $eId
+                ));
+
+        if ($eSiteAccess == 1) {
+            $checkU = $db->prepare(
+                    "SELECT COUNT(*),id,salt FROM users WHERE email = ? AND subOf = ?");
+            $checkU->execute(array(
+                    $eEmail,
+                    $myId
             ));
-            $ceR = $checkEmail->fetch();
-            if ($ceR) {
-                $count = $ceR[0];
-                if ($count >= 1) {
-                    $SAerror = "<span style='font-weight:bold; color:red;'>The email address: $email is already in use.</span><br><br>";
-                } else {
+            $checkUR = $checkU->fetch();
+            if ($checkUR && $checkUR[0] == 1) {
+                $saId = $checkUR['id'];
+                $saSalt = $checkUR['salt'];
+                if ($ePwd != "" && $ePwd != " ") {
+                    $hidepwd = hash('sha512', ($saSalt . $ePwd), FALSE);
+                    $pwdUp = $db->prepare(
+                            "UPDATE users SET password = ? WHERE id = ?");
+                    $pwdUp->execute(array(
+                            $hidePwd,
+                            $saId
+                    ));
+                }
+            } else {
+                if ($ePwd != "" && $ePwd != " ") {
                     $salt = mt_rand(100000, 999999);
-                    $hidepwd = hash('sha512', ($salt . $pwd), FALSE);
-                    $saUp = $db->prepare(
+                    $hidepwd = hash('sha512', ($salt . $ePwd), FALSE);
+                    $pwdUp = $db->prepare(
                             "INSERT INTO users VALUES(NULL,?,?,?,?,?,?,?,?,?,?)");
-                    $saUp->execute(
+                    $pwdUp->execute(
                             array(
-                                    $name,
-                                    $email,
-                                    $hidepwd,
+                                    $eName,
+                                    $eEmail,
+                                    $hidePwd,
                                     $salt,
-                                    '0',
+                                    $time,
                                     '0',
                                     '1',
                                     $myId,
@@ -46,28 +106,57 @@ if ($myId >= 1 && $SA == 0) {
                 }
             }
         } else {
-            $Sid2 = filter_input(INPUT_GET, 'SAid', FILTER_SANITIZE_NUMBER_INT);
-            if ($Sid2 >= 1) {
-                if ($newPwd == 1 && $pwd != "" && $pwd != " ") {
-                    $salt = mt_rand(100000, 999999);
-                    $hidepwd = hash('sha512', ($salt . $pwd), FALSE);
-                    $setP = $db->prepare(
-                            "UPDATE users SET password = ?, salt = ? WHERE id = ?");
-                    $setP->execute(array(
-                            $hidepwd,
-                            $salt,
-                            $Sid2
-                    ));
-                }
-                $setSA = $db->prepare(
-                        "UPDATE users SET name = ?, email = ?, denyAccess = ? WHERE id = ?");
-                $setSA->execute(array(
-                        $name,
-                        $email,
-                        $deny,
-                        $Sid2
+            $checkU = $db->prepare(
+                    "SELECT COUNT(*),id FROM users WHERE email = ? AND subOf = ?");
+            $checkU->execute(array(
+                    $eEmail,
+                    $myId
+            ));
+            $checkUR = $checkU->fetch();
+            if ($checkUR && $checkUR[0] == 1) {
+                $saId = $checkUR['id'];
+                $delU = $db->prepare("DELETE FROM users WHERE id = ?");
+                $delU->execute(array(
+                        $saId
                 ));
             }
+        }
+        $getPay = $db->prepare(
+                "SELECT hourlyPayRate, salaryPayRate FROM $myEmployeeTracking WHERE employeeId = ? ORDER BY date DESC LIMIT 1");
+        $getPay->execute(array(
+                $eId
+        ));
+        $getPR = $getPay->fetch();
+        if ($getPR) {
+            $hpr = $getPR['hourlyPayRate'];
+            $spr = $getPR['salaryPayRate'];
+            if ($eHourlyPayRate != $hpr || $eSalaryPayRate != $spr) {
+                $entry = $db->prepare(
+                        "INSERT INTO $myEmployeeTracking VALUES(NULL,?,?,?,?,?,?,?)");
+                $entry->execute(
+                        array(
+                                $eId,
+                                $ePayRateDate,
+                                $eHourlyPayRate,
+                                $eSalaryPayRate,
+                                $eDescription,
+                                '0',
+                                '0'
+                        ));
+            }
+        } else {
+            $entry = $db->prepare(
+                    "INSERT INTO $myEmployeeTracking VALUES(NULL,?,?,?,?,?,?,?)");
+            $entry->execute(
+                    array(
+                            $eId,
+                            $ePayRateDate,
+                            $eHourlyPayRate,
+                            $eSalaryPayRate,
+                            $eDescription,
+                            '0',
+                            '0'
+                    ));
         }
     }
     if (filter_input(INPUT_POST, 'close', FILTER_SANITIZE_NUMBER_INT) == 1) {

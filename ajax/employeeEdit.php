@@ -81,6 +81,12 @@ if ($getER) {
         <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate' value='<?php
         echo $salaryPayRate;
         ?>'>
+        <label for="payRateDate">Pay rate effective Date</label>
+        <input id="payRateDate" type='date' name='payRateDate' value='<?php
+        echo date('Y-m-d', $time);
+        ?>'>
+        <label for="description">Description of pay rate change</label>
+        <input id="description" type='text' name='description' value=''>
         <label for="siteAccess">SFI site access:</label>
         <input id="siteAccess" type='radio' name='siteAccess' value='0'<?php
         echo ($access == 0) ? " checked" : "";
