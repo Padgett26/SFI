@@ -317,6 +317,61 @@ notUsed2 INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
+function createVehicles ($table)
+{
+    $recipes = db_sfi()->prepare(
+            "CREATE TABLE $table (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+licensePlate VARCHAR(10),
+vin VARCHAR(20),
+assignedTo INT(6),
+notUsed1 INT(2) UNSIGNED DEFAULT 0,
+notUsed2 INT(2) UNSIGNED DEFAULT 0
+)");
+    $recipes->execute();
+    return true;
+}
+
+function createEmployees ($table)
+{
+    $recipes = db_sfi()->prepare(
+            "CREATE TABLE $table (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+ssn INT(12) UNSIGNED,
+hourlyPayRate DECIMAL(10,2) UNSIGNED DEFAULT 0.00,
+salaryPayRate DECIMAL(10,2) UNSIGNED DEFAULT 0.00,
+hireDate INT(12) UNSIGNED,
+terminateDate INT(12) UNSIGNED,
+email VARCHAR(50),
+address VARCHAR(50),
+cityStZip VARCHAR(50),
+phone INT(12) UNSIGNED,
+notUsed1 INT(2) UNSIGNED DEFAULT 0,
+notUsed2 INT(2) UNSIGNED DEFAULT 0
+)");
+    $recipes->execute();
+    return true;
+}
+
+function createMilage ($table)
+{
+    $recipes = db_sfi()->prepare(
+            "CREATE TABLE $table (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+vehicleId INT(6) UNSIGNED,
+employeeId INT(6) UNSIGNED,
+usageDate INT(12) UNSIGNED,
+milageBegin DECIMAL(10,1) UNSIGNED,
+milageEnd DECIMAL(10,1) UNSIGNED,
+notUsed1 INT(2) UNSIGNED DEFAULT 0,
+notUsed2 INT(2) UNSIGNED DEFAULT 0
+)");
+    $recipes->execute();
+    return true;
+}
+
 function sendVerificationEmail ($toId, $firstName, $email, $verifyCode)
 {
     $link = hash('sha512', ($verifyCode . $firstName . $email), FALSE);

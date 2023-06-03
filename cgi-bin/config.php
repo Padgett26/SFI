@@ -330,6 +330,18 @@ $tables = array(
         array(
                 'name' => 'recipes',
                 'function' => 'createRecipes'
+        ),
+        array(
+                'name' => 'vehicles',
+                'function' => 'createVehicles'
+        ),
+        array(
+                'name' => 'employees',
+                'function' => 'createEmployees'
+        ),
+        array(
+                'name' => 'milage',
+                'function' => 'createMilage'
         )
 );
 
