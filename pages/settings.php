@@ -1270,103 +1270,82 @@ if ($myId >= 1 && $SA == 0) {
         <tr><td style="text-align:right; padding:10px; width:50%;">Employees:</td><td style="text-align:left; padding:10px; width:50%;"><select name="employee" size="1" onselect="getEmployeeEdit(this.value)">
         <option value='0'>Add new</option>
         <?php
-        foreach ($employees as $k => $v) {
-            echo "<option value='$k'>" . $v['name'] . "</option>\n";
+        $e = $db->prepare("SELECT id,name FROM $myEmployees ORDER BY name");
+        $e->execute();
+        while ($er = $e->fetch()) {
+            echo "<option value='" . $er['id'] . "'>" . $er['name'] .
+                    "</option>\n";
         }
         ?>
         </select></td></tr></table>
         <div id="employeeEdit" style="padding:20px; text-align:right;">
         <table style="margin:0px auto; width:50%;" cellspacing='0px'>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><form action="index.php?page=settings&r=salesAssociate" method="post">
-        <label for="name">Name</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="name" type='text' name='name'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="ssn">SSN</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="hireDate">Hire Date</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="hireDate" type='date' name='hireDate' value='<?php
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><form action="index.php?page=settings&r=salesAssociate" method="post"><label for="name">Name</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="name" type='text' name='name'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="ssn">SSN</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="ssn" type='number' min='0' max='999999999' step='1' name='ssn'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="hireDate">Hire Date</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="hireDate" type='date' name='hireDate' value='<?php
         echo date('Y-m-d', $time);
-        ?>'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="terminateDate">Termination Date</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="terminateDate" type='date' name='terminateDate'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="email">Email</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="email" type='email' name='email'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="address">Address</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="address" type='text' name='address'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="cityStZip">City, St Zip</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="cityStZip" type='text' name='cityStZip'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="phone">Phone Number</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="hourlyPayRate">Hourly Pay Rate</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="salaryPayRate">Salary Pay Rate</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="description">Description of pay rate change</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="description" type='text' name='description' value=''>
-        </td></tr>
-        <tr><td style="text-align:center; padding:10px;" colspan='2'><label for="siteAccess">SFI site access:</label>
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='0'>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        No access to the SFI site
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='1' checked>
-        </td><td style="text-align:left; padding:10px; width:50%;">Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.
-        </td></tr>
-        <tr><td style="text-align:right; padding:10px; width:50%;"><label for="pwd">To log in as a sales associate, this employee will need a password.</label>
-        </td><td style="text-align:left; padding:10px; width:50%;">
-        <input id="pwd" type='password' name='pwd'>
-        </td></tr>
-        <tr><td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='new'>
-        <button>Add Employee</button></form>
-        </td></tr>
+        ?>'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="terminateDate">Termination Date</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="terminateDate" type='date' name='terminateDate'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="email">Email</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="email" type='email' name='email'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="address">Address</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="address" type='text' name='address'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="cityStZip">City, St Zip</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="cityStZip" type='text' name='cityStZip'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="phone">Phone Number</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="phone" type='number' min='0' max='9999999999' step='1' name='phone'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="hourlyPayRate">Hourly Pay Rate</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="hourlyPayRate" type='number' min='0.00' step='0.01' name='hourlyPayRate'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="salaryPayRate">Salary Pay Rate</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="salaryPayRate" type='number' min='0.00' step='0.01' name='salaryPayRate'></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="description">Description of pay rate change</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="description" type='text' name='description' value=''></td>
+        </tr>
+        <tr>
+        <td style="text-align:center; padding:10px;" colspan='2'><label for="siteAccess">SFI site access:</label></td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='0'></td>
+        <td style="text-align:left; padding:10px; width:50%;">No access to the SFI site</td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='1' checked></td>
+        <td style="text-align:left; padding:10px; width:50%;">Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.</td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="pwd">To log in as a sales associate, this employee will need a password.</label></td>
+        <td style="text-align:left; padding:10px; width:50%;"><input id="pwd" type='password' name='pwd'></td>
+        </tr>
+        <tr>
+        <td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='new'><button>Add Employee</button></form></td>
+        </tr>
         </table>
-
-		<table cellspacing='0px' style='margin:0px auto;'>
-		<?php
-        $getSA = $db->prepare(
-                "SELECT id, name, email, denyAccess FROM users WHERE subOf = ? ORDER BY name");
-        $getSA->execute(array(
-                $myId
-        ));
-        while ($getSAr = $getSA->fetch()) {
-            $saId = $getSAr['id'];
-            $saName = $getSAr['name'];
-            $saEmail = $getSAr['email'];
-            $saDeny = $getSAr['denyAccess'];
-            echo "<tr>";
-            echo "<td style='font-weight:bold;'><form method='post' action='index.php?page=settings&SAid=$saId&r=salesAssociate'><input type='text' name='name' value='$saName' size='30' required></td>";
-            echo "<td style='font-weight:bold;'><input type='email' name='email' value='$saEmail' size='30' required></td>";
-            echo "<td style='font-weight:bold;'><input type='checkbox' name='newPwd' value='1'></td>";
-            echo "<td style='font-weight:bold;'><input type='password' name='pwd' value='' placeholder='password' size='30'></td>";
-            echo "<td style='font-weight:bold;'><input type='checkbox' name='deny' value='1'";
-            echo ($saDeny == 1) ? " checked" : "";
-            echo "></td>";
-            echo "<td style='font-weight:bold;'><input type='submit' value=' Update '></form></td>";
-            echo "</tr>";
-        }
-        ?>
-		</table></div>
+        </div>
 		<?php
     } elseif ($r == 'contribute') {
         ?>
