@@ -151,10 +151,53 @@ if ($loginErr != "x") {
 		</tr>
 		</table>
         </form>
-        <form method='post' action='index.php'>
-
-    	<input type="hidden" name="quickMilageUp" value="1"><button>Record Milage</button>
-        </form>
+        <?php
+        if ($useMilage == 1) {
+            ?>
+            <form method='post' action='index.php'>
+			<table style='border:1px solid black; margin:10px auto;'>
+			<tr>
+			<td style='text-align:center;'>Vehicle</td>
+			<td style='text-align:center;'>Employee</td>
+			<td style='text-align:center;'>Date</td>
+			</tr><tr>
+			<td style='text-align:center;'><select name='vehicleId' size='1' onchange="quickVehicle(this.value)"><?php
+            $v = $db->prepare(
+                    "SELECT id,name FROM $myVehicles WHERE retired = '0' ORDER BY name");
+            $v->execute();
+            while ($vr = $v->fetch()) {
+                echo "<option value='" . $vr['id'] . "'>" . $vr['name'] .
+                        "</option>\n";
+            }
+            ?></select></td>
+			<td style='text-align:center;'><div id='quickAssigned'><?php
+            echo "<select name='employeeId' size='1'>\n";
+            $v = $db->prepare("SELECT id,name FROM $myEmployees ORDER BY name");
+            $v->execute();
+            while ($vr = $v->fetch()) {
+                $id = $vr['id'];
+                $name = $vr['name'];
+                echo "<option value='$id'></option>\n";
+            }
+            echo "</select>";
+            ?></div></td>
+			<td style='text-align:center;'><input type='date' name='usageDate' value='<?php
+            echo date("Y-m-d", $time);
+            ?>'></td>
+			</tr><tr>
+			<td style='text-align:center;'>Milage Start</td>
+			<td style='text-align:center;'>Milage End</td>
+			<td style='text-align:center;'></td>
+			</tr><tr>
+			<td style='text-align:center;'><input type='number' name='milageBegin' min='0.0' step='0.1'></td>
+			<td style='text-align:center;'><input type='number' name='milageEnd' min='0.0' step='0.1'></td>
+			<td style='text-align:center;'><input type="hidden" name="quickMilageUp" value="1"><button>Record Milage</button></td>
+			</tr>
+			</table>
+            </form>
+            <?php
+        }
+        ?>
         </div>
         <?php
     }

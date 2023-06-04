@@ -131,6 +131,7 @@ if ($myId >= 1) {
         $fiscalYear = $gsRow['fiscalYear'];
         $currency = $gsRow['currency'];
         $budgetTerm = $gsRow['budgetTerm'];
+        $useMilage = $gsRow['useMilage'];
     }
     $getlangCode = $db->prepare(
             "SELECT langCode FROM currencies WHERE symbol = ?");

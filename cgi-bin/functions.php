@@ -15,11 +15,15 @@ taxRate DECIMAL(6,4) DEFAULT 0.0000,
 purchasingCostProcessing INT(2) UNSIGNED DEFAULT 0,
 fiscalYear INT(12) UNSIGNED DEFAULT 0,
 currency VARCHAR(5),
-budgetTerm INT(2) DEFAULT 0
+budgetTerm INT(2) DEFAULT 0,
+useMilage INT(2) UNSIGNED DEFAULT 0,
+notUsed1 INT(2) UNSIGNED DEFAULT 0,
+notUsed2 INT(2) UNSIGNED DEFAULT 0,
+notUsed3 INT(2) UNSIGNED DEFAULT 0
 )");
     $settings->execute();
     $settings2 = db_sfi()->prepare(
-            "INSERT INTO $table VALUES(1,'name','address','city st zip','phone','email','0','0.0000','0','0','USD','0')");
+            "INSERT INTO $table VALUES(1,'name','address','city st zip','phone','email','0','0.0000','0','0','USD','0','0','0','0','0')");
     $settings2->execute();
     return true;
 }

@@ -18,6 +18,32 @@ if (filter_input(INPUT_POST, 'dateRangeEnd', FILTER_SANITIZE_NUMBER_INT)) {
 $dateRangeEnd = (isset($_SESSION['dateRangeEnd'])) ? $_SESSION['dateRangeEnd'] : date2mktime(
         date("Y-m-d", $time), 'end');
 
+if (filter_input(INPUT_POST, 'quickMilageUp', FILTER_SANITIZE_NUMBER_INT) == 1) {
+    $mVehicleId = filter_input(INPUT_POST, 'vehicleId',
+            FILTER_SANITIZE_NUMBER_INT);
+    $mEmployeeId = filter_input(INPUT_POST, 'employeeId',
+            FILTER_SANITIZE_NUMBER_INT);
+    $ud = explode("-",
+            filter_input(INPUT_POST, 'usageDate', FILTER_SANITIZE_NUMBER_INT));
+    $mUsageDate = mktime(12, 0, 0, $ud[1], $ud[2], $ud[0]);
+    $mMilageBegin = filter_input(INPUT_POST, 'milageBegin',
+            FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $mMilageEnd = filter_input(INPUT_POST, 'milageEnd',
+            FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+    $mUp = $db->prepare("INSERT INTO $myMilage VALUES(NULL,?,?,?,?,?,?,?)");
+    $mUp->execute(
+            array(
+                    $mVehicleId,
+                    $mEmployeeId,
+                    $mUsageDate,
+                    $mMilageBegin,
+                    $mMilageEnd,
+                    '0',
+                    '0'
+            ));
+}
+
 if (filter_input(INPUT_POST, 'quickTransUp', FILTER_SANITIZE_NUMBER_INT) == 1) {
     $qDate = date2mktime(
             filter_input(INPUT_POST, 'qDate', FILTER_SANITIZE_NUMBER_INT),

@@ -1417,6 +1417,11 @@ if ($myId >= 1 && $SA == 0) {
 		<tr><td style="text-align:center; padding:10px;" colspan='6'><?php
         echo $Merror;
         ?></td></tr>
+        <tr><td style="text-align:center; padding:10px;" colspan='6'>Check this box to track milage for your vehicles. <input type='checkbox' name='useMilage' value='1'<?php
+        echo ($useMilage == 1) ? " checked" : "";
+        ?> onclick="toggleMilage(<?php
+        echo $myId;
+        ?>)"></td></tr>
         <tr>
         <td style="text-align:center; padding:10px;">Vehicle Name</td>
         <td style="text-align:center; padding:10px;">Lic Plate</td>

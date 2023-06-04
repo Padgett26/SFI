@@ -150,6 +150,23 @@ if (isset($name)) {
             xmlhttp.send();
         }
 
+        function toggleMilage(myId) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "ajax/toggleMilage.php?toggle=1&myId=" + myId, true);
+            xmlhttp.send();
+        }
+
+        function quickVehicle(id,myId) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById('quickAssigned').innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "ajax/quickAssigned.php?id=" + id + "&myId=" + myId, true);
+            xmlhttp.send();
+        }
+
         function showBlank(id) {
             document.getElementById("blank" + id).style.display = "block";
         }
