@@ -46,9 +46,9 @@ if ($getER) {
 }
 
 ?>
-<table style="margin:0px auto; width:50%;" cellspacing='0px'>
+<table style="margin:20px auto; width:50%;" cellspacing='0px'>
 <tr>
-<td style="text-align:right; padding:10px; width:50%;"><form action="index.php?page=settings&r=salesAssociate" method="post"><label for="name">Name</label></td>
+<td style="text-align:right; padding:10px; width:50%;"><label for="name">Name</label></td>
 <td style="text-align:left; padding:10px; width:50%;"><input id="name" type='text' name='name' value='<?php
 echo $name;
 ?>'></td>
@@ -139,6 +139,31 @@ echo ($access == 1) ? " checked" : "";
 <tr>
 <td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='<?php
 echo $getId;
-?>'><button>Update Employee</button></form></td>
+?>'><button>Update Employee</button></td>
 </tr>
+</table>
+<table cellspacing='0px' style="width:50%; margin:20px auto;">
+<tr>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Date</td>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Hourly Pay Rate</td>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Salary Pay Rate</td>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Description</td>
+</tr>
+<?php
+$getH = $db->prepare(
+        "SELECT * FROM $myEmployeeTracking WHERE employeeId = ? ORDER BY date");
+$getH->execute(array(
+        $getId
+));
+while ($getHR = $getH->fetch()) {
+    echo "<tr><td style='padding:10px; text-align:center;'>" .
+            date("Y-m-d", $getHR['date']) .
+            "</td><td style='padding:10px; text-align:center;'>" .
+            money($getHR['hourlyPayRate']) .
+            "</td><td style='padding:10px; text-align:center;'>" .
+            money($getHR['salaryPayRate']) .
+            "</td><td style='padding:10px; text-align:center;'>" .
+            html_entity_decode($getHR['description'], ENT_QUOTES) . "</td></tr>";
+}
+?>
 </table>

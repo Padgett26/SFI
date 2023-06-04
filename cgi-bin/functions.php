@@ -319,7 +319,7 @@ notUsed2 INT(2) UNSIGNED DEFAULT 0
 
 function createVehicles ($table)
 {
-    $recipes = db_sfi()->prepare(
+    $vehicles = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100),
@@ -329,13 +329,16 @@ assignedTo INT(6),
 notUsed1 INT(2) UNSIGNED DEFAULT 0,
 notUsed2 INT(2) UNSIGNED DEFAULT 0
 )");
-    $recipes->execute();
+    $vehicles->execute();
+    $v1 = db_sfi()->prepare(
+            "INSERT INTO $table VALUES(1,'Default','','',1,'0','0')");
+    $v1->execute();
     return true;
 }
 
 function createEmployees ($table)
 {
-    $recipes = db_sfi()->prepare(
+    $employee = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100),
@@ -349,13 +352,16 @@ phone INT(12) UNSIGNED,
 notUsed1 INT(2) UNSIGNED DEFAULT 0,
 notUsed2 INT(2) UNSIGNED DEFAULT 0
 )");
-    $recipes->execute();
+    $employee->execute();
+    $e1 = db_sfi()->prepare(
+            "INSERT INTO $table VALUES(1,'Default','0','0','0','','','','0','0','0')");
+    $e1->execute();
     return true;
 }
 
 function createMilage ($table)
 {
-    $recipes = db_sfi()->prepare(
+    $milage = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 vehicleId INT(6) UNSIGNED,
@@ -366,13 +372,13 @@ milageEnd DECIMAL(10,1) UNSIGNED,
 notUsed1 INT(2) UNSIGNED DEFAULT 0,
 notUsed2 INT(2) UNSIGNED DEFAULT 0
 )");
-    $recipes->execute();
+    $milage->execute();
     return true;
 }
 
 function createEmployeeTracking ($table)
 {
-    $recipes = db_sfi()->prepare(
+    $eTrack = db_sfi()->prepare(
             "CREATE TABLE $table (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 employeeId INT(6) UNSIGNED,
@@ -383,7 +389,7 @@ description TEXT,
 notUsed1 INT(2) UNSIGNED DEFAULT 0,
 notUsed2 INT(2) UNSIGNED DEFAULT 0
 )");
-    $recipes->execute();
+    $eTrack->execute();
     return true;
 }
 

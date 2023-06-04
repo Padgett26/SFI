@@ -4,6 +4,43 @@ if ($myId >= 1 && $SA == 0) {
     $r = (filter_input(INPUT_GET, 'r', FILTER_SANITIZE_STRING)) ? filter_input(
             INPUT_GET, 'r', FILTER_SANITIZE_STRING) : '0';
     $SAerror = "";
+    $Merror = "";
+
+    if (filter_input(INPUT_POST, 'vehicleUp', FILTER_SANITIZE_STRING)) {
+        $vId = filter_input(INPUT_POST, 'vehicleUp', FILTER_SANITIZE_STRING);
+        $vName = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $vLicensePlate = filter_input(INPUT_POST, 'licensePlate',
+                FILTER_SANITIZE_STRING);
+        $vVin = filter_input(INPUT_POST, 'vin', FILTER_SANITIZE_STRING);
+        $vAssignedTo = filter_input(INPUT_POST, 'assignedTo',
+                FILTER_SANITIZE_NUMBER_INT);
+        $vRetired = (filter_input(INPUT_POST, 'retired',
+                FILTER_SANITIZE_NUMBER_INT) == 1) ? 1 : 0;
+
+        if ($vId == 'new') {
+            $setV = $db->prepare(
+                    "INSERT INTO $myVehicles VALUES(NULL,'','','','0','0','0')");
+            $setV->execute();
+            $getV = $db->prepare(
+                    "SELECT id FROM $myVehicles ORDER BY id DESC LIMIT 1");
+            $getV->execute();
+            $getVR = $getV->fetch();
+            if ($getVR) {
+                $vId = $getVR['id'];
+            }
+        }
+        $putV = $db->prepare(
+                "UPDATE $myVehicles SET name = ?, licensePlate = ?, vin = ?, assignedTo = ?, retired = ? WHERE id = ?");
+        $putV->execute(
+                array(
+                        $vName,
+                        $vLicensePlate,
+                        $vVin,
+                        $vAssignedTo,
+                        $vRetired,
+                        $vId
+                ));
+    }
 
     if (filter_input(INPUT_POST, 'employeeUp', FILTER_SANITIZE_STRING)) {
         $eId = filter_input(INPUT_POST, 'employeeUp', FILTER_SANITIZE_STRING);
@@ -493,6 +530,18 @@ if ($myId >= 1 && $SA == 0) {
 			<table style="width: 300px;">
 				<tr>
 					<td style="text-align: left;">Employees</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	<form id="frmMilage" action="index.php?page=settings&r=milage"
+		method="post">
+		<div
+			style="line-height: 1.5; font-weight: bold; text-decoration: none; cursor: pointer;"
+			onclick="submitForm('Milage')">
+			<table style="width: 300px;">
+				<tr>
+					<td style="text-align: left;">Vehicles and Milage</td>
 				</tr>
 			</table>
 		</div>
@@ -1265,8 +1314,8 @@ if ($myId >= 1 && $SA == 0) {
     } elseif ($r == 'salesAssociate') {
         ?>
         <table style="margin:0px auto; width:50%;" cellspacing='0px'>
-		<tr><td style="text-align:center; padding:10px;" colspan='2'><span style='font-weight:bold;'>Sales Associates</span></td></tr>
-		<tr><td style="text-align:center; padding:10px;" colspan='2'>Here you can add employees.</td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'><span style='font-weight:bold; font-size:2em;'>Employees</span></td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'>Here you can add employees, and track their pay rate through time.</td></tr>
 		<tr><td style="text-align:center; padding:10px;" colspan='2'><?php
         echo $SAerror;
         ?></td></tr>
@@ -1283,10 +1332,11 @@ if ($myId >= 1 && $SA == 0) {
         }
         ?>
         </select></td></tr></table>
+        <form action="index.php?page=settings&r=salesAssociate" method="post">
         <div id="employeeEdit" style="padding:20px; text-align:right;">
-        <table style="margin:0px auto; width:50%;" cellspacing='0px'>
+        <table style="margin:20px auto; width:50%;" cellspacing='0px'>
         <tr>
-        <td style="text-align:right; padding:10px; width:50%;"><form action="index.php?page=settings&r=salesAssociate" method="post"><label for="name">Name</label></td>
+        <td style="text-align:right; padding:10px; width:50%;"><label for="name">Name</label></td>
         <td style="text-align:left; padding:10px; width:50%;"><input id="name" type='text' name='name'></td>
         </tr>
         <tr>
@@ -1353,10 +1403,75 @@ if ($myId >= 1 && $SA == 0) {
         <td style="text-align:left; padding:10px; width:50%;"><input id="pwd" type='password' name='pwd'></td>
         </tr>
         <tr>
-        <td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='new'><button>Add Employee</button></form></td>
+        <td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='new'><button>Add Employee</button></td>
         </tr>
         </table>
         </div>
+        </form>
+        <?php
+    } elseif ($r == 'milage') {
+        ?>
+        <table style="margin:0px auto; width:50%;" cellspacing='0px'>
+		<tr><td style="text-align:center; padding:10px;" colspan='6'><span style='font-weight:bold; font-size:2em;'>Vehicles and Milage</span></td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='6'>Here you can add vehicles and track milage.</td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='6'><?php
+        echo $Merror;
+        ?></td></tr>
+        <tr>
+        <td style="text-align:center; padding:10px;">Vehicle Name</td>
+        <td style="text-align:center; padding:10px;">Lic Plate</td>
+        <td style="text-align:center; padding:10px;">Vin</td>
+        <td style="text-align:center; padding:10px;">Assigned To</td>
+        <td style="text-align:center; padding:10px;">Retired</td>
+        <td style="text-align:center; padding:10px;"></td>
+        </tr>
+        <tr>
+        <td style="text-align:center; padding:10px;"><form action="index.php?page=settings&r=milage" method="post"><input type='text' name='name'></td>
+        <td style="text-align:center; padding:10px;"><input type='text' name='licensePlate'></td>
+        <td style="text-align:center; padding:10px;"><input type='text' name='vin'></td>
+        <td style="text-align:center; padding:10px;"><select name="assignedTo" size="1">
+        <?php
+        $e = $db->prepare("SELECT id,name FROM $myEmployees ORDER BY name");
+        $e->execute();
+        while ($er = $e->fetch()) {
+            echo "<option value='" . $er['id'] . "'>" . $er['name'] .
+                    "</option>\n";
+        }
+        ?>
+        </select></td>
+        <td style="text-align:center; padding:10px;"></td>
+        <td style="text-align:center; padding:10px;"><input type='hidden' name='vehicleUp' value='new'><button>Add new vehicle</button></form></td>
+        </tr>
+        <?php
+        $getV = $db->prepare("SELECT * FROM $myVehicles ORDER BY name");
+        $getV->execute();
+        while ($getVR = $getV->fetch()) {
+            echo "<tr>";
+            echo "<td style='text-align:center; padding:10px;'><form action='index.php?page=settings&r=milage' method='post'><input type='text' name='name' value='" .
+                    $getVR['name'] . "'></td>";
+            echo "<td style='text-align:center; padding:10px;'><input type='text' name='licensePlate' value='" .
+                    $getVR['licensePlate'] . "'></td>";
+            echo "<td style='text-align:center; padding:10px;'><input type='text' name='vin' value='" .
+                    $getVR['vin'] . "'></td>";
+            echo "<td style='text-align:center; padding:10px;'><select name='assignedTo' size='1'>";
+            $e = $db->prepare("SELECT id,name FROM $myEmployees ORDER BY name");
+            $e->execute();
+            while ($er = $e->fetch()) {
+                echo "<option value='" . $er['id'] . "'";
+                echo ($er['id'] == $getVR['id']) ? " selected" : "";
+                echo ">" . $er['name'] . "</option>\n";
+            }
+            echo "</select></td>";
+            echo "<td style='text-align:center; padding:10px;'><input type='checkbox' name='retired' value='1'";
+            echo ($getVR['retired'] == 1) ? " checked" : "";
+            echo "></td>";
+            echo "<td style='text-align:center; padding:10px;'><input type='hidden' name='vehicleUp' value='" .
+                    $getVR['id'] .
+                    "'><button>Update vehicle</button></form></td>";
+            echo "</tr>";
+        }
+        ?>
+        </table>
 		<?php
     } elseif ($r == 'contribute') {
         ?>
