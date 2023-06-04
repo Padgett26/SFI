@@ -1,6 +1,7 @@
 <?php
 include "cgi-bin/config.php";
 include "cgi-bin/functions.php";
+
 if (filter_input(INPUT_POST, 'dateRangeStart', FILTER_SANITIZE_NUMBER_INT)) {
     $_SESSION['dateRangeStart'] = date2mktime(
             filter_input(INPUT_POST, 'dateRangeStart',
@@ -16,6 +17,75 @@ if (filter_input(INPUT_POST, 'dateRangeEnd', FILTER_SANITIZE_NUMBER_INT)) {
 }
 $dateRangeEnd = (isset($_SESSION['dateRangeEnd'])) ? $_SESSION['dateRangeEnd'] : date2mktime(
         date("Y-m-d", $time), 'end');
+
+if (filter_input(INPUT_POST, 'quickTransUp', FILTER_SANITIZE_NUMBER_INT) == 1) {
+    $qDate = date2mktime(
+            filter_input(INPUT_POST, 'qDate', FILTER_SANITIZE_NUMBER_INT),
+            'noon');
+    $qContactName = htmlEntities(
+            trim(
+                    filter_input(INPUT_POST, 'qContactName',
+                            FILTER_SANITIZE_STRING)));
+    $qContactNameSelect = filter_input(INPUT_POST, 'qContactNameSelect',
+            FILTER_SANITIZE_NUMBER_INT);
+    $qCCC = filter_input(INPUT_POST, 'qCCC', FILTER_SANITIZE_NUMBER_INT);
+    $qCkNm = filter_input(INPUT_POST, 'qCkNm', FILTER_SANITIZE_NUMBER_INT);
+    $newId = getNext(6, $myFLedger);
+
+    if ($qContactNameSelect >= 1) {
+        $contactId = $qContactNameSelect;
+    } elseif ($qContactName != " " && $qContactName != "") {
+        $contactId = conCheck($qContactName, $myContacts, $time, '0');
+    } else {
+        $contactId = 0;
+    }
+
+    $qDesc = htmlEntities(
+            trim(
+                    filter_input(INPUT_POST, 'qDescription',
+                            FILTER_SANITIZE_STRING)));
+    $qFromAcc = filter_input(INPUT_POST, 'qFromAcc',
+            FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $qToAcc = filter_input(INPUT_POST, 'qToAcc', FILTER_SANITIZE_NUMBER_FLOAT,
+            FILTER_FLAG_ALLOW_FRACTION);
+    $qAmount = filter_input(INPUT_POST, 'qAmount', FILTER_SANITIZE_NUMBER_FLOAT,
+            FILTER_FLAG_ALLOW_FRACTION);
+
+    if ($qAmount >= 0.01) {
+        // id, date, contact, description, cashCheckCC, checkNumber,
+        // accountNumber, debitAmount, creditAmount, refNumber,
+        // typeCode, dailyConfirm, notUsed1, notUsed2
+        $upLedger2 = $db->prepare(
+                "INSERT INTO $myFLedger VALUES(NULL,?,?,?,?,?,?,'0.00',?,?,?,'0','0','0')");
+        $upLedger2->execute(
+                array(
+                        $qDate,
+                        $contactId,
+                        $qDesc,
+                        $qCCC,
+                        $qCkNm,
+                        $qFromAcc,
+                        $qAmount,
+                        $newId,
+                        '6'
+                ));
+
+        $upLedger1 = $db->prepare(
+                "INSERT INTO $myFLedger VALUES(NULL,?,?,?,?,?,?,?,'0.00',?,?,'0','0','0')");
+        $upLedger1->execute(
+                array(
+                        $qDate,
+                        $contactId,
+                        $qDesc,
+                        $qCCC,
+                        $qCkNm,
+                        $qToAcc,
+                        $qAmount,
+                        $newId,
+                        '6'
+                ));
+    }
+}
 ?>
 <!DOCTYPE HTML>
 <html manifest="includes/cache.appcache">
