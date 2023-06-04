@@ -24,6 +24,7 @@ $loginErr = "x";
 if (filter_input(INPUT_POST, 'login', FILTER_SANITIZE_NUMBER_INT) == "1") {
     $email = (filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)) ? strtolower(
             filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)) : '0';
+    $hidepwd = 'x';
     $login1stmt = $db->prepare("SELECT id,salt FROM users WHERE email = ?");
     $login1stmt->execute(array(
             $email
