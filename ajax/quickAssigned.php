@@ -25,6 +25,6 @@ while ($vr = $v->fetch()) {
     $name = $vr['name'];
     echo "<option value='$id'";
     echo ($id == $assigned) ? " selected" : "";
-    echo "></option>\n";
+    echo ">$name</option>\n";
 }
 echo "</select>";

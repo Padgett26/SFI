@@ -70,9 +70,6 @@ if ($myId >= 1 && $SA == 0) {
         $eDescription = htmlentities(
                 filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING),
                 ENT_QUOTES);
-        $eSiteAccess = (filter_input(INPUT_POST, 'siteAccess',
-                FILTER_SANITIZE_NUMBER_INT) == 1) ? 1 : 0;
-        $ePwd = filter_input(INPUT_POST, 'pwd', FILTER_SANITIZE_STRING);
 
         if ($eId == 'new') {
             $eSet = $db->prepare(
@@ -102,63 +99,6 @@ if ($myId >= 1 && $SA == 0) {
                         $eId
                 ));
 
-        if ($eSiteAccess == 1) {
-            $checkU = $db->prepare(
-                    "SELECT COUNT(*),id,salt FROM users WHERE email = ? AND subOf = ?");
-            $checkU->execute(array(
-                    $eEmail,
-                    $myId
-            ));
-            $checkUR = $checkU->fetch();
-            if ($checkUR && $checkUR[0] == 1) {
-                $saId = $checkUR['id'];
-                $saSalt = $checkUR['salt'];
-                if ($ePwd != "" && $ePwd != " ") {
-                    $hidepwd = hash('sha512', ($saSalt . $ePwd), FALSE);
-                    $pwdUp = $db->prepare(
-                            "UPDATE users SET password = ? WHERE id = ?");
-                    $pwdUp->execute(array(
-                            $hidePwd,
-                            $saId
-                    ));
-                }
-            } else {
-                if ($ePwd != "" && $ePwd != " ") {
-                    $salt = mt_rand(100000, 999999);
-                    $hidepwd = hash('sha512', ($salt . $ePwd), FALSE);
-                    $pwdUp = $db->prepare(
-                            "INSERT INTO users VALUES(NULL,?,?,?,?,?,?,?,?,?,?)");
-                    $pwdUp->execute(
-                            array(
-                                    $eName,
-                                    $eEmail,
-                                    $hidePwd,
-                                    $salt,
-                                    $time,
-                                    '0',
-                                    '1',
-                                    $myId,
-                                    '0',
-                                    '0'
-                            ));
-                }
-            }
-        } else {
-            $checkU = $db->prepare(
-                    "SELECT COUNT(*),id FROM users WHERE email = ? AND subOf = ?");
-            $checkU->execute(array(
-                    $eEmail,
-                    $myId
-            ));
-            $checkUR = $checkU->fetch();
-            if ($checkUR && $checkUR[0] == 1) {
-                $saId = $checkUR['id'];
-                $delU = $db->prepare("DELETE FROM users WHERE id = ?");
-                $delU->execute(array(
-                        $saId
-                ));
-            }
-        }
         $getPay = $db->prepare(
                 "SELECT hourlyPayRate, salaryPayRate FROM $myEmployeeTracking WHERE employeeId = ? ORDER BY date DESC LIMIT 1");
         $getPay->execute(array(
@@ -1388,21 +1328,6 @@ if ($myId >= 1 && $SA == 0) {
         <td style="text-align:left; padding:10px; width:50%;"><input id="description" type='text' name='description' value=''></td>
         </tr>
         <tr>
-        <td style="text-align:center; padding:10px;" colspan='2'><label for="siteAccess">SFI site access:</label></td>
-        </tr>
-        <tr>
-        <td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='0'></td>
-        <td style="text-align:left; padding:10px; width:50%;">No access to the SFI site</td>
-        </tr>
-        <tr>
-        <td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='1' checked></td>
-        <td style="text-align:left; padding:10px; width:50%;">Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.</td>
-        </tr>
-        <tr>
-        <td style="text-align:right; padding:10px; width:50%;"><label for="pwd">To log in as a sales associate, this employee will need a password.</label></td>
-        <td style="text-align:left; padding:10px; width:50%;"><input id="pwd" type='password' name='pwd'></td>
-        </tr>
-        <tr>
         <td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='new'><button>Add Employee</button></td>
         </tr>
         </table>
@@ -1463,7 +1388,7 @@ if ($myId >= 1 && $SA == 0) {
             $e->execute();
             while ($er = $e->fetch()) {
                 echo "<option value='" . $er['id'] . "'";
-                echo ($er['id'] == $getVR['id']) ? " selected" : "";
+                echo ($er['id'] == $getVR['assignedTo']) ? " selected" : "";
                 echo ">" . $er['name'] . "</option>\n";
             }
             echo "</select></td>";

@@ -34,15 +34,6 @@ if ($getER) {
         $hourlyPayRate = $getPR['hourlyPayRate'];
         $salaryPayRate = $getPR['salaryPayRate'];
     }
-
-    $getSub = $db->prepare(
-            "SELECT COUNT(*) FROM users WHERE email = ? AND subOf = ?");
-    $getSub->execute(array(
-            $email,
-            $myId
-    ));
-    $getSR = $getSub->fetch();
-    $access = ($getSR) ? $getSR[0] : 0;
 }
 
 ?>
@@ -116,25 +107,6 @@ echo date('Y-m-d', time());
 <tr>
 <td style="text-align:right; padding:10px; width:50%;"><label for="description">Description of pay rate change</label></td>
 <td style="text-align:left; padding:10px; width:50%;"><input id="description" type='text' name='description' value=''></td>
-</tr>
-<tr>
-<td style="text-align:center; padding:10px;" colspan='2'><label for="siteAccess">SFI site access:</label></td>
-</tr>
-<tr>
-<td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='0'<?php
-echo ($access == 0) ? " checked" : "";
-?>></td>
-<td style="text-align:left; padding:10px; width:50%;">No access to the SFI site</td>
-</tr>
-<tr>
-<td style="text-align:right; padding:10px; width:50%;"><input id="siteAccess" type='radio' name='siteAccess' value='1'<?php
-echo ($access == 1) ? " checked" : "";
-?>></td>
-<td style="text-align:left; padding:10px; width:50%;">Sales access only would be able to open: Sell, Inv, Contacts, Milage, and Help. There would be no access to your financial information.</td>
-</tr>
-<tr>
-<td style="text-align:right; padding:10px; width:50%;"><label for="pwd">To log in as a sales associate, this employee will need a password.</label></td>
-<td style="text-align:left; padding:10px; width:50%;"><input id="pwd" type='password' name='pwd' autocomplete="off"></td>
 </tr>
 <tr>
 <td style="text-align:center; padding:10px;" colspan='2'><input type='hidden' name='employeeUp' value='<?php

@@ -161,7 +161,9 @@ if ($loginErr != "x") {
 			<td style='text-align:center;'>Employee</td>
 			<td style='text-align:center;'>Date</td>
 			</tr><tr>
-			<td style='text-align:center;'><select name='vehicleId' size='1' onchange="quickVehicle(this.value)"><?php
+			<td style='text-align:center;'><select name='vehicleId' size='1' onchange="quickVehicle(this.value,<?php
+            echo $myId;
+            ?>)"><?php
             $v = $db->prepare(
                     "SELECT id,name FROM $myVehicles WHERE retired = '0' ORDER BY name");
             $v->execute();
@@ -177,7 +179,7 @@ if ($loginErr != "x") {
             while ($vr = $v->fetch()) {
                 $id = $vr['id'];
                 $name = $vr['name'];
-                echo "<option value='$id'></option>\n";
+                echo "<option value='$id'>$name</option>\n";
             }
             echo "</select>";
             ?></div></td>

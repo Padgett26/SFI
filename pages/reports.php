@@ -191,6 +191,23 @@ if ($myId >= 1 && $SA == 0) {
 			</table>
 		</div>
 	</form>
+	<?php
+    if ($useMilage == 1) {
+        ?>
+    	<form id="frmMilage" action="index.php?page=reports&r=milage" method="post">
+    		<div
+    			style="line-height: 1.5; font-weight: bold; text-decoration: none; cursor: pointer;"
+    			onclick="submitForm('Milage')">
+    			<table style="width: 300px;">
+    				<tr>
+    					<td style="text-align: left;">Vehicle Milage</td>
+    				</tr>
+    			</table>
+    		</div>
+    	</form>
+	<?php
+    }
+    ?>
 	<table><tr>
 	<td style="cursor:pointer; font-weight:bold; line-heoght:1.5; padding:5px;" onclick="toggleview('whoOwesWho')">
 	Outstanding funds
@@ -340,6 +357,8 @@ if ($myId >= 1 && $SA == 0) {
         ?>
     </div><?php
         include "includes/reportsIncome.php";
+    } elseif ($r == "milage") {
+        include "includes/reportsMilage.php";
     } elseif ($r == "item") {
         ?><div style="text-align:right;">
     	<?php
