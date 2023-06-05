@@ -330,12 +330,13 @@ name VARCHAR(100),
 licensePlate VARCHAR(10),
 vin VARCHAR(20),
 assignedTo INT(6),
+retired INT(2) UNSIGNED DEFAULT 0,
 notUsed1 INT(2) UNSIGNED DEFAULT 0,
 notUsed2 INT(2) UNSIGNED DEFAULT 0
 )");
     $vehicles->execute();
     $v1 = db_sfi()->prepare(
-            "INSERT INTO $table VALUES(1,'Default','','',1,'0','0')");
+            "INSERT INTO $table VALUES(1,'Default','','',1,'0','0','0')");
     $v1->execute();
     return true;
 }
