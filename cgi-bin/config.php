@@ -73,22 +73,6 @@ if ($myId == '0' &&
                                                                // logged in
 }
 
-$SA = 0;
-$saId = $myId;
-$Sget = $db->prepare("SELECT subOf, denyAccess FROM users WHERE id = ?");
-$Sget->execute(array(
-        $myId
-));
-$SgetR = $Sget->fetch();
-if ($SgetR) {
-    $s = $SgetR['subOf'];
-    $d = $SgetR['denyAccess'];
-    if ($s >= 1 && $d == 0) {
-        $myId = $s;
-        $SA = 1;
-    }
-}
-
 // *** page settings ***
 $page = (filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING)) ? filter_input(
         INPUT_GET, 'page', FILTER_SANITIZE_STRING) : "home";

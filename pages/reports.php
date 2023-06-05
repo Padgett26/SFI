@@ -1,6 +1,6 @@
 <div class="heading">Reports</div>
 <?php
-if ($myId >= 1 && $SA == 0) {
+if ($myId >= 1) {
     $r = (filter_input(INPUT_GET, 'r', FILTER_SANITIZE_STRING)) ? filter_input(
             INPUT_GET, 'r', FILTER_SANITIZE_STRING) : '0';
     $an = (filter_input(INPUT_GET, 'an', FILTER_SANITIZE_NUMBER_INT)) ? filter_input(

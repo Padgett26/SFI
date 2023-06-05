@@ -1,6 +1,6 @@
 <div class="heading">Recipes</div>
 <?php
-if ($myId >= 1 && $SA == 0) {
+if ($myId >= 1) {
     $done = 0;
     $upUOM = 0;
     $upId = (filter_input(INPUT_GET, 'recipeId', FILTER_SANITIZE_NUMBER_INT)) ? filter_input(

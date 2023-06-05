@@ -1,9 +1,8 @@
 <div class="heading">Settings</div>
 <?php
-if ($myId >= 1 && $SA == 0) {
+if ($myId >= 1) {
     $r = (filter_input(INPUT_GET, 'r', FILTER_SANITIZE_STRING)) ? filter_input(
             INPUT_GET, 'r', FILTER_SANITIZE_STRING) : '0';
-    $SAerror = "";
     $Merror = "";
 
     if (filter_input(INPUT_POST, 'vehicleUp', FILTER_SANITIZE_STRING)) {
@@ -1256,9 +1255,6 @@ if ($myId >= 1 && $SA == 0) {
         <table style="margin:0px auto; width:50%;" cellspacing='0px'>
 		<tr><td style="text-align:center; padding:10px;" colspan='2'><span style='font-weight:bold; font-size:2em;'>Employees</span></td></tr>
 		<tr><td style="text-align:center; padding:10px;" colspan='2'>Here you can add employees, and track their pay rate through time.</td></tr>
-		<tr><td style="text-align:center; padding:10px;" colspan='2'><?php
-        echo $SAerror;
-        ?></td></tr>
         <tr><td style="text-align:right; padding:10px; width:50%;">Employees:</td><td style="text-align:left; padding:10px; width:50%;"><select name="employee" size="1" onchange="getEmployeeEdit(this.value,'<?php
         echo $myId;
         ?>')">

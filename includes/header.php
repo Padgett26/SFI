@@ -26,27 +26,17 @@ if ($myId >= 1) {
     if ($fiscalYear != 0) {
         ?>
         <a href="index.php?page=inventory" class="menu">INV</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-        <?php
-        if ($SA == 0) {
-            ?>
-            <a href="index.php?page=journals" class="menu">Bank Registers</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-            <a href="index.php?page=reports" class="menu">Reports</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-            <a href="index.php?page=budget" class="menu">Budget</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-            <a href="index.php?page=recipes" class="menu">Recipes</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-            <a href="index.php?page=buy" class="menu">Buy</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-            <?php
-        }
-        ?>
+        <a href="index.php?page=journals" class="menu">Bank Registers</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
+        <a href="index.php?page=reports" class="menu">Reports</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
+        <a href="index.php?page=budget" class="menu">Budget</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
+        <a href="index.php?page=recipes" class="menu">Recipes</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
+        <a href="index.php?page=buy" class="menu">Buy</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
         <a href="index.php?page=sell" class="menu">Sell</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
         <a href="index.php?page=contacts" class="menu">Contacts</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
         <?php
     }
-    if ($SA == 0) {
-        ?>
-        <a href="index.php?page=settings" class="menu">Settings</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
-        <?php
-    }
     ?>
+    <a href="index.php?page=settings" class="menu">Settings</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
     <a href="index.php?page=help" class="menu">Help</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
     <a id="feedbackLink" onclick="toggleview('feedbackBox')" class="menu">Feedback</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;
     <a id="legalLink" onclick="toggleview('legalBox')" class="menu">Legal</a>&nbsp;&nbsp;<span class="mcat">|</span>&nbsp;&nbsp;

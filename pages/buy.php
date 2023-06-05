@@ -2,7 +2,7 @@
 <?php
 use function ArrayIterator\count;
 
-if ($myId >= 1 && $SA == 0) {
+if ($myId >= 1) {
     if (filter_input(INPUT_POST, 'dateRangeStart', FILTER_SANITIZE_NUMBER_INT)) {
         $_SESSION['dateRangeStart'] = date2mktime(
                 filter_input(INPUT_POST, 'dateRangeStart',
