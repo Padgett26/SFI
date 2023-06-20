@@ -7,9 +7,8 @@ $db = db_sfi();
 $debugging = 0; // 1 for debug info showing, 0 for not showing
 $beta = 0; // 1 for beta, 0 for complete
 
-date_default_timezone_set('America/Chicago');
-$time = time();
 $domain = "simplefinancialsandinventory.com";
+$time = time();
 
 $visitingIP = filter_input(INPUT_SERVER, 'REMOTE_ADDR', FILTER_SANITIZE_STRING);
 
@@ -97,8 +96,25 @@ $myEmployees = $myId . "__employees";
 $myEmployeeTracking = $myId . "__employeeTracking";
 $myMilage = $myId . "__milage";
 $myVehicles = $myId . "__vehicles";
+$myTimeClock = $myId . "__timeClock";
 
 if ($myId >= 1) {
+    if (filter_input(INPUT_POST, 'settingsUp', FILTER_SANITIZE_STRING) ==
+            'company') {
+        $timeZoneArea = filter_input(INPUT_POST, 'timeZoneArea',
+                FILTER_SANITIZE_STRING);
+        $timeZoneCity = filter_input(INPUT_POST, 'timeZoneCity',
+                FILTER_SANITIZE_STRING);
+        $timeZone = $timeZoneArea . "/" . $timeZoneCity;
+
+        $settingsUp = $db->prepare(
+                "UPDATE $mySettings SET timeZone = ? WHERE id = ?");
+        $settingsUp->execute(array(
+                $timeZone,
+                '1'
+        ));
+    }
+
     $getSettings = $db->prepare("SELECT * FROM $mySettings WHERE id = ?");
     $getSettings->execute(array(
             '1'
@@ -117,15 +133,23 @@ if ($myId >= 1) {
         $currency = $gsRow['currency'];
         $budgetTerm = $gsRow['budgetTerm'];
         $useMilage = $gsRow['useMilage'];
-    }
-    $getlangCode = $db->prepare(
-            "SELECT langCode FROM currencies WHERE symbol = ?");
-    $getlangCode->execute(array(
-            $currency
-    ));
-    $glc = $getlangCode->fetch();
-    if ($glc) {
-        $langCode = $glc['langCode'];
+        $usePayroll = $gsRow['usePayroll'];
+        $timeZone = $gsRow['timeZone'];
+        date_default_timezone_set($timeZone);
+        $getlangCode = $db->prepare(
+                "SELECT langCode FROM currencies WHERE symbol = ?");
+        $getlangCode->execute(array(
+                $currency
+        ));
+        $glc = $getlangCode->fetch();
+        if ($glc) {
+            $langCode = $glc['langCode'];
+        }
+    } else {
+        $timeZone = "America/Chicago";
+        date_default_timezone_set($timeZone);
+        $currency = "USD";
+        $langCode = "en-US";
     }
 }
 
@@ -336,6 +360,10 @@ $tables = array(
         array(
                 'name' => 'employeeTracking',
                 'function' => 'createEmployeeTracking'
+        ),
+        array(
+                'name' => 'timeClock',
+                'function' => 'createTimeClock'
         )
 );
 

@@ -17,13 +17,13 @@ fiscalYear INT(12) UNSIGNED DEFAULT 0,
 currency VARCHAR(5),
 budgetTerm INT(2) DEFAULT 0,
 useMilage INT(2) UNSIGNED DEFAULT 0,
-notUsed1 INT(2) UNSIGNED DEFAULT 0,
-notUsed2 INT(2) UNSIGNED DEFAULT 0,
+usePayroll INT(2) UNSIGNED DEFAULT 0,
+timeZone VARCHAR(30),
 notUsed3 INT(2) UNSIGNED DEFAULT 0
 )");
     $settings->execute();
     $settings2 = db_sfi()->prepare(
-            "INSERT INTO $table VALUES(1,'name','address','city st zip','phone','email','0','0.0000','0','0','USD','0','0','0','0','0')");
+            "INSERT INTO $table VALUES(1,'name','address','city st zip','phone','email','0','0.0000','0','0','USD','0','0','0','America/Chicago','0')");
     $settings2->execute();
     return true;
 }
@@ -398,6 +398,23 @@ notUsed2 INT(2) UNSIGNED DEFAULT 0
     return true;
 }
 
+function createTimeClock ($table)
+{
+    $clock = db_sfi()->prepare(
+            "CREATE TABLE $table (
+id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+employeeId INT(6) UNSIGNED,
+clockIn INT(12) UNSIGNED,
+clockOut INT(12) UNSIGNED DEFAULT 0,
+paid INT(2) UNSIGNED DEFAULT 0,
+notUsed1 INT(2) UNSIGNED DEFAULT 0,
+notUsed2 INT(2) UNSIGNED DEFAULT 0,
+notUsed3 INT(2) UNSIGNED DEFAULT 0
+)");
+    $clock->execute();
+    return true;
+}
+
 function sendVerificationEmail ($toId, $firstName, $email, $verifyCode)
 {
     $link = hash('sha512', ($verifyCode . $firstName . $email), FALSE);
@@ -414,10 +431,10 @@ function sendVerificationEmail ($toId, $firstName, $email, $verifyCode)
             $message, $headers);
 }
 
-function sendPWResetEmail ($toId, $firstName, $email, $verifyCode)
+function sendPWResetEmail ($toId, $name, $email, $verifyCode)
 {
-    $link = hash('sha512', ($verifyCode . $firstName . $email), FALSE);
-    $mess = "$firstName,\r\n\r\n
+    $link = hash('sha512', ($verifyCode . $name . $email), FALSE);
+    $mess = "$name,\r\n\r\n
         There has been a request on the SFaI website for a password reset for this account.  If you initiated this request, click the link below, and you will be sent to a page where you will be able enter a new password. If you did not initiate this password reset request, simple ignore this email, and your password will not be changed.\r\n\r\n
         https://simplefinancialsandinventory.com/index.php?page=PWReset&id=$toId&ver=$link\r\n\r\n
         Thank you,\nAdmin\nSFaI";

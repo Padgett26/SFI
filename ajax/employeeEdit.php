@@ -8,6 +8,16 @@ $myId = filter_input(INPUT_GET, 'myId', FILTER_SANITIZE_NUMBER_INT);
 
 $myEmployees = $myId . "__employees";
 $myEmployeeTracking = $myId . "__employeeTracking";
+$myTimeClock = $myId . "__timeClock";
+$mySettings = $myId . "__settings";
+$gettz = $db->prepare("SELECT timeZone FROM $mySettings WHERE id = '1'");
+$gettz->execute();
+$gettzr = $gettz->fetch();
+if ($gettzr) {
+    date_default_timezone_set($gettzr['timeZone']);
+} else {
+    date_default_timezone_set("America/Chicago");
+}
 
 $getEmployees = $db->prepare("SELECT * FROM $myEmployees WHERE id = ?");
 $getEmployees->execute(array(
@@ -114,6 +124,8 @@ echo $getId;
 ?>'><button>Update Employee</button></td>
 </tr>
 </table>
+<div style='font-weight:bold; text-align:center; cursor:pointer;' onclick='toggleview("payRateHistory")'>Show Pay Rate History</div>
+<div style='display:none;' id='payRateHistory'>
 <table cellspacing='0px' style="width:50%; margin:20px auto;">
 <tr>
 <td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Date</td>
@@ -138,4 +150,41 @@ while ($getHR = $getH->fetch()) {
             html_entity_decode($getHR['description'], ENT_QUOTES) . "</td></tr>";
 }
 ?>
-</table>
+</table></div>
+<div style='font-weight:bold; text-align:center; cursor:pointer; margin-top:20px;' onclick='toggleview("timeClockHistory")'>Time Clock History</div>
+<div style='display:none;' id='timeClockHistory'>
+<table cellspacing='0px' style="width:50%; margin:20px auto;">
+<tr>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Clock In</td>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Clock Out</td>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Time</td>
+<td style='padding:10px; border-bottom:1px solid black; text-align:center;'>Paid</td>
+</tr>
+<?php
+$getT = $db->prepare(
+        "SELECT * FROM $myTimeClock WHERE employeeId = ? ORDER BY clockIn DESC");
+$getT->execute(array(
+        $getId
+));
+while ($getTR = $getT->fetch()) {
+    $in = dateTime2mktime($getTR['clockIn']);
+    $out = dateTime2mktime($getTR['clockOut']);
+    $spanTime = ($out > $in) ? ($out - $in) : (time() - $in);
+    $d = floor($spanTime / 86400);
+    $r = $spanTime % 86400;
+    $h = floor($r / 3600);
+    $r = $r % 3600;
+    $m = floor($r / 60);
+    echo "<tr><td style='padding:10px; text-align:center;'>" .
+            date("Y-m-d H:i", $in) .
+            "</td><td style='padding:10px; text-align:center;'>";
+    echo ($out > $in) ? date("Y-m-d H:i", $out) : "";
+    echo "</td><td style='padding:10px; text-align:center;'>";
+    echo ($d >= 1) ? "$d D" : "";
+    echo "$h H : $m M</td>";
+    echo "<td style='padding:10px; text-align:center;'>";
+    echo ($getTR['paid'] == 1) ? "Yes" : "No";
+    echo "</td></tr>";
+}
+?>
+</table></div>

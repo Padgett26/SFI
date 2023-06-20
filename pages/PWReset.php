@@ -1,12 +1,17 @@
 <div id='mainTableBox' style="padding:10px;">
     <?php
-    if (NULL !== (filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING)) && filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING) != "" && filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING) != " " && filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING) === filter_input(INPUT_POST, 'pwd2', FILTER_SANITIZE_STRING)) {
+    if (NULL !== (filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING)) &&
+            filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING) != "" &&
+            filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING) != " " &&
+            filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING) ===
+            filter_input(INPUT_POST, 'pwd2', FILTER_SANITIZE_STRING)) {
         $pwd1 = filter_input(INPUT_POST, 'pwd1', FILTER_SANITIZE_STRING);
         $rId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $ver = filter_input(INPUT_GET, 'ver', FILTER_SANITIZE_STRING);
-        $stmt = $db->prepare("SELECT name, email, verifyCode, salt FROM users WHERE id=?");
+        $stmt = $db->prepare(
+                "SELECT name, email, verifyCode, salt FROM users WHERE id=?");
         $stmt->execute(array(
-            $rId
+                $rId
         ));
         $row = $stmt->fetch();
         $name = html_entity_decode($row['name'], ENT_QUOTES);
@@ -16,11 +21,12 @@
         $link = hash('sha512', ($verifyCode . $name . $email), FALSE);
         if ($ver == $link) {
             $hidepwd = hash('sha512', ($salt . $pwd1), FALSE);
-            $upstmt = $db->prepare("UPDATE users SET password=?, verifyCode=? WHERE id=?");
+            $upstmt = $db->prepare(
+                    "UPDATE users SET password=?, verifyCode=? WHERE id=?");
             $upstmt->execute(array(
-                $hidepwd,
-                '0',
-                $rId
+                    $hidepwd,
+                    '0',
+                    $rId
             ));
             ?>
         <header class="heading">Let's get your password reset.</header>
@@ -32,15 +38,16 @@
         if (filter_input(INPUT_GET, 'ver', FILTER_SANITIZE_STRING)) {
             $rId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $ver = filter_input(INPUT_GET, 'ver', FILTER_SANITIZE_STRING);
-            $stmt = $db->prepare("SELECT name, email, verifyCode FROM users WHERE id=?");
+            $stmt = $db->prepare(
+                    "SELECT name, email, verifyCode FROM users WHERE id=?");
             $stmt->execute(array(
-                $rId
+                    $rId
             ));
             $row = $stmt->fetch();
             $name = html_entity_decode($row['name'], ENT_QUOTES);
             $email = $row['email'];
             $verifyCode = $row['verifyCode'];
-            $link = hash('sha512', ($verifyCode . $firstName . $email), FALSE);
+            $link = hash('sha512', ($verifyCode . $name . $email), FALSE);
             if ($ver == $link) {
                 ?>
             <header style="font-weight:bold; font-size: 1.5em; text-align:center;">Let's get your password reset.</header>
@@ -59,10 +66,12 @@
             }
         } else {
             if (filter_input(INPUT_POST, 'resetEmail', FILTER_VALIDATE_EMAIL)) {
-                $resetEmail = filter_input(INPUT_POST, 'resetEmail', FILTER_SANITIZE_EMAIL);
-                $stmt = $db->prepare("SELECT COUNT(*), id, name FROM users WHERE email=?");
+                $resetEmail = filter_input(INPUT_POST, 'resetEmail',
+                        FILTER_SANITIZE_EMAIL);
+                $stmt = $db->prepare(
+                        "SELECT COUNT(*), id, name FROM users WHERE email=?");
                 $stmt->execute(array(
-                    $resetEmail
+                        $resetEmail
                 ));
                 $row = $stmt->fetch();
                 $emailExists = ($row[0] >= 1) ? true : false;
@@ -70,10 +79,11 @@
                 $toName = html_entity_decode($row['name'], ENT_QUOTES);
                 if ($emailExists) {
                     sendPWResetEmail($toId, $toName, $resetEmail, $time);
-                    $substmt = $db->prepare("UPDATE users SET verifyCode=? WHERE id=?");
+                    $substmt = $db->prepare(
+                            "UPDATE users SET verifyCode=? WHERE id=?");
                     $substmt->execute(array(
-                        $time,
-                        $toId
+                            $time,
+                            $toId
                     ));
                     echo '<header style="font-weight:bold; font-size: 1.5em; text-align:center;">Let\'s get your password reset.</header><article style="font-size: 1.25em; text-align:center;">The email has been sent.  Please check your inbox, and click on the link allowing you to change your password.</article>';
                 } else {

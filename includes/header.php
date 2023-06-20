@@ -83,70 +83,38 @@ if ($loginErr != "x") {
         </div>
 
         <div id='quickEntryBox' style='display:none; text-align:center; background-color: #ffffff; color: #000000; width:100%; padding:20px;'>
-        <form method='post' action='index.php'>
-		<table style='border:1px solid black; margin:10px auto;'>
-		<tr>
-		<td style='text-align:center;'>Date</td>
-		<td style='text-align:center;'>Pay Type</td>
-		<td style='text-align:center;'>From Account</td>
-		<td style='text-align:center;'>Amount</td>
-		</tr><tr>
-		<td style='text-align:center;'><input type='date' name='qDate' value='<?php
-        echo date("Y-m-d", $time);
-        ?>'></td>
-        <td style='text-align:center;'><select name='qCCC' size='1'>
-    	<?php
-        for ($i = 0; $i < 4; ++ $i) {
-            echo "<option value='$i'>$PAYTYPES[$i]</option>\n";
-        }
-        ?>
-		</select></td>
-		<td style='text-align:center;'><select name="qFromAcc" size="1">
         <?php
-        foreach ($ACCOUNTS as $k => $v) {
-            echo "<option value='" . $k . "'>" . $k . " - " . $v . "</option>\n";
-        }
-        ?>
-    	</select></td>
-    	<td style='text-align:center;'><input type="number" name="qAmount" value="0.00" min="0.00" step="0.01"></td>
-		</tr><tr>
-		<td style='text-align:center;'>Contact</td>
-		<td style='text-align:center;'>Check #</td>
-		<td style='text-align:center;'>To Account</td>
-		<td style='text-align:center;'>Description</td>
-		</tr><tr>
-		<td style='text-align:center;'><input type='text' name='qContactName' value='' placeholder='contact' onchange='getContactSelect("contactSelect", this.value, <?php
-        echo $myId;
-        ?>)'>
-            <br />
-            <select id='contactSelect' name='qContactNameSelect' size='1'>
+        if ($usePayroll == 1) {
+            ?>
+            <form method='post' action='index.php'>
+			<table style='border:1px solid black; margin:10px auto;'>
+			<tr>
+			<td style='text-align:center; font-weight:bold;' colspan='2'>Time Clock</td>
+			</tr><tr>
+			<td style='text-align:center;' colspan='2'>Employee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php
+            echo "<select name='employeeId' size='1' onchange='quickEmployee(this.value, $myId)'>\n";
+            echo "<option value='0'></option>\n";
+            $v = $db->prepare("SELECT id,name FROM $myEmployees ORDER BY name");
+            $v->execute();
+            while ($vr = $v->fetch()) {
+                $id = $vr['id'];
+                $name = $vr['name'];
+                echo "<option value='$id'>$name</option>\n";
+            }
+            echo "</select>";
+            ?></td></tr>
+            <tr><td colspan='2'><div id='quickEmployee' style='text-align:center;'></div></td></tr>
+			</table>
+            </form>
             <?php
-        echo "<option value='0'>Select Contact</option>";
-        foreach ($CONTACTS as $k => $v) {
-            echo "<option value='$k'>$v</option>\n";
         }
-        ?>
-        </select></td>
-        <td style='text-align:center;'><input type='text' name='qCkNm' value='' placeholder='ck num' size='6'></td>
-        <td style='text-align:center;'><select name="qToAcc" size="1">
-        <?php
-        foreach ($ACCOUNTS as $k => $v) {
-            echo "<option value='" . $k . "'>" . $k . " - " . $v . "</option>\n";
-        }
-        ?>
-    	</select></td>
-    	<td style='text-align:center;'><input type="text" name="qDescription" value=""></td>
-		</tr><tr>
-		<td style='text-align:center;' colspan='4'><input type="hidden" name="quickTransUp" value="1"><button>Record Transaction</button></td>
-		</tr>
-		</table>
-        </form>
-        <?php
         if ($useMilage == 1) {
             ?>
             <form method='post' action='index.php'>
 			<table style='border:1px solid black; margin:10px auto;'>
 			<tr>
+			<td style='text-align:center; font-weight:bold;' colspan='3'>Record Milage</td>
+			</tr><tr>
 			<td style='text-align:center;'>Vehicle</td>
 			<td style='text-align:center;'>Employee</td>
 			<td style='text-align:center;'>Date</td>
@@ -190,6 +158,70 @@ if ($loginErr != "x") {
             <?php
         }
         ?>
+        <form method='post' action='index.php'>
+		<table style='border:1px solid black; margin:10px auto;'>
+		<tr>
+		<td style='text-align:center; font-weight:bold;' colspan='2'>Ledger Entry</td>
+        </tr><tr>
+		<td style='text-align:right; padding-right:10px;'>Date</td>
+		<td style='text-align:left; padding-left:10px;'><input type='date' name='qDate' value='<?php
+        echo date("Y-m-d", $time);
+        ?>'></td>
+        </tr><tr>
+		<td style='text-align:right; padding-right:10px;'>Contact</td>
+		<td style='text-align:left; padding-left:10px;'><input type='text' name='qContactName' value='' placeholder='contact' onchange='getContactSelect("contactSelect", this.value, <?php
+        echo $myId;
+        ?>)'>
+            <br />
+            <select id='contactSelect' name='qContactNameSelect' size='1'>
+            <?php
+        echo "<option value='0'>Select Contact</option>";
+        foreach ($CONTACTS as $k => $v) {
+            echo "<option value='$k'>$v</option>\n";
+        }
+        ?>
+        </select></td>
+		</tr><tr>
+		<td style=''text-align:right; padding-right:10px;''>Description</td>
+		<td style='text-align:left; padding-left:10px;'><input type="text" name="qDescription" value=""></td>
+		</tr><tr>
+		<td style=''text-align:right; padding-right:10px;''>From Account</td>
+		<td style='text-align:left; padding-left:10px;'><select name="qFromAcc" size="1">
+        <?php
+        foreach ($ACCOUNTS as $k => $v) {
+            echo "<option value='" . $k . "'>" . $k . " - " . $v . "</option>\n";
+        }
+        ?>
+    	</select></td>
+		</tr><tr>
+		<td style='text-align:right; padding-right:10px;'>To Account</td>
+		<td style='text-align:left; padding-left:10px;'><select name="qToAcc" size="1">
+        <?php
+        foreach ($ACCOUNTS as $k => $v) {
+            echo "<option value='" . $k . "'>" . $k . " - " . $v . "</option>\n";
+        }
+        ?>
+    	</select></td>
+    	</tr><tr>
+		<td style='text-align:right; padding-right:10px;'>Amount</td>
+		<td style='text-align:left; padding-left:10px;'><input type="number" name="qAmount" value="0.00" min="0.00" step="0.01"></td>
+		</tr><tr>
+		<td style='text-align:right; padding-right:10px;'>Pay Type</td>
+		<td style='text-align:left; padding-left:10px;'><select name='qCCC' size='1'>
+    	<?php
+        for ($i = 0; $i < 4; ++ $i) {
+            echo "<option value='$i'>$PAYTYPES[$i]</option>\n";
+        }
+        ?>
+		</select></td>
+		</tr><tr>
+		<td style='text-align:right; padding-right:10px;'>Check #</td>
+		<td style='text-align:left; padding-left:10px;'><input type='text' name='qCkNm' value='' placeholder='ck num' size='6'></td>
+        </tr><tr>
+		<td style='text-align:center;' colspan='2'><input type="hidden" name="quickTransUp" value="1"><button>Record Transaction</button></td>
+		</tr>
+		</table>
+        </form>
         </div>
         <?php
     }

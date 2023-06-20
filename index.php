@@ -18,6 +18,36 @@ if (filter_input(INPUT_POST, 'dateRangeEnd', FILTER_SANITIZE_NUMBER_INT)) {
 $dateRangeEnd = (isset($_SESSION['dateRangeEnd'])) ? $_SESSION['dateRangeEnd'] : date2mktime(
         date("Y-m-d", $time), 'end');
 
+if (filter_input(INPUT_POST, 'timeClock', FILTER_SANITIZE_NUMBER_INT) == 1) {
+    $clockOut = filter_input(INPUT_POST, 'clockOut', FILTER_SANITIZE_NUMBER_INT);
+    $employeeId = filter_input(INPUT_POST, 'employeeId',
+            FILTER_SANITIZE_NUMBER_INT);
+    $manDate = filter_input(INPUT_POST, 'manDate', FILTER_SANITIZE_NUMBER_INT);
+    $manHour = filter_input(INPUT_POST, 'manHour', FILTER_SANITIZE_NUMBER_INT);
+    $manMinute = filter_input(INPUT_POST, 'manMinute',
+            FILTER_SANITIZE_NUMBER_INT);
+    $stamp = $manDate . " " . $manHour . ":" . $manMinute . ":00";
+    if ($clockOut >= 1 && $employeeId == 0) {
+        $set = $db->prepare("UPDATE $myTimeClock SET clockOut = ? WHERE id = ?");
+        $set->execute(array(
+                $stamp,
+                $clockOut
+        ));
+    } elseif ($clockOut == 0 && $employeeId >= 1) {
+        $set = $db->prepare(
+                "INSERT INTO $myTimeClock VALUES(NULL,?,?,?,?,?,?,?)");
+        $set->execute(array(
+                $employeeId,
+                $stamp,
+                '0',
+                '0',
+                '0',
+                '0',
+                '0'
+        ));
+    }
+}
+
 if (filter_input(INPUT_POST, 'quickMilageUp', FILTER_SANITIZE_NUMBER_INT) == 1) {
     $mVehicleId = filter_input(INPUT_POST, 'vehicleId',
             FILTER_SANITIZE_NUMBER_INT);

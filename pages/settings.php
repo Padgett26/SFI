@@ -1016,6 +1016,35 @@ if ($myId >= 1) {
 	</tr>
 	<tr>
 	<td style=''></td>
+	<td style='text-align:right;'>Default Time Zone</td>
+	<td style='text-align:left;'><select name="timeZoneArea" size='1' onchange='getTimeZoneArea(this.value)'>
+		<?php
+        $myTimeZoneArea = explode("/", $timeZone);
+        $area = $myTimeZoneArea[0];
+        $city = (isset($myTimeZoneArea[2])) ? $myTimeZoneArea[1] . "/" .
+                $myTimeZoneArea[2] : $myTimeZoneArea[1];
+        $TimeZoneAreas = getTimeZoneAreas();
+        foreach ($TimeZoneAreas as $v) {
+            echo "<option value='$v'";
+            echo ($area == $v) ? " selected" : "";
+            echo ">$v</option>\n";
+        }
+        ?>
+		</select>
+	</td>
+	<td style='text-align:left;' id='timeZoneCity'><?php
+        echo "<select name='timeZoneCity' size='1'>";
+        $TimeZoneCities = getTimeZoneCities($area);
+        foreach ($TimeZoneCities as $v) {
+            echo "<option value='$v'";
+            echo ($city == $v) ? " selected" : "";
+            echo ">$v</option>\n";
+        }
+        echo "</select>";
+        ?></td>
+	</tr>
+	<tr>
+	<td style=''></td>
 	<td style='text-align:right;'>Currency Symbol</td>
 	<td style='text-align:left;'><select name="currency" size='1'>
 		<?php
@@ -1254,7 +1283,12 @@ if ($myId >= 1) {
         ?>
         <table style="margin:0px auto; width:50%;" cellspacing='0px'>
 		<tr><td style="text-align:center; padding:10px;" colspan='2'><span style='font-weight:bold; font-size:2em;'>Employees</span></td></tr>
-		<tr><td style="text-align:center; padding:10px;" colspan='2'>Here you can add employees, and track their pay rate through time.</td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'>Here you can manage employees.</td></tr>
+		<tr><td style="text-align:center; padding:10px;" colspan='2'>Check this box to track employee hours and payroll. <input type='checkbox' name='usePayroll' value='1'<?php
+        echo ($usePayroll == 1) ? " checked" : "";
+        ?> onclick="togglePayroll(<?php
+        echo $myId;
+        ?>)"></td></tr>
         <tr><td style="text-align:right; padding:10px; width:50%;">Employees:</td><td style="text-align:left; padding:10px; width:50%;"><select name="employee" size="1" onchange="getEmployeeEdit(this.value,'<?php
         echo $myId;
         ?>')">

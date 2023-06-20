@@ -167,6 +167,34 @@ if (isset($name)) {
             xmlhttp.send();
         }
 
+        function togglePayroll(myId) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "ajax/togglePayroll.php?toggle=1&myId=" + myId, true);
+            xmlhttp.send();
+        }
+
+        function quickEmployee(id,myId) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById('quickEmployee').innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "ajax/quickEmployee.php?id=" + id + "&myId=" + myId, true);
+            xmlhttp.send();
+        }
+
+        function getTimeZoneArea(area) {
+        	var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById('timeZoneCity').innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "ajax/timeZoneCity.php?area=" + area, true);
+            xmlhttp.send();
+        }
+
         function showBlank(id) {
             document.getElementById("blank" + id).style.display = "block";
         }
