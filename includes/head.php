@@ -7,9 +7,9 @@
 <meta http-equiv="X-UA-Compatible"  content="IE=edge" />
 <?php
 if (isset($name)) {
-    echo "<title>SFI || $page || $name</title>";
+	echo "<title>SFI || $page || $name</title>";
 } else {
-    echo "<title>SFI || $page</title>";
+	echo "<title>SFI || $page</title>";
 }
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -239,6 +239,19 @@ if (isset($name)) {
                {
                document.getElementById("dueTotal").value = total.toFixed(2);
                document.getElementById("oweTotal").value = total.toFixed(2);
+               }
+            }
+
+            function addST(id)
+            {
+            var itm1 = document.getElementById('state' + id);
+            var itm2 = document.getElementById('running' + id);
+            var total = itm2.value - itm1.value;
+               const input = document.getElementsByClassName("netPay" + id);
+               for (var i = 0; i < input.length; i++)
+               {
+                  input[i].innerHTML = total.toFixed(2);
+
                }
             }
     </script>
