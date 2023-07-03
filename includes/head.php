@@ -24,6 +24,23 @@ if (isset($name)) {
             }
         }
 
+        function toggleviewMenu(itm) {
+        	const boxes = ["signInBox", "legalBox", "feedbackBox", "inventoryBox", "invoicingBox", "financialBox", "employeeBox", "quickEntryBox"];
+        	let boxLen = boxes.length;
+        	for (let i = 0; i < boxLen; i++) {
+        		if (boxes[i] == itm) {
+        			var itmx = document.getElementById(itm);
+        			if (itmx.style.display === "none") {
+		                itmx.style.display = "block";
+		            } else {
+		                itmx.style.display = "none";
+		            }
+        		} else {
+        			document.getElementById(boxes[i]).style.display = "none";
+        		}
+        	}
+        }
+
         function showBox1() {
             document.getElementById('box1').style.display = "block";
             document.getElementById('box2').style.display = "none";

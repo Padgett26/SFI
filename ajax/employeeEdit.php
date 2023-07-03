@@ -364,10 +364,9 @@ while ($getHR = $getH->fetch()) {
 		<tr>
 			<td style='padding: 10px; text-align: center;'><form
 					action='index.php?page=settings&r=salesAssociate' method='post'>
-					<input type='date' name='bDate'
-						value='<?php
-						echo date("Y-m-d", $time);
-						?>'></td>
+					<input type='date' name='bDate' value='<?php
+					echo date("Y-m-d", $time);
+					?>'></td>
 			<td style='padding: 10px; text-align: center;'><input type='number'
 				name='bAmount' value='0.00' min='0.00' step='0.01'></td>
 			<td style='padding: 10px; text-align: center;'><input type='text'

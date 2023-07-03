@@ -405,7 +405,7 @@ notUsed1 INT(2) UNSIGNED DEFAULT 0,
 notUsed2 INT(2) UNSIGNED DEFAULT 0
 )");
 	$employee->execute();
-	$e1 = db_sfi()->prepare("INSERT INTO $table VALUES(1,'Default','0','0','0','','','','0','1','0','0','0','0','0','0')");
+	$e1 = db_sfi()->prepare("INSERT INTO $table VALUES(1,'Default','0','0','0','','','','0','1','0','0','0','0','0.00','0.00','0.00','0.00','0.00','0.00','0.00','0','0')");
 	$e1->execute();
 	return true;
 }
